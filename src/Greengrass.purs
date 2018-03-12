@@ -20,377 +20,523 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "Greengrass" :: String
-
 
 -- | Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services. The role's permissions will allow Greengrass core Lambda functions to perform actions against the cloud.
 associateRoleToGroup :: forall eff. AssociateRoleToGroupRequest -> Aff (exception :: EXCEPTION | eff) AssociateRoleToGroupResponse
-associateRoleToGroup = Request.request serviceName "associateRoleToGroup" 
+associateRoleToGroup = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "associateRoleToGroup"
 
 
 -- | Associates a role which is used by AWS Greengrass. AWS Greengrass uses the role to access your Lambda functions and AWS IoT resources. This is necessary for deployments to succeed. It needs to have minimum permissions in policy ``AWSGreengrassResourceAccessRolePolicy``
 associateServiceRoleToAccount :: forall eff. AssociateServiceRoleToAccountRequest -> Aff (exception :: EXCEPTION | eff) AssociateServiceRoleToAccountResponse
-associateServiceRoleToAccount = Request.request serviceName "associateServiceRoleToAccount" 
+associateServiceRoleToAccount = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "associateServiceRoleToAccount"
 
 
 -- | Creates a core definition. You may optionally provide the initial version of the core definition or use ''CreateCoreDefinitionVersion'' at a later time. AWS Greengrass Groups must each contain exactly 1 AWS Greengrass Core.
 createCoreDefinition :: forall eff. CreateCoreDefinitionRequest -> Aff (exception :: EXCEPTION | eff) CreateCoreDefinitionResponse
-createCoreDefinition = Request.request serviceName "createCoreDefinition" 
+createCoreDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createCoreDefinition"
 
 
 -- | Creates a version of a core definition that has already been defined. AWS Greengrass Groups must each contain exactly 1 AWS Greengrass Core.
 createCoreDefinitionVersion :: forall eff. CreateCoreDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateCoreDefinitionVersionResponse
-createCoreDefinitionVersion = Request.request serviceName "createCoreDefinitionVersion" 
+createCoreDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createCoreDefinitionVersion"
 
 
 -- | Creates a deployment.
 createDeployment :: forall eff. CreateDeploymentRequest -> Aff (exception :: EXCEPTION | eff) CreateDeploymentResponse
-createDeployment = Request.request serviceName "createDeployment" 
+createDeployment = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createDeployment"
 
 
 -- | Creates a device definition. You may optinally provide the initial version of the device definition or use ``CreateDeviceDefinitionVersion`` at a later time.
 createDeviceDefinition :: forall eff. CreateDeviceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) CreateDeviceDefinitionResponse
-createDeviceDefinition = Request.request serviceName "createDeviceDefinition" 
+createDeviceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createDeviceDefinition"
 
 
 -- | Creates a version of a device definition that has already been defined.
 createDeviceDefinitionVersion :: forall eff. CreateDeviceDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateDeviceDefinitionVersionResponse
-createDeviceDefinitionVersion = Request.request serviceName "createDeviceDefinitionVersion" 
+createDeviceDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createDeviceDefinitionVersion"
 
 
 -- | Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a group. You can create an initial version of the definition by providing a list of Lambda functions and their configurations now, or use ``CreateFunctionDefinitionVersion`` later.
 createFunctionDefinition :: forall eff. CreateFunctionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) CreateFunctionDefinitionResponse
-createFunctionDefinition = Request.request serviceName "createFunctionDefinition" 
+createFunctionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createFunctionDefinition"
 
 
 -- | Create a version of a Lambda function definition that has already been defined.
 createFunctionDefinitionVersion :: forall eff. CreateFunctionDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateFunctionDefinitionVersionResponse
-createFunctionDefinitionVersion = Request.request serviceName "createFunctionDefinitionVersion" 
+createFunctionDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createFunctionDefinitionVersion"
 
 
 -- | Creates a group. You may optionally provide the initial version of the group or use ''CreateGroupVersion'' at a later time.
 createGroup :: forall eff. CreateGroupRequest -> Aff (exception :: EXCEPTION | eff) CreateGroupResponse
-createGroup = Request.request serviceName "createGroup" 
+createGroup = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createGroup"
 
 
 -- | Creates a CA for the group. If a CA already exists, it will rotate the existing CA.
 createGroupCertificateAuthority :: forall eff. CreateGroupCertificateAuthorityRequest -> Aff (exception :: EXCEPTION | eff) CreateGroupCertificateAuthorityResponse
-createGroupCertificateAuthority = Request.request serviceName "createGroupCertificateAuthority" 
+createGroupCertificateAuthority = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createGroupCertificateAuthority"
 
 
 -- | Creates a version of a group which has already been defined.
 createGroupVersion :: forall eff. CreateGroupVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateGroupVersionResponse
-createGroupVersion = Request.request serviceName "createGroupVersion" 
+createGroupVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createGroupVersion"
 
 
 -- | Creates a logger definition. You may optionally provide the initial version of the logger definition or use ``CreateLoggerDefinitionVersion`` at a later time.
 createLoggerDefinition :: forall eff. CreateLoggerDefinitionRequest -> Aff (exception :: EXCEPTION | eff) CreateLoggerDefinitionResponse
-createLoggerDefinition = Request.request serviceName "createLoggerDefinition" 
+createLoggerDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createLoggerDefinition"
 
 
 -- | Creates a version of a logger definition that has already been defined.
 createLoggerDefinitionVersion :: forall eff. CreateLoggerDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateLoggerDefinitionVersionResponse
-createLoggerDefinitionVersion = Request.request serviceName "createLoggerDefinitionVersion" 
+createLoggerDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createLoggerDefinitionVersion"
 
 
 -- | Creates a resource definition which contains a list of resources to be used in a group. You can create an initial version of the definition by providing a list of resources now, or use ``CreateResourceDefinitionVersion`` later.
 createResourceDefinition :: forall eff. CreateResourceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) CreateResourceDefinitionResponse
-createResourceDefinition = Request.request serviceName "createResourceDefinition" 
+createResourceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createResourceDefinition"
 
 
 -- | Create a version of a resource definition that has already been defined.
 createResourceDefinitionVersion :: forall eff. CreateResourceDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateResourceDefinitionVersionResponse
-createResourceDefinitionVersion = Request.request serviceName "createResourceDefinitionVersion" 
+createResourceDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createResourceDefinitionVersion"
 
 
 -- | Creates an Iot Job that will trigger your Greengrass Cores to update the software they are running.
 createSoftwareUpdateJob :: forall eff. CreateSoftwareUpdateJobRequest -> Aff (exception :: EXCEPTION | eff) CreateSoftwareUpdateJobResponse
-createSoftwareUpdateJob = Request.request serviceName "createSoftwareUpdateJob" 
+createSoftwareUpdateJob = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createSoftwareUpdateJob"
 
 
 -- | Creates a subscription definition. You may optionally provide the initial version of the subscription definition or use ``CreateSubscriptionDefinitionVersion`` at a later time.
 createSubscriptionDefinition :: forall eff. CreateSubscriptionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) CreateSubscriptionDefinitionResponse
-createSubscriptionDefinition = Request.request serviceName "createSubscriptionDefinition" 
+createSubscriptionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createSubscriptionDefinition"
 
 
 -- | Creates a version of a subscription definition which has already been defined.
 createSubscriptionDefinitionVersion :: forall eff. CreateSubscriptionDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) CreateSubscriptionDefinitionVersionResponse
-createSubscriptionDefinitionVersion = Request.request serviceName "createSubscriptionDefinitionVersion" 
+createSubscriptionDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "createSubscriptionDefinitionVersion"
 
 
 -- | Deletes a core definition. The core definition must not have been used in a deployment.
 deleteCoreDefinition :: forall eff. DeleteCoreDefinitionRequest -> Aff (exception :: EXCEPTION | eff) DeleteCoreDefinitionResponse
-deleteCoreDefinition = Request.request serviceName "deleteCoreDefinition" 
+deleteCoreDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteCoreDefinition"
 
 
 -- | Deletes a device definition. The device definition must not have been used in a deployment.
 deleteDeviceDefinition :: forall eff. DeleteDeviceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) DeleteDeviceDefinitionResponse
-deleteDeviceDefinition = Request.request serviceName "deleteDeviceDefinition" 
+deleteDeviceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteDeviceDefinition"
 
 
 -- | Deletes a Lambda function definition. The Lambda function definition must not have been used in a deployment.
 deleteFunctionDefinition :: forall eff. DeleteFunctionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) DeleteFunctionDefinitionResponse
-deleteFunctionDefinition = Request.request serviceName "deleteFunctionDefinition" 
+deleteFunctionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteFunctionDefinition"
 
 
 -- | Deletes a group. The group must not have been used in deployment.
 deleteGroup :: forall eff. DeleteGroupRequest -> Aff (exception :: EXCEPTION | eff) DeleteGroupResponse
-deleteGroup = Request.request serviceName "deleteGroup" 
+deleteGroup = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteGroup"
 
 
 -- | Deletes a logger definition. The logger definition must not have been used in a deployment.
 deleteLoggerDefinition :: forall eff. DeleteLoggerDefinitionRequest -> Aff (exception :: EXCEPTION | eff) DeleteLoggerDefinitionResponse
-deleteLoggerDefinition = Request.request serviceName "deleteLoggerDefinition" 
+deleteLoggerDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteLoggerDefinition"
 
 
 -- | Deletes a resource definition.
 deleteResourceDefinition :: forall eff. DeleteResourceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) DeleteResourceDefinitionResponse
-deleteResourceDefinition = Request.request serviceName "deleteResourceDefinition" 
+deleteResourceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteResourceDefinition"
 
 
 -- | Deletes a subscription definition. The subscription definition must not have been used in a deployment.
 deleteSubscriptionDefinition :: forall eff. DeleteSubscriptionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) DeleteSubscriptionDefinitionResponse
-deleteSubscriptionDefinition = Request.request serviceName "deleteSubscriptionDefinition" 
+deleteSubscriptionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "deleteSubscriptionDefinition"
 
 
 -- | Disassociates the role from a group.
 disassociateRoleFromGroup :: forall eff. DisassociateRoleFromGroupRequest -> Aff (exception :: EXCEPTION | eff) DisassociateRoleFromGroupResponse
-disassociateRoleFromGroup = Request.request serviceName "disassociateRoleFromGroup" 
+disassociateRoleFromGroup = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "disassociateRoleFromGroup"
 
 
 -- | Disassociates the service role from the account. Without a service role, deployments will not work.
 disassociateServiceRoleFromAccount :: forall eff. DisassociateServiceRoleFromAccountRequest -> Aff (exception :: EXCEPTION | eff) DisassociateServiceRoleFromAccountResponse
-disassociateServiceRoleFromAccount = Request.request serviceName "disassociateServiceRoleFromAccount" 
+disassociateServiceRoleFromAccount = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "disassociateServiceRoleFromAccount"
 
 
 -- | Retrieves the role associated with a particular group.
 getAssociatedRole :: forall eff. GetAssociatedRoleRequest -> Aff (exception :: EXCEPTION | eff) GetAssociatedRoleResponse
-getAssociatedRole = Request.request serviceName "getAssociatedRole" 
+getAssociatedRole = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getAssociatedRole"
 
 
 -- | Retrieves the connectivity information for a core.
 getConnectivityInfo :: forall eff. GetConnectivityInfoRequest -> Aff (exception :: EXCEPTION | eff) GetConnectivityInfoResponse
-getConnectivityInfo = Request.request serviceName "getConnectivityInfo" 
+getConnectivityInfo = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getConnectivityInfo"
 
 
 -- | Retrieves information about a core definition version.
 getCoreDefinition :: forall eff. GetCoreDefinitionRequest -> Aff (exception :: EXCEPTION | eff) GetCoreDefinitionResponse
-getCoreDefinition = Request.request serviceName "getCoreDefinition" 
+getCoreDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getCoreDefinition"
 
 
 -- | Retrieves information about a core definition version.
 getCoreDefinitionVersion :: forall eff. GetCoreDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) GetCoreDefinitionVersionResponse
-getCoreDefinitionVersion = Request.request serviceName "getCoreDefinitionVersion" 
+getCoreDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getCoreDefinitionVersion"
 
 
 -- | Returns the status of a deployment.
 getDeploymentStatus :: forall eff. GetDeploymentStatusRequest -> Aff (exception :: EXCEPTION | eff) GetDeploymentStatusResponse
-getDeploymentStatus = Request.request serviceName "getDeploymentStatus" 
+getDeploymentStatus = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getDeploymentStatus"
 
 
 -- | Retrieves information about a device definition.
 getDeviceDefinition :: forall eff. GetDeviceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) GetDeviceDefinitionResponse
-getDeviceDefinition = Request.request serviceName "getDeviceDefinition" 
+getDeviceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getDeviceDefinition"
 
 
 -- | Retrieves information about a device definition version.
 getDeviceDefinitionVersion :: forall eff. GetDeviceDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) GetDeviceDefinitionVersionResponse
-getDeviceDefinitionVersion = Request.request serviceName "getDeviceDefinitionVersion" 
+getDeviceDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getDeviceDefinitionVersion"
 
 
 -- | Retrieves information about a Lambda function definition, such as its creation time and latest version.
 getFunctionDefinition :: forall eff. GetFunctionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) GetFunctionDefinitionResponse
-getFunctionDefinition = Request.request serviceName "getFunctionDefinition" 
+getFunctionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getFunctionDefinition"
 
 
 -- | Retrieves information about a Lambda function definition version, such as which Lambda functions are included in the version and their configurations.
 getFunctionDefinitionVersion :: forall eff. GetFunctionDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) GetFunctionDefinitionVersionResponse
-getFunctionDefinitionVersion = Request.request serviceName "getFunctionDefinitionVersion" 
+getFunctionDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getFunctionDefinitionVersion"
 
 
 -- | Retrieves information about a group.
 getGroup :: forall eff. GetGroupRequest -> Aff (exception :: EXCEPTION | eff) GetGroupResponse
-getGroup = Request.request serviceName "getGroup" 
+getGroup = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getGroup"
 
 
 -- | Retreives the CA associated with a group. Returns the public key of the CA.
 getGroupCertificateAuthority :: forall eff. GetGroupCertificateAuthorityRequest -> Aff (exception :: EXCEPTION | eff) GetGroupCertificateAuthorityResponse
-getGroupCertificateAuthority = Request.request serviceName "getGroupCertificateAuthority" 
+getGroupCertificateAuthority = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getGroupCertificateAuthority"
 
 
 -- | Retrieves the current configuration for the CA used by the group.
 getGroupCertificateConfiguration :: forall eff. GetGroupCertificateConfigurationRequest -> Aff (exception :: EXCEPTION | eff) GetGroupCertificateConfigurationResponse
-getGroupCertificateConfiguration = Request.request serviceName "getGroupCertificateConfiguration" 
+getGroupCertificateConfiguration = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getGroupCertificateConfiguration"
 
 
 -- | Retrieves information about a group version.
 getGroupVersion :: forall eff. GetGroupVersionRequest -> Aff (exception :: EXCEPTION | eff) GetGroupVersionResponse
-getGroupVersion = Request.request serviceName "getGroupVersion" 
+getGroupVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getGroupVersion"
 
 
 -- | Retrieves information about a logger definition.
 getLoggerDefinition :: forall eff. GetLoggerDefinitionRequest -> Aff (exception :: EXCEPTION | eff) GetLoggerDefinitionResponse
-getLoggerDefinition = Request.request serviceName "getLoggerDefinition" 
+getLoggerDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getLoggerDefinition"
 
 
 -- | Retrieves information about a logger definition version.
 getLoggerDefinitionVersion :: forall eff. GetLoggerDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) GetLoggerDefinitionVersionResponse
-getLoggerDefinitionVersion = Request.request serviceName "getLoggerDefinitionVersion" 
+getLoggerDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getLoggerDefinitionVersion"
 
 
 -- | Retrieves information about a resource definition, such as its creation time and latest version.
 getResourceDefinition :: forall eff. GetResourceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) GetResourceDefinitionResponse
-getResourceDefinition = Request.request serviceName "getResourceDefinition" 
+getResourceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getResourceDefinition"
 
 
 -- | Retrieves information about a resource definition version, such as which resources are included in the version.
 getResourceDefinitionVersion :: forall eff. GetResourceDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) GetResourceDefinitionVersionResponse
-getResourceDefinitionVersion = Request.request serviceName "getResourceDefinitionVersion" 
+getResourceDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getResourceDefinitionVersion"
 
 
 -- | Retrieves the service role that is attached to the account.
 getServiceRoleForAccount :: forall eff. GetServiceRoleForAccountRequest -> Aff (exception :: EXCEPTION | eff) GetServiceRoleForAccountResponse
-getServiceRoleForAccount = Request.request serviceName "getServiceRoleForAccount" 
+getServiceRoleForAccount = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getServiceRoleForAccount"
 
 
 -- | Retrieves information about a subscription definition.
 getSubscriptionDefinition :: forall eff. GetSubscriptionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) GetSubscriptionDefinitionResponse
-getSubscriptionDefinition = Request.request serviceName "getSubscriptionDefinition" 
+getSubscriptionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getSubscriptionDefinition"
 
 
 -- | Retrieves information about a subscription definition version.
 getSubscriptionDefinitionVersion :: forall eff. GetSubscriptionDefinitionVersionRequest -> Aff (exception :: EXCEPTION | eff) GetSubscriptionDefinitionVersionResponse
-getSubscriptionDefinitionVersion = Request.request serviceName "getSubscriptionDefinitionVersion" 
+getSubscriptionDefinitionVersion = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "getSubscriptionDefinitionVersion"
 
 
 -- | Lists versions of a core definition.
 listCoreDefinitionVersions :: forall eff. ListCoreDefinitionVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListCoreDefinitionVersionsResponse
-listCoreDefinitionVersions = Request.request serviceName "listCoreDefinitionVersions" 
+listCoreDefinitionVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listCoreDefinitionVersions"
 
 
 -- | Retrieves a list of core definitions.
 listCoreDefinitions :: forall eff. ListCoreDefinitionsRequest -> Aff (exception :: EXCEPTION | eff) ListCoreDefinitionsResponse
-listCoreDefinitions = Request.request serviceName "listCoreDefinitions" 
+listCoreDefinitions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listCoreDefinitions"
 
 
 -- | Returns a history of deployments for the group.
 listDeployments :: forall eff. ListDeploymentsRequest -> Aff (exception :: EXCEPTION | eff) ListDeploymentsResponse
-listDeployments = Request.request serviceName "listDeployments" 
+listDeployments = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listDeployments"
 
 
 -- | Lists the versions of a device definition.
 listDeviceDefinitionVersions :: forall eff. ListDeviceDefinitionVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListDeviceDefinitionVersionsResponse
-listDeviceDefinitionVersions = Request.request serviceName "listDeviceDefinitionVersions" 
+listDeviceDefinitionVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listDeviceDefinitionVersions"
 
 
 -- | Retrieves a list of device definitions.
 listDeviceDefinitions :: forall eff. ListDeviceDefinitionsRequest -> Aff (exception :: EXCEPTION | eff) ListDeviceDefinitionsResponse
-listDeviceDefinitions = Request.request serviceName "listDeviceDefinitions" 
+listDeviceDefinitions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listDeviceDefinitions"
 
 
 -- | Lists the versions of a Lambda function definition.
 listFunctionDefinitionVersions :: forall eff. ListFunctionDefinitionVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListFunctionDefinitionVersionsResponse
-listFunctionDefinitionVersions = Request.request serviceName "listFunctionDefinitionVersions" 
+listFunctionDefinitionVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listFunctionDefinitionVersions"
 
 
 -- | Retrieves a list of Lambda function definitions.
 listFunctionDefinitions :: forall eff. ListFunctionDefinitionsRequest -> Aff (exception :: EXCEPTION | eff) ListFunctionDefinitionsResponse
-listFunctionDefinitions = Request.request serviceName "listFunctionDefinitions" 
+listFunctionDefinitions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listFunctionDefinitions"
 
 
 -- | Retrieves the current CAs for a group.
 listGroupCertificateAuthorities :: forall eff. ListGroupCertificateAuthoritiesRequest -> Aff (exception :: EXCEPTION | eff) ListGroupCertificateAuthoritiesResponse
-listGroupCertificateAuthorities = Request.request serviceName "listGroupCertificateAuthorities" 
+listGroupCertificateAuthorities = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listGroupCertificateAuthorities"
 
 
 -- | List the versions of a group.
 listGroupVersions :: forall eff. ListGroupVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListGroupVersionsResponse
-listGroupVersions = Request.request serviceName "listGroupVersions" 
+listGroupVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listGroupVersions"
 
 
 -- | Retrieves a list of groups.
 listGroups :: forall eff. ListGroupsRequest -> Aff (exception :: EXCEPTION | eff) ListGroupsResponse
-listGroups = Request.request serviceName "listGroups" 
+listGroups = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listGroups"
 
 
 -- | Lists the versions of a logger definition.
 listLoggerDefinitionVersions :: forall eff. ListLoggerDefinitionVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListLoggerDefinitionVersionsResponse
-listLoggerDefinitionVersions = Request.request serviceName "listLoggerDefinitionVersions" 
+listLoggerDefinitionVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listLoggerDefinitionVersions"
 
 
 -- | Retrieves a list of logger definitions.
 listLoggerDefinitions :: forall eff. ListLoggerDefinitionsRequest -> Aff (exception :: EXCEPTION | eff) ListLoggerDefinitionsResponse
-listLoggerDefinitions = Request.request serviceName "listLoggerDefinitions" 
+listLoggerDefinitions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listLoggerDefinitions"
 
 
 -- | Lists the versions of a resource definition.
 listResourceDefinitionVersions :: forall eff. ListResourceDefinitionVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListResourceDefinitionVersionsResponse
-listResourceDefinitionVersions = Request.request serviceName "listResourceDefinitionVersions" 
+listResourceDefinitionVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listResourceDefinitionVersions"
 
 
 -- | Retrieves a list of resource definitions.
 listResourceDefinitions :: forall eff. ListResourceDefinitionsRequest -> Aff (exception :: EXCEPTION | eff) ListResourceDefinitionsResponse
-listResourceDefinitions = Request.request serviceName "listResourceDefinitions" 
+listResourceDefinitions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listResourceDefinitions"
 
 
 -- | Lists the versions of a subscription definition.
 listSubscriptionDefinitionVersions :: forall eff. ListSubscriptionDefinitionVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListSubscriptionDefinitionVersionsResponse
-listSubscriptionDefinitionVersions = Request.request serviceName "listSubscriptionDefinitionVersions" 
+listSubscriptionDefinitionVersions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listSubscriptionDefinitionVersions"
 
 
 -- | Retrieves a list of subscription definitions.
 listSubscriptionDefinitions :: forall eff. ListSubscriptionDefinitionsRequest -> Aff (exception :: EXCEPTION | eff) ListSubscriptionDefinitionsResponse
-listSubscriptionDefinitions = Request.request serviceName "listSubscriptionDefinitions" 
+listSubscriptionDefinitions = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "listSubscriptionDefinitions"
 
 
 -- | Resets a group's deployments.
 resetDeployments :: forall eff. ResetDeploymentsRequest -> Aff (exception :: EXCEPTION | eff) ResetDeploymentsResponse
-resetDeployments = Request.request serviceName "resetDeployments" 
+resetDeployments = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "resetDeployments"
 
 
 -- | Updates the connectivity information for the core. Any devices that belong to the group which has this core will receive this information in order to find the location of the core and connect to it.
 updateConnectivityInfo :: forall eff. UpdateConnectivityInfoRequest -> Aff (exception :: EXCEPTION | eff) UpdateConnectivityInfoResponse
-updateConnectivityInfo = Request.request serviceName "updateConnectivityInfo" 
+updateConnectivityInfo = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateConnectivityInfo"
 
 
 -- | Updates a core definition.
 updateCoreDefinition :: forall eff. UpdateCoreDefinitionRequest -> Aff (exception :: EXCEPTION | eff) UpdateCoreDefinitionResponse
-updateCoreDefinition = Request.request serviceName "updateCoreDefinition" 
+updateCoreDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateCoreDefinition"
 
 
 -- | Updates a device definition.
 updateDeviceDefinition :: forall eff. UpdateDeviceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) UpdateDeviceDefinitionResponse
-updateDeviceDefinition = Request.request serviceName "updateDeviceDefinition" 
+updateDeviceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateDeviceDefinition"
 
 
 -- | Updates a Lambda function definition.
 updateFunctionDefinition :: forall eff. UpdateFunctionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) UpdateFunctionDefinitionResponse
-updateFunctionDefinition = Request.request serviceName "updateFunctionDefinition" 
+updateFunctionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateFunctionDefinition"
 
 
 -- | Updates a group.
 updateGroup :: forall eff. UpdateGroupRequest -> Aff (exception :: EXCEPTION | eff) UpdateGroupResponse
-updateGroup = Request.request serviceName "updateGroup" 
+updateGroup = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateGroup"
 
 
 -- | Updates the Cert expiry time for a group.
 updateGroupCertificateConfiguration :: forall eff. UpdateGroupCertificateConfigurationRequest -> Aff (exception :: EXCEPTION | eff) UpdateGroupCertificateConfigurationResponse
-updateGroupCertificateConfiguration = Request.request serviceName "updateGroupCertificateConfiguration" 
+updateGroupCertificateConfiguration = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateGroupCertificateConfiguration"
 
 
 -- | Updates a logger definition.
 updateLoggerDefinition :: forall eff. UpdateLoggerDefinitionRequest -> Aff (exception :: EXCEPTION | eff) UpdateLoggerDefinitionResponse
-updateLoggerDefinition = Request.request serviceName "updateLoggerDefinition" 
+updateLoggerDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateLoggerDefinition"
 
 
 -- | Updates a resource definition.
 updateResourceDefinition :: forall eff. UpdateResourceDefinitionRequest -> Aff (exception :: EXCEPTION | eff) UpdateResourceDefinitionResponse
-updateResourceDefinition = Request.request serviceName "updateResourceDefinition" 
+updateResourceDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateResourceDefinition"
 
 
 -- | Updates a subscription definition.
 updateSubscriptionDefinition :: forall eff. UpdateSubscriptionDefinitionRequest -> Aff (exception :: EXCEPTION | eff) UpdateSubscriptionDefinitionResponse
-updateSubscriptionDefinition = Request.request serviceName "updateSubscriptionDefinition" 
+updateSubscriptionDefinition = Request.request service method  where
+    service = Request.ServiceName "Greengrass"
+    method = Request.MethodName "updateSubscriptionDefinition"
 
 
 newtype AssociateRoleToGroupRequest = AssociateRoleToGroupRequest 
