@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype AssociateRoleToGroupRequest
-  = AssociateRoleToGroupRequest { "GroupId" :: String, "RoleArn" :: NullOrUndefined (String) }
+  = AssociateRoleToGroupRequest { "GroupId" :: String, "RoleArn" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -33,7 +33,7 @@ Constructs AssociateRoleToGroupRequest from required parameters
 #### `newAssociateRoleToGroupRequest'`
 
 ``` purescript
-newAssociateRoleToGroupRequest' :: String -> ({ "GroupId" :: String, "RoleArn" :: NullOrUndefined (String) } -> { "GroupId" :: String, "RoleArn" :: NullOrUndefined (String) }) -> AssociateRoleToGroupRequest
+newAssociateRoleToGroupRequest' :: String -> ({ "GroupId" :: String, "RoleArn" :: Maybe (String) } -> { "GroupId" :: String, "RoleArn" :: Maybe (String) }) -> AssociateRoleToGroupRequest
 ```
 
 Constructs AssociateRoleToGroupRequest's fields from required parameters
@@ -42,7 +42,7 @@ Constructs AssociateRoleToGroupRequest's fields from required parameters
 
 ``` purescript
 newtype AssociateRoleToGroupResponse
-  = AssociateRoleToGroupResponse { "AssociatedAt" :: NullOrUndefined (String) }
+  = AssociateRoleToGroupResponse { "AssociatedAt" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -65,7 +65,7 @@ Constructs AssociateRoleToGroupResponse from required parameters
 #### `newAssociateRoleToGroupResponse'`
 
 ``` purescript
-newAssociateRoleToGroupResponse' :: ({ "AssociatedAt" :: NullOrUndefined (String) } -> { "AssociatedAt" :: NullOrUndefined (String) }) -> AssociateRoleToGroupResponse
+newAssociateRoleToGroupResponse' :: ({ "AssociatedAt" :: Maybe (String) } -> { "AssociatedAt" :: Maybe (String) }) -> AssociateRoleToGroupResponse
 ```
 
 Constructs AssociateRoleToGroupResponse's fields from required parameters
@@ -74,7 +74,7 @@ Constructs AssociateRoleToGroupResponse's fields from required parameters
 
 ``` purescript
 newtype AssociateServiceRoleToAccountRequest
-  = AssociateServiceRoleToAccountRequest { "RoleArn" :: NullOrUndefined (String) }
+  = AssociateServiceRoleToAccountRequest { "RoleArn" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -97,7 +97,7 @@ Constructs AssociateServiceRoleToAccountRequest from required parameters
 #### `newAssociateServiceRoleToAccountRequest'`
 
 ``` purescript
-newAssociateServiceRoleToAccountRequest' :: ({ "RoleArn" :: NullOrUndefined (String) } -> { "RoleArn" :: NullOrUndefined (String) }) -> AssociateServiceRoleToAccountRequest
+newAssociateServiceRoleToAccountRequest' :: ({ "RoleArn" :: Maybe (String) } -> { "RoleArn" :: Maybe (String) }) -> AssociateServiceRoleToAccountRequest
 ```
 
 Constructs AssociateServiceRoleToAccountRequest's fields from required parameters
@@ -106,7 +106,7 @@ Constructs AssociateServiceRoleToAccountRequest's fields from required parameter
 
 ``` purescript
 newtype AssociateServiceRoleToAccountResponse
-  = AssociateServiceRoleToAccountResponse { "AssociatedAt" :: NullOrUndefined (String) }
+  = AssociateServiceRoleToAccountResponse { "AssociatedAt" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -129,7 +129,7 @@ Constructs AssociateServiceRoleToAccountResponse from required parameters
 #### `newAssociateServiceRoleToAccountResponse'`
 
 ``` purescript
-newAssociateServiceRoleToAccountResponse' :: ({ "AssociatedAt" :: NullOrUndefined (String) } -> { "AssociatedAt" :: NullOrUndefined (String) }) -> AssociateServiceRoleToAccountResponse
+newAssociateServiceRoleToAccountResponse' :: ({ "AssociatedAt" :: Maybe (String) } -> { "AssociatedAt" :: Maybe (String) }) -> AssociateServiceRoleToAccountResponse
 ```
 
 Constructs AssociateServiceRoleToAccountResponse's fields from required parameters
@@ -138,7 +138,7 @@ Constructs AssociateServiceRoleToAccountResponse's fields from required paramete
 
 ``` purescript
 newtype BadRequestException
-  = BadRequestException { "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) }
+  = BadRequestException { "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) }
 ```
 
 General Error
@@ -163,7 +163,7 @@ Constructs BadRequestException from required parameters
 #### `newBadRequestException'`
 
 ``` purescript
-newBadRequestException' :: ({ "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) } -> { "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) }) -> BadRequestException
+newBadRequestException' :: ({ "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) } -> { "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) }) -> BadRequestException
 ```
 
 Constructs BadRequestException's fields from required parameters
@@ -172,7 +172,7 @@ Constructs BadRequestException's fields from required parameters
 
 ``` purescript
 newtype ConnectivityInfo
-  = ConnectivityInfo { "HostAddress" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Metadata" :: NullOrUndefined (String), "PortNumber" :: NullOrUndefined (Int) }
+  = ConnectivityInfo { "HostAddress" :: Maybe (String), "Id" :: Maybe (String), "Metadata" :: Maybe (String), "PortNumber" :: Maybe (Int) }
 ```
 
 Connectivity Info
@@ -197,7 +197,7 @@ Constructs ConnectivityInfo from required parameters
 #### `newConnectivityInfo'`
 
 ``` purescript
-newConnectivityInfo' :: ({ "HostAddress" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Metadata" :: NullOrUndefined (String), "PortNumber" :: NullOrUndefined (Int) } -> { "HostAddress" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Metadata" :: NullOrUndefined (String), "PortNumber" :: NullOrUndefined (Int) }) -> ConnectivityInfo
+newConnectivityInfo' :: ({ "HostAddress" :: Maybe (String), "Id" :: Maybe (String), "Metadata" :: Maybe (String), "PortNumber" :: Maybe (Int) } -> { "HostAddress" :: Maybe (String), "Id" :: Maybe (String), "Metadata" :: Maybe (String), "PortNumber" :: Maybe (Int) }) -> ConnectivityInfo
 ```
 
 Constructs ConnectivityInfo's fields from required parameters
@@ -206,7 +206,7 @@ Constructs ConnectivityInfo's fields from required parameters
 
 ``` purescript
 newtype Core
-  = Core { "CertificateArn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "SyncShadow" :: NullOrUndefined (Boolean), "ThingArn" :: NullOrUndefined (String) }
+  = Core { "CertificateArn" :: Maybe (String), "Id" :: Maybe (String), "SyncShadow" :: Maybe (Boolean), "ThingArn" :: Maybe (String) }
 ```
 
 Information on the core
@@ -231,7 +231,7 @@ Constructs Core from required parameters
 #### `newCore'`
 
 ``` purescript
-newCore' :: ({ "CertificateArn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "SyncShadow" :: NullOrUndefined (Boolean), "ThingArn" :: NullOrUndefined (String) } -> { "CertificateArn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "SyncShadow" :: NullOrUndefined (Boolean), "ThingArn" :: NullOrUndefined (String) }) -> Core
+newCore' :: ({ "CertificateArn" :: Maybe (String), "Id" :: Maybe (String), "SyncShadow" :: Maybe (Boolean), "ThingArn" :: Maybe (String) } -> { "CertificateArn" :: Maybe (String), "Id" :: Maybe (String), "SyncShadow" :: Maybe (Boolean), "ThingArn" :: Maybe (String) }) -> Core
 ```
 
 Constructs Core's fields from required parameters
@@ -240,7 +240,7 @@ Constructs Core's fields from required parameters
 
 ``` purescript
 newtype CoreDefinitionVersion
-  = CoreDefinitionVersion { "Cores" :: NullOrUndefined (ListOfCore) }
+  = CoreDefinitionVersion { "Cores" :: Maybe (ListOfCore) }
 ```
 
 Information on core definition version
@@ -265,7 +265,7 @@ Constructs CoreDefinitionVersion from required parameters
 #### `newCoreDefinitionVersion'`
 
 ``` purescript
-newCoreDefinitionVersion' :: ({ "Cores" :: NullOrUndefined (ListOfCore) } -> { "Cores" :: NullOrUndefined (ListOfCore) }) -> CoreDefinitionVersion
+newCoreDefinitionVersion' :: ({ "Cores" :: Maybe (ListOfCore) } -> { "Cores" :: Maybe (ListOfCore) }) -> CoreDefinitionVersion
 ```
 
 Constructs CoreDefinitionVersion's fields from required parameters
@@ -274,7 +274,7 @@ Constructs CoreDefinitionVersion's fields from required parameters
 
 ``` purescript
 newtype CreateCoreDefinitionRequest
-  = CreateCoreDefinitionRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (CoreDefinitionVersion), "Name" :: NullOrUndefined (String) }
+  = CreateCoreDefinitionRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (CoreDefinitionVersion), "Name" :: Maybe (String) }
 ```
 
 Information on the core definition request
@@ -299,7 +299,7 @@ Constructs CreateCoreDefinitionRequest from required parameters
 #### `newCreateCoreDefinitionRequest'`
 
 ``` purescript
-newCreateCoreDefinitionRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (CoreDefinitionVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (CoreDefinitionVersion), "Name" :: NullOrUndefined (String) }) -> CreateCoreDefinitionRequest
+newCreateCoreDefinitionRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (CoreDefinitionVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (CoreDefinitionVersion), "Name" :: Maybe (String) }) -> CreateCoreDefinitionRequest
 ```
 
 Constructs CreateCoreDefinitionRequest's fields from required parameters
@@ -308,7 +308,7 @@ Constructs CreateCoreDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateCoreDefinitionResponse
-  = CreateCoreDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateCoreDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -331,7 +331,7 @@ Constructs CreateCoreDefinitionResponse from required parameters
 #### `newCreateCoreDefinitionResponse'`
 
 ``` purescript
-newCreateCoreDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateCoreDefinitionResponse
+newCreateCoreDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateCoreDefinitionResponse
 ```
 
 Constructs CreateCoreDefinitionResponse's fields from required parameters
@@ -340,7 +340,7 @@ Constructs CreateCoreDefinitionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateCoreDefinitionVersionRequest
-  = CreateCoreDefinitionVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "CoreDefinitionId" :: String, "Cores" :: NullOrUndefined (ListOfCore) }
+  = CreateCoreDefinitionVersionRequest { "AmznClientToken" :: Maybe (String), "CoreDefinitionId" :: String, "Cores" :: Maybe (ListOfCore) }
 ```
 
 ##### Instances
@@ -363,7 +363,7 @@ Constructs CreateCoreDefinitionVersionRequest from required parameters
 #### `newCreateCoreDefinitionVersionRequest'`
 
 ``` purescript
-newCreateCoreDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "CoreDefinitionId" :: String, "Cores" :: NullOrUndefined (ListOfCore) } -> { "AmznClientToken" :: NullOrUndefined (String), "CoreDefinitionId" :: String, "Cores" :: NullOrUndefined (ListOfCore) }) -> CreateCoreDefinitionVersionRequest
+newCreateCoreDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "CoreDefinitionId" :: String, "Cores" :: Maybe (ListOfCore) } -> { "AmznClientToken" :: Maybe (String), "CoreDefinitionId" :: String, "Cores" :: Maybe (ListOfCore) }) -> CreateCoreDefinitionVersionRequest
 ```
 
 Constructs CreateCoreDefinitionVersionRequest's fields from required parameters
@@ -372,7 +372,7 @@ Constructs CreateCoreDefinitionVersionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateCoreDefinitionVersionResponse
-  = CreateCoreDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateCoreDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -395,7 +395,7 @@ Constructs CreateCoreDefinitionVersionResponse from required parameters
 #### `newCreateCoreDefinitionVersionResponse'`
 
 ``` purescript
-newCreateCoreDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateCoreDefinitionVersionResponse
+newCreateCoreDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateCoreDefinitionVersionResponse
 ```
 
 Constructs CreateCoreDefinitionVersionResponse's fields from required parameters
@@ -404,7 +404,7 @@ Constructs CreateCoreDefinitionVersionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateDeploymentRequest
-  = CreateDeploymentRequest { "AmznClientToken" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "GroupId" :: String, "GroupVersionId" :: NullOrUndefined (String) }
+  = CreateDeploymentRequest { "AmznClientToken" :: Maybe (String), "DeploymentId" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "GroupId" :: String, "GroupVersionId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -427,7 +427,7 @@ Constructs CreateDeploymentRequest from required parameters
 #### `newCreateDeploymentRequest'`
 
 ``` purescript
-newCreateDeploymentRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "GroupId" :: String, "GroupVersionId" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "GroupId" :: String, "GroupVersionId" :: NullOrUndefined (String) }) -> CreateDeploymentRequest
+newCreateDeploymentRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "DeploymentId" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "GroupId" :: String, "GroupVersionId" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "DeploymentId" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "GroupId" :: String, "GroupVersionId" :: Maybe (String) }) -> CreateDeploymentRequest
 ```
 
 Constructs CreateDeploymentRequest's fields from required parameters
@@ -436,7 +436,7 @@ Constructs CreateDeploymentRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDeploymentResponse
-  = CreateDeploymentResponse { "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String) }
+  = CreateDeploymentResponse { "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -459,7 +459,7 @@ Constructs CreateDeploymentResponse from required parameters
 #### `newCreateDeploymentResponse'`
 
 ``` purescript
-newCreateDeploymentResponse' :: ({ "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String) } -> { "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String) }) -> CreateDeploymentResponse
+newCreateDeploymentResponse' :: ({ "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String) } -> { "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String) }) -> CreateDeploymentResponse
 ```
 
 Constructs CreateDeploymentResponse's fields from required parameters
@@ -468,7 +468,7 @@ Constructs CreateDeploymentResponse's fields from required parameters
 
 ``` purescript
 newtype CreateDeviceDefinitionRequest
-  = CreateDeviceDefinitionRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (DeviceDefinitionVersion), "Name" :: NullOrUndefined (String) }
+  = CreateDeviceDefinitionRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (DeviceDefinitionVersion), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -491,7 +491,7 @@ Constructs CreateDeviceDefinitionRequest from required parameters
 #### `newCreateDeviceDefinitionRequest'`
 
 ``` purescript
-newCreateDeviceDefinitionRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (DeviceDefinitionVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (DeviceDefinitionVersion), "Name" :: NullOrUndefined (String) }) -> CreateDeviceDefinitionRequest
+newCreateDeviceDefinitionRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (DeviceDefinitionVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (DeviceDefinitionVersion), "Name" :: Maybe (String) }) -> CreateDeviceDefinitionRequest
 ```
 
 Constructs CreateDeviceDefinitionRequest's fields from required parameters
@@ -500,7 +500,7 @@ Constructs CreateDeviceDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDeviceDefinitionResponse
-  = CreateDeviceDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateDeviceDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -523,7 +523,7 @@ Constructs CreateDeviceDefinitionResponse from required parameters
 #### `newCreateDeviceDefinitionResponse'`
 
 ``` purescript
-newCreateDeviceDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateDeviceDefinitionResponse
+newCreateDeviceDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateDeviceDefinitionResponse
 ```
 
 Constructs CreateDeviceDefinitionResponse's fields from required parameters
@@ -532,7 +532,7 @@ Constructs CreateDeviceDefinitionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateDeviceDefinitionVersionRequest
-  = CreateDeviceDefinitionVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "DeviceDefinitionId" :: String, "Devices" :: NullOrUndefined (ListOfDevice) }
+  = CreateDeviceDefinitionVersionRequest { "AmznClientToken" :: Maybe (String), "DeviceDefinitionId" :: String, "Devices" :: Maybe (ListOfDevice) }
 ```
 
 ##### Instances
@@ -555,7 +555,7 @@ Constructs CreateDeviceDefinitionVersionRequest from required parameters
 #### `newCreateDeviceDefinitionVersionRequest'`
 
 ``` purescript
-newCreateDeviceDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "DeviceDefinitionId" :: String, "Devices" :: NullOrUndefined (ListOfDevice) } -> { "AmznClientToken" :: NullOrUndefined (String), "DeviceDefinitionId" :: String, "Devices" :: NullOrUndefined (ListOfDevice) }) -> CreateDeviceDefinitionVersionRequest
+newCreateDeviceDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "DeviceDefinitionId" :: String, "Devices" :: Maybe (ListOfDevice) } -> { "AmznClientToken" :: Maybe (String), "DeviceDefinitionId" :: String, "Devices" :: Maybe (ListOfDevice) }) -> CreateDeviceDefinitionVersionRequest
 ```
 
 Constructs CreateDeviceDefinitionVersionRequest's fields from required parameters
@@ -564,7 +564,7 @@ Constructs CreateDeviceDefinitionVersionRequest's fields from required parameter
 
 ``` purescript
 newtype CreateDeviceDefinitionVersionResponse
-  = CreateDeviceDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateDeviceDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -587,7 +587,7 @@ Constructs CreateDeviceDefinitionVersionResponse from required parameters
 #### `newCreateDeviceDefinitionVersionResponse'`
 
 ``` purescript
-newCreateDeviceDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateDeviceDefinitionVersionResponse
+newCreateDeviceDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateDeviceDefinitionVersionResponse
 ```
 
 Constructs CreateDeviceDefinitionVersionResponse's fields from required parameters
@@ -596,7 +596,7 @@ Constructs CreateDeviceDefinitionVersionResponse's fields from required paramete
 
 ``` purescript
 newtype CreateFunctionDefinitionRequest
-  = CreateFunctionDefinitionRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (FunctionDefinitionVersion), "Name" :: NullOrUndefined (String) }
+  = CreateFunctionDefinitionRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (FunctionDefinitionVersion), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -619,7 +619,7 @@ Constructs CreateFunctionDefinitionRequest from required parameters
 #### `newCreateFunctionDefinitionRequest'`
 
 ``` purescript
-newCreateFunctionDefinitionRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (FunctionDefinitionVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (FunctionDefinitionVersion), "Name" :: NullOrUndefined (String) }) -> CreateFunctionDefinitionRequest
+newCreateFunctionDefinitionRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (FunctionDefinitionVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (FunctionDefinitionVersion), "Name" :: Maybe (String) }) -> CreateFunctionDefinitionRequest
 ```
 
 Constructs CreateFunctionDefinitionRequest's fields from required parameters
@@ -628,7 +628,7 @@ Constructs CreateFunctionDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateFunctionDefinitionResponse
-  = CreateFunctionDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateFunctionDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -651,7 +651,7 @@ Constructs CreateFunctionDefinitionResponse from required parameters
 #### `newCreateFunctionDefinitionResponse'`
 
 ``` purescript
-newCreateFunctionDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateFunctionDefinitionResponse
+newCreateFunctionDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateFunctionDefinitionResponse
 ```
 
 Constructs CreateFunctionDefinitionResponse's fields from required parameters
@@ -660,7 +660,7 @@ Constructs CreateFunctionDefinitionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateFunctionDefinitionVersionRequest
-  = CreateFunctionDefinitionVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "FunctionDefinitionId" :: String, "Functions" :: NullOrUndefined (ListOfFunction) }
+  = CreateFunctionDefinitionVersionRequest { "AmznClientToken" :: Maybe (String), "FunctionDefinitionId" :: String, "Functions" :: Maybe (ListOfFunction) }
 ```
 
 Function definition version
@@ -685,7 +685,7 @@ Constructs CreateFunctionDefinitionVersionRequest from required parameters
 #### `newCreateFunctionDefinitionVersionRequest'`
 
 ``` purescript
-newCreateFunctionDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "FunctionDefinitionId" :: String, "Functions" :: NullOrUndefined (ListOfFunction) } -> { "AmznClientToken" :: NullOrUndefined (String), "FunctionDefinitionId" :: String, "Functions" :: NullOrUndefined (ListOfFunction) }) -> CreateFunctionDefinitionVersionRequest
+newCreateFunctionDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "FunctionDefinitionId" :: String, "Functions" :: Maybe (ListOfFunction) } -> { "AmznClientToken" :: Maybe (String), "FunctionDefinitionId" :: String, "Functions" :: Maybe (ListOfFunction) }) -> CreateFunctionDefinitionVersionRequest
 ```
 
 Constructs CreateFunctionDefinitionVersionRequest's fields from required parameters
@@ -694,7 +694,7 @@ Constructs CreateFunctionDefinitionVersionRequest's fields from required paramet
 
 ``` purescript
 newtype CreateFunctionDefinitionVersionResponse
-  = CreateFunctionDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateFunctionDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -717,7 +717,7 @@ Constructs CreateFunctionDefinitionVersionResponse from required parameters
 #### `newCreateFunctionDefinitionVersionResponse'`
 
 ``` purescript
-newCreateFunctionDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateFunctionDefinitionVersionResponse
+newCreateFunctionDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateFunctionDefinitionVersionResponse
 ```
 
 Constructs CreateFunctionDefinitionVersionResponse's fields from required parameters
@@ -726,7 +726,7 @@ Constructs CreateFunctionDefinitionVersionResponse's fields from required parame
 
 ``` purescript
 newtype CreateGroupCertificateAuthorityRequest
-  = CreateGroupCertificateAuthorityRequest { "AmznClientToken" :: NullOrUndefined (String), "GroupId" :: String }
+  = CreateGroupCertificateAuthorityRequest { "AmznClientToken" :: Maybe (String), "GroupId" :: String }
 ```
 
 ##### Instances
@@ -749,7 +749,7 @@ Constructs CreateGroupCertificateAuthorityRequest from required parameters
 #### `newCreateGroupCertificateAuthorityRequest'`
 
 ``` purescript
-newCreateGroupCertificateAuthorityRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "GroupId" :: String } -> { "AmznClientToken" :: NullOrUndefined (String), "GroupId" :: String }) -> CreateGroupCertificateAuthorityRequest
+newCreateGroupCertificateAuthorityRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "GroupId" :: String } -> { "AmznClientToken" :: Maybe (String), "GroupId" :: String }) -> CreateGroupCertificateAuthorityRequest
 ```
 
 Constructs CreateGroupCertificateAuthorityRequest's fields from required parameters
@@ -758,7 +758,7 @@ Constructs CreateGroupCertificateAuthorityRequest's fields from required paramet
 
 ``` purescript
 newtype CreateGroupCertificateAuthorityResponse
-  = CreateGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn" :: NullOrUndefined (String) }
+  = CreateGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -781,7 +781,7 @@ Constructs CreateGroupCertificateAuthorityResponse from required parameters
 #### `newCreateGroupCertificateAuthorityResponse'`
 
 ``` purescript
-newCreateGroupCertificateAuthorityResponse' :: ({ "GroupCertificateAuthorityArn" :: NullOrUndefined (String) } -> { "GroupCertificateAuthorityArn" :: NullOrUndefined (String) }) -> CreateGroupCertificateAuthorityResponse
+newCreateGroupCertificateAuthorityResponse' :: ({ "GroupCertificateAuthorityArn" :: Maybe (String) } -> { "GroupCertificateAuthorityArn" :: Maybe (String) }) -> CreateGroupCertificateAuthorityResponse
 ```
 
 Constructs CreateGroupCertificateAuthorityResponse's fields from required parameters
@@ -790,7 +790,7 @@ Constructs CreateGroupCertificateAuthorityResponse's fields from required parame
 
 ``` purescript
 newtype CreateGroupRequest
-  = CreateGroupRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (GroupVersion), "Name" :: NullOrUndefined (String) }
+  = CreateGroupRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (GroupVersion), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -813,7 +813,7 @@ Constructs CreateGroupRequest from required parameters
 #### `newCreateGroupRequest'`
 
 ``` purescript
-newCreateGroupRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (GroupVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (GroupVersion), "Name" :: NullOrUndefined (String) }) -> CreateGroupRequest
+newCreateGroupRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (GroupVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (GroupVersion), "Name" :: Maybe (String) }) -> CreateGroupRequest
 ```
 
 Constructs CreateGroupRequest's fields from required parameters
@@ -822,7 +822,7 @@ Constructs CreateGroupRequest's fields from required parameters
 
 ``` purescript
 newtype CreateGroupResponse
-  = CreateGroupResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateGroupResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -845,7 +845,7 @@ Constructs CreateGroupResponse from required parameters
 #### `newCreateGroupResponse'`
 
 ``` purescript
-newCreateGroupResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateGroupResponse
+newCreateGroupResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateGroupResponse
 ```
 
 Constructs CreateGroupResponse's fields from required parameters
@@ -854,7 +854,7 @@ Constructs CreateGroupResponse's fields from required parameters
 
 ``` purescript
 newtype CreateGroupVersionRequest
-  = CreateGroupVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "CoreDefinitionVersionArn" :: NullOrUndefined (String), "DeviceDefinitionVersionArn" :: NullOrUndefined (String), "FunctionDefinitionVersionArn" :: NullOrUndefined (String), "GroupId" :: String, "LoggerDefinitionVersionArn" :: NullOrUndefined (String), "ResourceDefinitionVersionArn" :: NullOrUndefined (String), "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) }
+  = CreateGroupVersionRequest { "AmznClientToken" :: Maybe (String), "CoreDefinitionVersionArn" :: Maybe (String), "DeviceDefinitionVersionArn" :: Maybe (String), "FunctionDefinitionVersionArn" :: Maybe (String), "GroupId" :: String, "LoggerDefinitionVersionArn" :: Maybe (String), "ResourceDefinitionVersionArn" :: Maybe (String), "SubscriptionDefinitionVersionArn" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -877,7 +877,7 @@ Constructs CreateGroupVersionRequest from required parameters
 #### `newCreateGroupVersionRequest'`
 
 ``` purescript
-newCreateGroupVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "CoreDefinitionVersionArn" :: NullOrUndefined (String), "DeviceDefinitionVersionArn" :: NullOrUndefined (String), "FunctionDefinitionVersionArn" :: NullOrUndefined (String), "GroupId" :: String, "LoggerDefinitionVersionArn" :: NullOrUndefined (String), "ResourceDefinitionVersionArn" :: NullOrUndefined (String), "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "CoreDefinitionVersionArn" :: NullOrUndefined (String), "DeviceDefinitionVersionArn" :: NullOrUndefined (String), "FunctionDefinitionVersionArn" :: NullOrUndefined (String), "GroupId" :: String, "LoggerDefinitionVersionArn" :: NullOrUndefined (String), "ResourceDefinitionVersionArn" :: NullOrUndefined (String), "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) }) -> CreateGroupVersionRequest
+newCreateGroupVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "CoreDefinitionVersionArn" :: Maybe (String), "DeviceDefinitionVersionArn" :: Maybe (String), "FunctionDefinitionVersionArn" :: Maybe (String), "GroupId" :: String, "LoggerDefinitionVersionArn" :: Maybe (String), "ResourceDefinitionVersionArn" :: Maybe (String), "SubscriptionDefinitionVersionArn" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "CoreDefinitionVersionArn" :: Maybe (String), "DeviceDefinitionVersionArn" :: Maybe (String), "FunctionDefinitionVersionArn" :: Maybe (String), "GroupId" :: String, "LoggerDefinitionVersionArn" :: Maybe (String), "ResourceDefinitionVersionArn" :: Maybe (String), "SubscriptionDefinitionVersionArn" :: Maybe (String) }) -> CreateGroupVersionRequest
 ```
 
 Constructs CreateGroupVersionRequest's fields from required parameters
@@ -886,7 +886,7 @@ Constructs CreateGroupVersionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateGroupVersionResponse
-  = CreateGroupVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateGroupVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -909,7 +909,7 @@ Constructs CreateGroupVersionResponse from required parameters
 #### `newCreateGroupVersionResponse'`
 
 ``` purescript
-newCreateGroupVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateGroupVersionResponse
+newCreateGroupVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateGroupVersionResponse
 ```
 
 Constructs CreateGroupVersionResponse's fields from required parameters
@@ -918,7 +918,7 @@ Constructs CreateGroupVersionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateLoggerDefinitionRequest
-  = CreateLoggerDefinitionRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (LoggerDefinitionVersion), "Name" :: NullOrUndefined (String) }
+  = CreateLoggerDefinitionRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (LoggerDefinitionVersion), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -941,7 +941,7 @@ Constructs CreateLoggerDefinitionRequest from required parameters
 #### `newCreateLoggerDefinitionRequest'`
 
 ``` purescript
-newCreateLoggerDefinitionRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (LoggerDefinitionVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (LoggerDefinitionVersion), "Name" :: NullOrUndefined (String) }) -> CreateLoggerDefinitionRequest
+newCreateLoggerDefinitionRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (LoggerDefinitionVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (LoggerDefinitionVersion), "Name" :: Maybe (String) }) -> CreateLoggerDefinitionRequest
 ```
 
 Constructs CreateLoggerDefinitionRequest's fields from required parameters
@@ -950,7 +950,7 @@ Constructs CreateLoggerDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateLoggerDefinitionResponse
-  = CreateLoggerDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateLoggerDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -973,7 +973,7 @@ Constructs CreateLoggerDefinitionResponse from required parameters
 #### `newCreateLoggerDefinitionResponse'`
 
 ``` purescript
-newCreateLoggerDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateLoggerDefinitionResponse
+newCreateLoggerDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateLoggerDefinitionResponse
 ```
 
 Constructs CreateLoggerDefinitionResponse's fields from required parameters
@@ -982,7 +982,7 @@ Constructs CreateLoggerDefinitionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateLoggerDefinitionVersionRequest
-  = CreateLoggerDefinitionVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "LoggerDefinitionId" :: String, "Loggers" :: NullOrUndefined (ListOfLogger) }
+  = CreateLoggerDefinitionVersionRequest { "AmznClientToken" :: Maybe (String), "LoggerDefinitionId" :: String, "Loggers" :: Maybe (ListOfLogger) }
 ```
 
 ##### Instances
@@ -1005,7 +1005,7 @@ Constructs CreateLoggerDefinitionVersionRequest from required parameters
 #### `newCreateLoggerDefinitionVersionRequest'`
 
 ``` purescript
-newCreateLoggerDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "LoggerDefinitionId" :: String, "Loggers" :: NullOrUndefined (ListOfLogger) } -> { "AmznClientToken" :: NullOrUndefined (String), "LoggerDefinitionId" :: String, "Loggers" :: NullOrUndefined (ListOfLogger) }) -> CreateLoggerDefinitionVersionRequest
+newCreateLoggerDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "LoggerDefinitionId" :: String, "Loggers" :: Maybe (ListOfLogger) } -> { "AmznClientToken" :: Maybe (String), "LoggerDefinitionId" :: String, "Loggers" :: Maybe (ListOfLogger) }) -> CreateLoggerDefinitionVersionRequest
 ```
 
 Constructs CreateLoggerDefinitionVersionRequest's fields from required parameters
@@ -1014,7 +1014,7 @@ Constructs CreateLoggerDefinitionVersionRequest's fields from required parameter
 
 ``` purescript
 newtype CreateLoggerDefinitionVersionResponse
-  = CreateLoggerDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateLoggerDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1037,7 +1037,7 @@ Constructs CreateLoggerDefinitionVersionResponse from required parameters
 #### `newCreateLoggerDefinitionVersionResponse'`
 
 ``` purescript
-newCreateLoggerDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateLoggerDefinitionVersionResponse
+newCreateLoggerDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateLoggerDefinitionVersionResponse
 ```
 
 Constructs CreateLoggerDefinitionVersionResponse's fields from required parameters
@@ -1046,7 +1046,7 @@ Constructs CreateLoggerDefinitionVersionResponse's fields from required paramete
 
 ``` purescript
 newtype CreateResourceDefinitionRequest
-  = CreateResourceDefinitionRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (ResourceDefinitionVersion), "Name" :: NullOrUndefined (String) }
+  = CreateResourceDefinitionRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (ResourceDefinitionVersion), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1069,7 +1069,7 @@ Constructs CreateResourceDefinitionRequest from required parameters
 #### `newCreateResourceDefinitionRequest'`
 
 ``` purescript
-newCreateResourceDefinitionRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (ResourceDefinitionVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (ResourceDefinitionVersion), "Name" :: NullOrUndefined (String) }) -> CreateResourceDefinitionRequest
+newCreateResourceDefinitionRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (ResourceDefinitionVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (ResourceDefinitionVersion), "Name" :: Maybe (String) }) -> CreateResourceDefinitionRequest
 ```
 
 Constructs CreateResourceDefinitionRequest's fields from required parameters
@@ -1078,7 +1078,7 @@ Constructs CreateResourceDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateResourceDefinitionResponse
-  = CreateResourceDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateResourceDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1101,7 +1101,7 @@ Constructs CreateResourceDefinitionResponse from required parameters
 #### `newCreateResourceDefinitionResponse'`
 
 ``` purescript
-newCreateResourceDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateResourceDefinitionResponse
+newCreateResourceDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateResourceDefinitionResponse
 ```
 
 Constructs CreateResourceDefinitionResponse's fields from required parameters
@@ -1110,7 +1110,7 @@ Constructs CreateResourceDefinitionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateResourceDefinitionVersionRequest
-  = CreateResourceDefinitionVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "ResourceDefinitionId" :: String, "Resources" :: NullOrUndefined (ListOfResource) }
+  = CreateResourceDefinitionVersionRequest { "AmznClientToken" :: Maybe (String), "ResourceDefinitionId" :: String, "Resources" :: Maybe (ListOfResource) }
 ```
 
 ##### Instances
@@ -1133,7 +1133,7 @@ Constructs CreateResourceDefinitionVersionRequest from required parameters
 #### `newCreateResourceDefinitionVersionRequest'`
 
 ``` purescript
-newCreateResourceDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "ResourceDefinitionId" :: String, "Resources" :: NullOrUndefined (ListOfResource) } -> { "AmznClientToken" :: NullOrUndefined (String), "ResourceDefinitionId" :: String, "Resources" :: NullOrUndefined (ListOfResource) }) -> CreateResourceDefinitionVersionRequest
+newCreateResourceDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "ResourceDefinitionId" :: String, "Resources" :: Maybe (ListOfResource) } -> { "AmznClientToken" :: Maybe (String), "ResourceDefinitionId" :: String, "Resources" :: Maybe (ListOfResource) }) -> CreateResourceDefinitionVersionRequest
 ```
 
 Constructs CreateResourceDefinitionVersionRequest's fields from required parameters
@@ -1142,7 +1142,7 @@ Constructs CreateResourceDefinitionVersionRequest's fields from required paramet
 
 ``` purescript
 newtype CreateResourceDefinitionVersionResponse
-  = CreateResourceDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateResourceDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1165,7 +1165,7 @@ Constructs CreateResourceDefinitionVersionResponse from required parameters
 #### `newCreateResourceDefinitionVersionResponse'`
 
 ``` purescript
-newCreateResourceDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateResourceDefinitionVersionResponse
+newCreateResourceDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateResourceDefinitionVersionResponse
 ```
 
 Constructs CreateResourceDefinitionVersionResponse's fields from required parameters
@@ -1174,7 +1174,7 @@ Constructs CreateResourceDefinitionVersionResponse's fields from required parame
 
 ``` purescript
 newtype CreateSoftwareUpdateJobRequest
-  = CreateSoftwareUpdateJobRequest { "AmznClientToken" :: NullOrUndefined (String), "S3UrlSignerRole" :: NullOrUndefined (S3UrlSignerRole), "SoftwareToUpdate" :: NullOrUndefined (SoftwareToUpdate), "UpdateAgentLogLevel" :: NullOrUndefined (UpdateAgentLogLevel), "UpdateTargets" :: NullOrUndefined (UpdateTargets), "UpdateTargetsArchitecture" :: NullOrUndefined (UpdateTargetsArchitecture), "UpdateTargetsOperatingSystem" :: NullOrUndefined (UpdateTargetsOperatingSystem) }
+  = CreateSoftwareUpdateJobRequest { "AmznClientToken" :: Maybe (String), "S3UrlSignerRole" :: Maybe (S3UrlSignerRole), "SoftwareToUpdate" :: Maybe (SoftwareToUpdate), "UpdateAgentLogLevel" :: Maybe (UpdateAgentLogLevel), "UpdateTargets" :: Maybe (UpdateTargets), "UpdateTargetsArchitecture" :: Maybe (UpdateTargetsArchitecture), "UpdateTargetsOperatingSystem" :: Maybe (UpdateTargetsOperatingSystem) }
 ```
 
 ##### Instances
@@ -1197,7 +1197,7 @@ Constructs CreateSoftwareUpdateJobRequest from required parameters
 #### `newCreateSoftwareUpdateJobRequest'`
 
 ``` purescript
-newCreateSoftwareUpdateJobRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "S3UrlSignerRole" :: NullOrUndefined (S3UrlSignerRole), "SoftwareToUpdate" :: NullOrUndefined (SoftwareToUpdate), "UpdateAgentLogLevel" :: NullOrUndefined (UpdateAgentLogLevel), "UpdateTargets" :: NullOrUndefined (UpdateTargets), "UpdateTargetsArchitecture" :: NullOrUndefined (UpdateTargetsArchitecture), "UpdateTargetsOperatingSystem" :: NullOrUndefined (UpdateTargetsOperatingSystem) } -> { "AmznClientToken" :: NullOrUndefined (String), "S3UrlSignerRole" :: NullOrUndefined (S3UrlSignerRole), "SoftwareToUpdate" :: NullOrUndefined (SoftwareToUpdate), "UpdateAgentLogLevel" :: NullOrUndefined (UpdateAgentLogLevel), "UpdateTargets" :: NullOrUndefined (UpdateTargets), "UpdateTargetsArchitecture" :: NullOrUndefined (UpdateTargetsArchitecture), "UpdateTargetsOperatingSystem" :: NullOrUndefined (UpdateTargetsOperatingSystem) }) -> CreateSoftwareUpdateJobRequest
+newCreateSoftwareUpdateJobRequest' :: ({ "AmznClientToken" :: Maybe (String), "S3UrlSignerRole" :: Maybe (S3UrlSignerRole), "SoftwareToUpdate" :: Maybe (SoftwareToUpdate), "UpdateAgentLogLevel" :: Maybe (UpdateAgentLogLevel), "UpdateTargets" :: Maybe (UpdateTargets), "UpdateTargetsArchitecture" :: Maybe (UpdateTargetsArchitecture), "UpdateTargetsOperatingSystem" :: Maybe (UpdateTargetsOperatingSystem) } -> { "AmznClientToken" :: Maybe (String), "S3UrlSignerRole" :: Maybe (S3UrlSignerRole), "SoftwareToUpdate" :: Maybe (SoftwareToUpdate), "UpdateAgentLogLevel" :: Maybe (UpdateAgentLogLevel), "UpdateTargets" :: Maybe (UpdateTargets), "UpdateTargetsArchitecture" :: Maybe (UpdateTargetsArchitecture), "UpdateTargetsOperatingSystem" :: Maybe (UpdateTargetsOperatingSystem) }) -> CreateSoftwareUpdateJobRequest
 ```
 
 Constructs CreateSoftwareUpdateJobRequest's fields from required parameters
@@ -1206,7 +1206,7 @@ Constructs CreateSoftwareUpdateJobRequest's fields from required parameters
 
 ``` purescript
 newtype CreateSoftwareUpdateJobResponse
-  = CreateSoftwareUpdateJobResponse { "IotJobArn" :: NullOrUndefined (String), "IotJobId" :: NullOrUndefined (String) }
+  = CreateSoftwareUpdateJobResponse { "IotJobArn" :: Maybe (String), "IotJobId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1229,7 +1229,7 @@ Constructs CreateSoftwareUpdateJobResponse from required parameters
 #### `newCreateSoftwareUpdateJobResponse'`
 
 ``` purescript
-newCreateSoftwareUpdateJobResponse' :: ({ "IotJobArn" :: NullOrUndefined (String), "IotJobId" :: NullOrUndefined (String) } -> { "IotJobArn" :: NullOrUndefined (String), "IotJobId" :: NullOrUndefined (String) }) -> CreateSoftwareUpdateJobResponse
+newCreateSoftwareUpdateJobResponse' :: ({ "IotJobArn" :: Maybe (String), "IotJobId" :: Maybe (String) } -> { "IotJobArn" :: Maybe (String), "IotJobId" :: Maybe (String) }) -> CreateSoftwareUpdateJobResponse
 ```
 
 Constructs CreateSoftwareUpdateJobResponse's fields from required parameters
@@ -1238,7 +1238,7 @@ Constructs CreateSoftwareUpdateJobResponse's fields from required parameters
 
 ``` purescript
 newtype CreateSubscriptionDefinitionRequest
-  = CreateSubscriptionDefinitionRequest { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (SubscriptionDefinitionVersion), "Name" :: NullOrUndefined (String) }
+  = CreateSubscriptionDefinitionRequest { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (SubscriptionDefinitionVersion), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1261,7 +1261,7 @@ Constructs CreateSubscriptionDefinitionRequest from required parameters
 #### `newCreateSubscriptionDefinitionRequest'`
 
 ``` purescript
-newCreateSubscriptionDefinitionRequest' :: ({ "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (SubscriptionDefinitionVersion), "Name" :: NullOrUndefined (String) } -> { "AmznClientToken" :: NullOrUndefined (String), "InitialVersion" :: NullOrUndefined (SubscriptionDefinitionVersion), "Name" :: NullOrUndefined (String) }) -> CreateSubscriptionDefinitionRequest
+newCreateSubscriptionDefinitionRequest' :: ({ "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (SubscriptionDefinitionVersion), "Name" :: Maybe (String) } -> { "AmznClientToken" :: Maybe (String), "InitialVersion" :: Maybe (SubscriptionDefinitionVersion), "Name" :: Maybe (String) }) -> CreateSubscriptionDefinitionRequest
 ```
 
 Constructs CreateSubscriptionDefinitionRequest's fields from required parameters
@@ -1270,7 +1270,7 @@ Constructs CreateSubscriptionDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateSubscriptionDefinitionResponse
-  = CreateSubscriptionDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = CreateSubscriptionDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1293,7 +1293,7 @@ Constructs CreateSubscriptionDefinitionResponse from required parameters
 #### `newCreateSubscriptionDefinitionResponse'`
 
 ``` purescript
-newCreateSubscriptionDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> CreateSubscriptionDefinitionResponse
+newCreateSubscriptionDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> CreateSubscriptionDefinitionResponse
 ```
 
 Constructs CreateSubscriptionDefinitionResponse's fields from required parameters
@@ -1302,7 +1302,7 @@ Constructs CreateSubscriptionDefinitionResponse's fields from required parameter
 
 ``` purescript
 newtype CreateSubscriptionDefinitionVersionRequest
-  = CreateSubscriptionDefinitionVersionRequest { "AmznClientToken" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String, "Subscriptions" :: NullOrUndefined (ListOfSubscription) }
+  = CreateSubscriptionDefinitionVersionRequest { "AmznClientToken" :: Maybe (String), "SubscriptionDefinitionId" :: String, "Subscriptions" :: Maybe (ListOfSubscription) }
 ```
 
 ##### Instances
@@ -1325,7 +1325,7 @@ Constructs CreateSubscriptionDefinitionVersionRequest from required parameters
 #### `newCreateSubscriptionDefinitionVersionRequest'`
 
 ``` purescript
-newCreateSubscriptionDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String, "Subscriptions" :: NullOrUndefined (ListOfSubscription) } -> { "AmznClientToken" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String, "Subscriptions" :: NullOrUndefined (ListOfSubscription) }) -> CreateSubscriptionDefinitionVersionRequest
+newCreateSubscriptionDefinitionVersionRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "SubscriptionDefinitionId" :: String, "Subscriptions" :: Maybe (ListOfSubscription) } -> { "AmznClientToken" :: Maybe (String), "SubscriptionDefinitionId" :: String, "Subscriptions" :: Maybe (ListOfSubscription) }) -> CreateSubscriptionDefinitionVersionRequest
 ```
 
 Constructs CreateSubscriptionDefinitionVersionRequest's fields from required parameters
@@ -1334,7 +1334,7 @@ Constructs CreateSubscriptionDefinitionVersionRequest's fields from required par
 
 ``` purescript
 newtype CreateSubscriptionDefinitionVersionResponse
-  = CreateSubscriptionDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = CreateSubscriptionDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1357,7 +1357,7 @@ Constructs CreateSubscriptionDefinitionVersionResponse from required parameters
 #### `newCreateSubscriptionDefinitionVersionResponse'`
 
 ``` purescript
-newCreateSubscriptionDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> CreateSubscriptionDefinitionVersionResponse
+newCreateSubscriptionDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> CreateSubscriptionDefinitionVersionResponse
 ```
 
 Constructs CreateSubscriptionDefinitionVersionResponse's fields from required parameters
@@ -1366,7 +1366,7 @@ Constructs CreateSubscriptionDefinitionVersionResponse's fields from required pa
 
 ``` purescript
 newtype DefinitionInformation
-  = DefinitionInformation { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = DefinitionInformation { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 Information on the Definition
@@ -1391,7 +1391,7 @@ Constructs DefinitionInformation from required parameters
 #### `newDefinitionInformation'`
 
 ``` purescript
-newDefinitionInformation' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> DefinitionInformation
+newDefinitionInformation' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> DefinitionInformation
 ```
 
 Constructs DefinitionInformation's fields from required parameters
@@ -1736,7 +1736,7 @@ Encode DeleteSubscriptionDefinitionResponse
 
 ``` purescript
 newtype Deployment
-  = Deployment { "CreatedAt" :: NullOrUndefined (String), "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "GroupArn" :: NullOrUndefined (String) }
+  = Deployment { "CreatedAt" :: Maybe (String), "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "GroupArn" :: Maybe (String) }
 ```
 
 Information on the deployment
@@ -1761,7 +1761,7 @@ Constructs Deployment from required parameters
 #### `newDeployment'`
 
 ``` purescript
-newDeployment' :: ({ "CreatedAt" :: NullOrUndefined (String), "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "GroupArn" :: NullOrUndefined (String) } -> { "CreatedAt" :: NullOrUndefined (String), "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "GroupArn" :: NullOrUndefined (String) }) -> Deployment
+newDeployment' :: ({ "CreatedAt" :: Maybe (String), "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "GroupArn" :: Maybe (String) } -> { "CreatedAt" :: Maybe (String), "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "GroupArn" :: Maybe (String) }) -> Deployment
 ```
 
 Constructs Deployment's fields from required parameters
@@ -1802,7 +1802,7 @@ Encode Deployments
 
 ``` purescript
 newtype Device
-  = Device { "CertificateArn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "SyncShadow" :: NullOrUndefined (Boolean), "ThingArn" :: NullOrUndefined (String) }
+  = Device { "CertificateArn" :: Maybe (String), "Id" :: Maybe (String), "SyncShadow" :: Maybe (Boolean), "ThingArn" :: Maybe (String) }
 ```
 
 Information on a Device
@@ -1827,7 +1827,7 @@ Constructs Device from required parameters
 #### `newDevice'`
 
 ``` purescript
-newDevice' :: ({ "CertificateArn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "SyncShadow" :: NullOrUndefined (Boolean), "ThingArn" :: NullOrUndefined (String) } -> { "CertificateArn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "SyncShadow" :: NullOrUndefined (Boolean), "ThingArn" :: NullOrUndefined (String) }) -> Device
+newDevice' :: ({ "CertificateArn" :: Maybe (String), "Id" :: Maybe (String), "SyncShadow" :: Maybe (Boolean), "ThingArn" :: Maybe (String) } -> { "CertificateArn" :: Maybe (String), "Id" :: Maybe (String), "SyncShadow" :: Maybe (Boolean), "ThingArn" :: Maybe (String) }) -> Device
 ```
 
 Constructs Device's fields from required parameters
@@ -1836,7 +1836,7 @@ Constructs Device's fields from required parameters
 
 ``` purescript
 newtype DeviceDefinitionVersion
-  = DeviceDefinitionVersion { "Devices" :: NullOrUndefined (ListOfDevice) }
+  = DeviceDefinitionVersion { "Devices" :: Maybe (ListOfDevice) }
 ```
 
 Information on device definition version
@@ -1861,7 +1861,7 @@ Constructs DeviceDefinitionVersion from required parameters
 #### `newDeviceDefinitionVersion'`
 
 ``` purescript
-newDeviceDefinitionVersion' :: ({ "Devices" :: NullOrUndefined (ListOfDevice) } -> { "Devices" :: NullOrUndefined (ListOfDevice) }) -> DeviceDefinitionVersion
+newDeviceDefinitionVersion' :: ({ "Devices" :: Maybe (ListOfDevice) } -> { "Devices" :: Maybe (ListOfDevice) }) -> DeviceDefinitionVersion
 ```
 
 Constructs DeviceDefinitionVersion's fields from required parameters
@@ -1902,7 +1902,7 @@ Constructs DisassociateRoleFromGroupRequest's fields from required parameters
 
 ``` purescript
 newtype DisassociateRoleFromGroupResponse
-  = DisassociateRoleFromGroupResponse { "DisassociatedAt" :: NullOrUndefined (String) }
+  = DisassociateRoleFromGroupResponse { "DisassociatedAt" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1925,7 +1925,7 @@ Constructs DisassociateRoleFromGroupResponse from required parameters
 #### `newDisassociateRoleFromGroupResponse'`
 
 ``` purescript
-newDisassociateRoleFromGroupResponse' :: ({ "DisassociatedAt" :: NullOrUndefined (String) } -> { "DisassociatedAt" :: NullOrUndefined (String) }) -> DisassociateRoleFromGroupResponse
+newDisassociateRoleFromGroupResponse' :: ({ "DisassociatedAt" :: Maybe (String) } -> { "DisassociatedAt" :: Maybe (String) }) -> DisassociateRoleFromGroupResponse
 ```
 
 Constructs DisassociateRoleFromGroupResponse's fields from required parameters
@@ -1950,7 +1950,7 @@ Encode DisassociateServiceRoleFromAccountRequest
 
 ``` purescript
 newtype DisassociateServiceRoleFromAccountResponse
-  = DisassociateServiceRoleFromAccountResponse { "DisassociatedAt" :: NullOrUndefined (String) }
+  = DisassociateServiceRoleFromAccountResponse { "DisassociatedAt" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -1973,7 +1973,7 @@ Constructs DisassociateServiceRoleFromAccountResponse from required parameters
 #### `newDisassociateServiceRoleFromAccountResponse'`
 
 ``` purescript
-newDisassociateServiceRoleFromAccountResponse' :: ({ "DisassociatedAt" :: NullOrUndefined (String) } -> { "DisassociatedAt" :: NullOrUndefined (String) }) -> DisassociateServiceRoleFromAccountResponse
+newDisassociateServiceRoleFromAccountResponse' :: ({ "DisassociatedAt" :: Maybe (String) } -> { "DisassociatedAt" :: Maybe (String) }) -> DisassociateServiceRoleFromAccountResponse
 ```
 
 Constructs DisassociateServiceRoleFromAccountResponse's fields from required parameters
@@ -2000,7 +2000,7 @@ Encode Empty
 
 ``` purescript
 newtype ErrorDetail
-  = ErrorDetail { "DetailedErrorCode" :: NullOrUndefined (String), "DetailedErrorMessage" :: NullOrUndefined (String) }
+  = ErrorDetail { "DetailedErrorCode" :: Maybe (String), "DetailedErrorMessage" :: Maybe (String) }
 ```
 
 ErrorDetail
@@ -2025,7 +2025,7 @@ Constructs ErrorDetail from required parameters
 #### `newErrorDetail'`
 
 ``` purescript
-newErrorDetail' :: ({ "DetailedErrorCode" :: NullOrUndefined (String), "DetailedErrorMessage" :: NullOrUndefined (String) } -> { "DetailedErrorCode" :: NullOrUndefined (String), "DetailedErrorMessage" :: NullOrUndefined (String) }) -> ErrorDetail
+newErrorDetail' :: ({ "DetailedErrorCode" :: Maybe (String), "DetailedErrorMessage" :: Maybe (String) } -> { "DetailedErrorCode" :: Maybe (String), "DetailedErrorMessage" :: Maybe (String) }) -> ErrorDetail
 ```
 
 Constructs ErrorDetail's fields from required parameters
@@ -2052,7 +2052,7 @@ Encode ErrorDetails
 
 ``` purescript
 newtype Function''
-  = Function'' { "FunctionArn" :: NullOrUndefined (String), "FunctionConfiguration" :: NullOrUndefined (FunctionConfiguration), "Id" :: NullOrUndefined (String) }
+  = Function'' { "FunctionArn" :: Maybe (String), "FunctionConfiguration" :: Maybe (FunctionConfiguration), "Id" :: Maybe (String) }
 ```
 
 Information on function
@@ -2077,7 +2077,7 @@ Constructs Function'' from required parameters
 #### `newFunction'''`
 
 ``` purescript
-newFunction''' :: ({ "FunctionArn" :: NullOrUndefined (String), "FunctionConfiguration" :: NullOrUndefined (FunctionConfiguration), "Id" :: NullOrUndefined (String) } -> { "FunctionArn" :: NullOrUndefined (String), "FunctionConfiguration" :: NullOrUndefined (FunctionConfiguration), "Id" :: NullOrUndefined (String) }) -> Function''
+newFunction''' :: ({ "FunctionArn" :: Maybe (String), "FunctionConfiguration" :: Maybe (FunctionConfiguration), "Id" :: Maybe (String) } -> { "FunctionArn" :: Maybe (String), "FunctionConfiguration" :: Maybe (FunctionConfiguration), "Id" :: Maybe (String) }) -> Function''
 ```
 
 Constructs Function'''s fields from required parameters
@@ -2086,7 +2086,7 @@ Constructs Function'''s fields from required parameters
 
 ``` purescript
 newtype FunctionConfiguration
-  = FunctionConfiguration { "Environment" :: NullOrUndefined (FunctionConfigurationEnvironment), "ExecArgs" :: NullOrUndefined (String), "Executable" :: NullOrUndefined (String), "MemorySize" :: NullOrUndefined (Int), "Pinned" :: NullOrUndefined (Boolean), "Timeout" :: NullOrUndefined (Int) }
+  = FunctionConfiguration { "Environment" :: Maybe (FunctionConfigurationEnvironment), "ExecArgs" :: Maybe (String), "Executable" :: Maybe (String), "MemorySize" :: Maybe (Int), "Pinned" :: Maybe (Boolean), "Timeout" :: Maybe (Int) }
 ```
 
 Configuration of the function
@@ -2111,7 +2111,7 @@ Constructs FunctionConfiguration from required parameters
 #### `newFunctionConfiguration'`
 
 ``` purescript
-newFunctionConfiguration' :: ({ "Environment" :: NullOrUndefined (FunctionConfigurationEnvironment), "ExecArgs" :: NullOrUndefined (String), "Executable" :: NullOrUndefined (String), "MemorySize" :: NullOrUndefined (Int), "Pinned" :: NullOrUndefined (Boolean), "Timeout" :: NullOrUndefined (Int) } -> { "Environment" :: NullOrUndefined (FunctionConfigurationEnvironment), "ExecArgs" :: NullOrUndefined (String), "Executable" :: NullOrUndefined (String), "MemorySize" :: NullOrUndefined (Int), "Pinned" :: NullOrUndefined (Boolean), "Timeout" :: NullOrUndefined (Int) }) -> FunctionConfiguration
+newFunctionConfiguration' :: ({ "Environment" :: Maybe (FunctionConfigurationEnvironment), "ExecArgs" :: Maybe (String), "Executable" :: Maybe (String), "MemorySize" :: Maybe (Int), "Pinned" :: Maybe (Boolean), "Timeout" :: Maybe (Int) } -> { "Environment" :: Maybe (FunctionConfigurationEnvironment), "ExecArgs" :: Maybe (String), "Executable" :: Maybe (String), "MemorySize" :: Maybe (Int), "Pinned" :: Maybe (Boolean), "Timeout" :: Maybe (Int) }) -> FunctionConfiguration
 ```
 
 Constructs FunctionConfiguration's fields from required parameters
@@ -2120,7 +2120,7 @@ Constructs FunctionConfiguration's fields from required parameters
 
 ``` purescript
 newtype FunctionConfigurationEnvironment
-  = FunctionConfigurationEnvironment { "AccessSysfs" :: NullOrUndefined (Boolean), "ResourceAccessPolicies" :: NullOrUndefined (ListOfResourceAccessPolicy), "Variables" :: NullOrUndefined (MapOf__string) }
+  = FunctionConfigurationEnvironment { "AccessSysfs" :: Maybe (Boolean), "ResourceAccessPolicies" :: Maybe (ListOfResourceAccessPolicy), "Variables" :: Maybe (MapOf__string) }
 ```
 
 Environment of the function configuration
@@ -2145,7 +2145,7 @@ Constructs FunctionConfigurationEnvironment from required parameters
 #### `newFunctionConfigurationEnvironment'`
 
 ``` purescript
-newFunctionConfigurationEnvironment' :: ({ "AccessSysfs" :: NullOrUndefined (Boolean), "ResourceAccessPolicies" :: NullOrUndefined (ListOfResourceAccessPolicy), "Variables" :: NullOrUndefined (MapOf__string) } -> { "AccessSysfs" :: NullOrUndefined (Boolean), "ResourceAccessPolicies" :: NullOrUndefined (ListOfResourceAccessPolicy), "Variables" :: NullOrUndefined (MapOf__string) }) -> FunctionConfigurationEnvironment
+newFunctionConfigurationEnvironment' :: ({ "AccessSysfs" :: Maybe (Boolean), "ResourceAccessPolicies" :: Maybe (ListOfResourceAccessPolicy), "Variables" :: Maybe (MapOf__string) } -> { "AccessSysfs" :: Maybe (Boolean), "ResourceAccessPolicies" :: Maybe (ListOfResourceAccessPolicy), "Variables" :: Maybe (MapOf__string) }) -> FunctionConfigurationEnvironment
 ```
 
 Constructs FunctionConfigurationEnvironment's fields from required parameters
@@ -2154,7 +2154,7 @@ Constructs FunctionConfigurationEnvironment's fields from required parameters
 
 ``` purescript
 newtype FunctionDefinitionVersion
-  = FunctionDefinitionVersion { "Functions" :: NullOrUndefined (ListOfFunction) }
+  = FunctionDefinitionVersion { "Functions" :: Maybe (ListOfFunction) }
 ```
 
 Information on the function definition version
@@ -2179,7 +2179,7 @@ Constructs FunctionDefinitionVersion from required parameters
 #### `newFunctionDefinitionVersion'`
 
 ``` purescript
-newFunctionDefinitionVersion' :: ({ "Functions" :: NullOrUndefined (ListOfFunction) } -> { "Functions" :: NullOrUndefined (ListOfFunction) }) -> FunctionDefinitionVersion
+newFunctionDefinitionVersion' :: ({ "Functions" :: Maybe (ListOfFunction) } -> { "Functions" :: Maybe (ListOfFunction) }) -> FunctionDefinitionVersion
 ```
 
 Constructs FunctionDefinitionVersion's fields from required parameters
@@ -2188,7 +2188,7 @@ Constructs FunctionDefinitionVersion's fields from required parameters
 
 ``` purescript
 newtype GeneralError
-  = GeneralError { "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) }
+  = GeneralError { "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) }
 ```
 
 General Error
@@ -2213,7 +2213,7 @@ Constructs GeneralError from required parameters
 #### `newGeneralError'`
 
 ``` purescript
-newGeneralError' :: ({ "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) } -> { "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) }) -> GeneralError
+newGeneralError' :: ({ "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) } -> { "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) }) -> GeneralError
 ```
 
 Constructs GeneralError's fields from required parameters
@@ -2254,7 +2254,7 @@ Constructs GetAssociatedRoleRequest's fields from required parameters
 
 ``` purescript
 newtype GetAssociatedRoleResponse
-  = GetAssociatedRoleResponse { "AssociatedAt" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }
+  = GetAssociatedRoleResponse { "AssociatedAt" :: Maybe (String), "RoleArn" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2277,7 +2277,7 @@ Constructs GetAssociatedRoleResponse from required parameters
 #### `newGetAssociatedRoleResponse'`
 
 ``` purescript
-newGetAssociatedRoleResponse' :: ({ "AssociatedAt" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) } -> { "AssociatedAt" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }) -> GetAssociatedRoleResponse
+newGetAssociatedRoleResponse' :: ({ "AssociatedAt" :: Maybe (String), "RoleArn" :: Maybe (String) } -> { "AssociatedAt" :: Maybe (String), "RoleArn" :: Maybe (String) }) -> GetAssociatedRoleResponse
 ```
 
 Constructs GetAssociatedRoleResponse's fields from required parameters
@@ -2318,7 +2318,7 @@ Constructs GetConnectivityInfoRequest's fields from required parameters
 
 ``` purescript
 newtype GetConnectivityInfoResponse
-  = GetConnectivityInfoResponse { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo), "Message" :: NullOrUndefined (String) }
+  = GetConnectivityInfoResponse { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo), "Message" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2341,7 +2341,7 @@ Constructs GetConnectivityInfoResponse from required parameters
 #### `newGetConnectivityInfoResponse'`
 
 ``` purescript
-newGetConnectivityInfoResponse' :: ({ "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo), "Message" :: NullOrUndefined (String) } -> { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo), "Message" :: NullOrUndefined (String) }) -> GetConnectivityInfoResponse
+newGetConnectivityInfoResponse' :: ({ "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo), "Message" :: Maybe (String) } -> { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo), "Message" :: Maybe (String) }) -> GetConnectivityInfoResponse
 ```
 
 Constructs GetConnectivityInfoResponse's fields from required parameters
@@ -2382,7 +2382,7 @@ Constructs GetCoreDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype GetCoreDefinitionResponse
-  = GetCoreDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetCoreDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2405,7 +2405,7 @@ Constructs GetCoreDefinitionResponse from required parameters
 #### `newGetCoreDefinitionResponse'`
 
 ``` purescript
-newGetCoreDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetCoreDefinitionResponse
+newGetCoreDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetCoreDefinitionResponse
 ```
 
 Constructs GetCoreDefinitionResponse's fields from required parameters
@@ -2446,7 +2446,7 @@ Constructs GetCoreDefinitionVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetCoreDefinitionVersionResponse
-  = GetCoreDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (CoreDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetCoreDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (CoreDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2469,7 +2469,7 @@ Constructs GetCoreDefinitionVersionResponse from required parameters
 #### `newGetCoreDefinitionVersionResponse'`
 
 ``` purescript
-newGetCoreDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (CoreDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (CoreDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetCoreDefinitionVersionResponse
+newGetCoreDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (CoreDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (CoreDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetCoreDefinitionVersionResponse
 ```
 
 Constructs GetCoreDefinitionVersionResponse's fields from required parameters
@@ -2510,7 +2510,7 @@ Constructs GetDeploymentStatusRequest's fields from required parameters
 
 ``` purescript
 newtype GetDeploymentStatusResponse
-  = GetDeploymentStatusResponse { "DeploymentStatus" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "ErrorDetails" :: NullOrUndefined (ErrorDetails), "ErrorMessage" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (String) }
+  = GetDeploymentStatusResponse { "DeploymentStatus" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "ErrorDetails" :: Maybe (ErrorDetails), "ErrorMessage" :: Maybe (String), "UpdatedAt" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2533,7 +2533,7 @@ Constructs GetDeploymentStatusResponse from required parameters
 #### `newGetDeploymentStatusResponse'`
 
 ``` purescript
-newGetDeploymentStatusResponse' :: ({ "DeploymentStatus" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "ErrorDetails" :: NullOrUndefined (ErrorDetails), "ErrorMessage" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (String) } -> { "DeploymentStatus" :: NullOrUndefined (String), "DeploymentType" :: NullOrUndefined (DeploymentType), "ErrorDetails" :: NullOrUndefined (ErrorDetails), "ErrorMessage" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (String) }) -> GetDeploymentStatusResponse
+newGetDeploymentStatusResponse' :: ({ "DeploymentStatus" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "ErrorDetails" :: Maybe (ErrorDetails), "ErrorMessage" :: Maybe (String), "UpdatedAt" :: Maybe (String) } -> { "DeploymentStatus" :: Maybe (String), "DeploymentType" :: Maybe (DeploymentType), "ErrorDetails" :: Maybe (ErrorDetails), "ErrorMessage" :: Maybe (String), "UpdatedAt" :: Maybe (String) }) -> GetDeploymentStatusResponse
 ```
 
 Constructs GetDeploymentStatusResponse's fields from required parameters
@@ -2574,7 +2574,7 @@ Constructs GetDeviceDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype GetDeviceDefinitionResponse
-  = GetDeviceDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetDeviceDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2597,7 +2597,7 @@ Constructs GetDeviceDefinitionResponse from required parameters
 #### `newGetDeviceDefinitionResponse'`
 
 ``` purescript
-newGetDeviceDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetDeviceDefinitionResponse
+newGetDeviceDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetDeviceDefinitionResponse
 ```
 
 Constructs GetDeviceDefinitionResponse's fields from required parameters
@@ -2638,7 +2638,7 @@ Constructs GetDeviceDefinitionVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetDeviceDefinitionVersionResponse
-  = GetDeviceDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (DeviceDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetDeviceDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (DeviceDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2661,7 +2661,7 @@ Constructs GetDeviceDefinitionVersionResponse from required parameters
 #### `newGetDeviceDefinitionVersionResponse'`
 
 ``` purescript
-newGetDeviceDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (DeviceDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (DeviceDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetDeviceDefinitionVersionResponse
+newGetDeviceDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (DeviceDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (DeviceDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetDeviceDefinitionVersionResponse
 ```
 
 Constructs GetDeviceDefinitionVersionResponse's fields from required parameters
@@ -2702,7 +2702,7 @@ Constructs GetFunctionDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype GetFunctionDefinitionResponse
-  = GetFunctionDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetFunctionDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2725,7 +2725,7 @@ Constructs GetFunctionDefinitionResponse from required parameters
 #### `newGetFunctionDefinitionResponse'`
 
 ``` purescript
-newGetFunctionDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetFunctionDefinitionResponse
+newGetFunctionDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetFunctionDefinitionResponse
 ```
 
 Constructs GetFunctionDefinitionResponse's fields from required parameters
@@ -2766,7 +2766,7 @@ Constructs GetFunctionDefinitionVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetFunctionDefinitionVersionResponse
-  = GetFunctionDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (FunctionDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetFunctionDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (FunctionDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2789,7 +2789,7 @@ Constructs GetFunctionDefinitionVersionResponse from required parameters
 #### `newGetFunctionDefinitionVersionResponse'`
 
 ``` purescript
-newGetFunctionDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (FunctionDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (FunctionDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetFunctionDefinitionVersionResponse
+newGetFunctionDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (FunctionDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (FunctionDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetFunctionDefinitionVersionResponse
 ```
 
 Constructs GetFunctionDefinitionVersionResponse's fields from required parameters
@@ -2830,7 +2830,7 @@ Constructs GetGroupCertificateAuthorityRequest's fields from required parameters
 
 ``` purescript
 newtype GetGroupCertificateAuthorityResponse
-  = GetGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn" :: NullOrUndefined (String), "GroupCertificateAuthorityId" :: NullOrUndefined (String), "PemEncodedCertificate" :: NullOrUndefined (String) }
+  = GetGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn" :: Maybe (String), "GroupCertificateAuthorityId" :: Maybe (String), "PemEncodedCertificate" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2853,7 +2853,7 @@ Constructs GetGroupCertificateAuthorityResponse from required parameters
 #### `newGetGroupCertificateAuthorityResponse'`
 
 ``` purescript
-newGetGroupCertificateAuthorityResponse' :: ({ "GroupCertificateAuthorityArn" :: NullOrUndefined (String), "GroupCertificateAuthorityId" :: NullOrUndefined (String), "PemEncodedCertificate" :: NullOrUndefined (String) } -> { "GroupCertificateAuthorityArn" :: NullOrUndefined (String), "GroupCertificateAuthorityId" :: NullOrUndefined (String), "PemEncodedCertificate" :: NullOrUndefined (String) }) -> GetGroupCertificateAuthorityResponse
+newGetGroupCertificateAuthorityResponse' :: ({ "GroupCertificateAuthorityArn" :: Maybe (String), "GroupCertificateAuthorityId" :: Maybe (String), "PemEncodedCertificate" :: Maybe (String) } -> { "GroupCertificateAuthorityArn" :: Maybe (String), "GroupCertificateAuthorityId" :: Maybe (String), "PemEncodedCertificate" :: Maybe (String) }) -> GetGroupCertificateAuthorityResponse
 ```
 
 Constructs GetGroupCertificateAuthorityResponse's fields from required parameters
@@ -2894,7 +2894,7 @@ Constructs GetGroupCertificateConfigurationRequest's fields from required parame
 
 ``` purescript
 newtype GetGroupCertificateConfigurationResponse
-  = GetGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) }
+  = GetGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2917,7 +2917,7 @@ Constructs GetGroupCertificateConfigurationResponse from required parameters
 #### `newGetGroupCertificateConfigurationResponse'`
 
 ``` purescript
-newGetGroupCertificateConfigurationResponse' :: ({ "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) } -> { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) }) -> GetGroupCertificateConfigurationResponse
+newGetGroupCertificateConfigurationResponse' :: ({ "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) } -> { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) }) -> GetGroupCertificateConfigurationResponse
 ```
 
 Constructs GetGroupCertificateConfigurationResponse's fields from required parameters
@@ -2958,7 +2958,7 @@ Constructs GetGroupRequest's fields from required parameters
 
 ``` purescript
 newtype GetGroupResponse
-  = GetGroupResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetGroupResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2981,7 +2981,7 @@ Constructs GetGroupResponse from required parameters
 #### `newGetGroupResponse'`
 
 ``` purescript
-newGetGroupResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetGroupResponse
+newGetGroupResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetGroupResponse
 ```
 
 Constructs GetGroupResponse's fields from required parameters
@@ -3022,7 +3022,7 @@ Constructs GetGroupVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetGroupVersionResponse
-  = GetGroupVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (GroupVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetGroupVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (GroupVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3045,7 +3045,7 @@ Constructs GetGroupVersionResponse from required parameters
 #### `newGetGroupVersionResponse'`
 
 ``` purescript
-newGetGroupVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (GroupVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (GroupVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetGroupVersionResponse
+newGetGroupVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (GroupVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (GroupVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetGroupVersionResponse
 ```
 
 Constructs GetGroupVersionResponse's fields from required parameters
@@ -3086,7 +3086,7 @@ Constructs GetLoggerDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype GetLoggerDefinitionResponse
-  = GetLoggerDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetLoggerDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3109,7 +3109,7 @@ Constructs GetLoggerDefinitionResponse from required parameters
 #### `newGetLoggerDefinitionResponse'`
 
 ``` purescript
-newGetLoggerDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetLoggerDefinitionResponse
+newGetLoggerDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetLoggerDefinitionResponse
 ```
 
 Constructs GetLoggerDefinitionResponse's fields from required parameters
@@ -3150,7 +3150,7 @@ Constructs GetLoggerDefinitionVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetLoggerDefinitionVersionResponse
-  = GetLoggerDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (LoggerDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetLoggerDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (LoggerDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3173,7 +3173,7 @@ Constructs GetLoggerDefinitionVersionResponse from required parameters
 #### `newGetLoggerDefinitionVersionResponse'`
 
 ``` purescript
-newGetLoggerDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (LoggerDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (LoggerDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetLoggerDefinitionVersionResponse
+newGetLoggerDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (LoggerDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (LoggerDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetLoggerDefinitionVersionResponse
 ```
 
 Constructs GetLoggerDefinitionVersionResponse's fields from required parameters
@@ -3214,7 +3214,7 @@ Constructs GetResourceDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype GetResourceDefinitionResponse
-  = GetResourceDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetResourceDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3237,7 +3237,7 @@ Constructs GetResourceDefinitionResponse from required parameters
 #### `newGetResourceDefinitionResponse'`
 
 ``` purescript
-newGetResourceDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetResourceDefinitionResponse
+newGetResourceDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetResourceDefinitionResponse
 ```
 
 Constructs GetResourceDefinitionResponse's fields from required parameters
@@ -3278,7 +3278,7 @@ Constructs GetResourceDefinitionVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetResourceDefinitionVersionResponse
-  = GetResourceDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ResourceDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetResourceDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (ResourceDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3301,7 +3301,7 @@ Constructs GetResourceDefinitionVersionResponse from required parameters
 #### `newGetResourceDefinitionVersionResponse'`
 
 ``` purescript
-newGetResourceDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ResourceDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ResourceDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetResourceDefinitionVersionResponse
+newGetResourceDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (ResourceDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (ResourceDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetResourceDefinitionVersionResponse
 ```
 
 Constructs GetResourceDefinitionVersionResponse's fields from required parameters
@@ -3326,7 +3326,7 @@ Encode GetServiceRoleForAccountRequest
 
 ``` purescript
 newtype GetServiceRoleForAccountResponse
-  = GetServiceRoleForAccountResponse { "AssociatedAt" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }
+  = GetServiceRoleForAccountResponse { "AssociatedAt" :: Maybe (String), "RoleArn" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3349,7 +3349,7 @@ Constructs GetServiceRoleForAccountResponse from required parameters
 #### `newGetServiceRoleForAccountResponse'`
 
 ``` purescript
-newGetServiceRoleForAccountResponse' :: ({ "AssociatedAt" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) } -> { "AssociatedAt" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }) -> GetServiceRoleForAccountResponse
+newGetServiceRoleForAccountResponse' :: ({ "AssociatedAt" :: Maybe (String), "RoleArn" :: Maybe (String) } -> { "AssociatedAt" :: Maybe (String), "RoleArn" :: Maybe (String) }) -> GetServiceRoleForAccountResponse
 ```
 
 Constructs GetServiceRoleForAccountResponse's fields from required parameters
@@ -3390,7 +3390,7 @@ Constructs GetSubscriptionDefinitionRequest's fields from required parameters
 
 ``` purescript
 newtype GetSubscriptionDefinitionResponse
-  = GetSubscriptionDefinitionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GetSubscriptionDefinitionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3413,7 +3413,7 @@ Constructs GetSubscriptionDefinitionResponse from required parameters
 #### `newGetSubscriptionDefinitionResponse'`
 
 ``` purescript
-newGetSubscriptionDefinitionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GetSubscriptionDefinitionResponse
+newGetSubscriptionDefinitionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GetSubscriptionDefinitionResponse
 ```
 
 Constructs GetSubscriptionDefinitionResponse's fields from required parameters
@@ -3454,7 +3454,7 @@ Constructs GetSubscriptionDefinitionVersionRequest's fields from required parame
 
 ``` purescript
 newtype GetSubscriptionDefinitionVersionResponse
-  = GetSubscriptionDefinitionVersionResponse { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (SubscriptionDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = GetSubscriptionDefinitionVersionResponse { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (SubscriptionDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3477,7 +3477,7 @@ Constructs GetSubscriptionDefinitionVersionResponse from required parameters
 #### `newGetSubscriptionDefinitionVersionResponse'`
 
 ``` purescript
-newGetSubscriptionDefinitionVersionResponse' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (SubscriptionDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (SubscriptionDefinitionVersion), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> GetSubscriptionDefinitionVersionResponse
+newGetSubscriptionDefinitionVersionResponse' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (SubscriptionDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Definition" :: Maybe (SubscriptionDefinitionVersion), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> GetSubscriptionDefinitionVersionResponse
 ```
 
 Constructs GetSubscriptionDefinitionVersionResponse's fields from required parameters
@@ -3486,7 +3486,7 @@ Constructs GetSubscriptionDefinitionVersionResponse's fields from required param
 
 ``` purescript
 newtype GroupCertificateAuthorityProperties
-  = GroupCertificateAuthorityProperties { "GroupCertificateAuthorityArn" :: NullOrUndefined (String), "GroupCertificateAuthorityId" :: NullOrUndefined (String) }
+  = GroupCertificateAuthorityProperties { "GroupCertificateAuthorityArn" :: Maybe (String), "GroupCertificateAuthorityId" :: Maybe (String) }
 ```
 
 Information on group certificate authority properties
@@ -3511,7 +3511,7 @@ Constructs GroupCertificateAuthorityProperties from required parameters
 #### `newGroupCertificateAuthorityProperties'`
 
 ``` purescript
-newGroupCertificateAuthorityProperties' :: ({ "GroupCertificateAuthorityArn" :: NullOrUndefined (String), "GroupCertificateAuthorityId" :: NullOrUndefined (String) } -> { "GroupCertificateAuthorityArn" :: NullOrUndefined (String), "GroupCertificateAuthorityId" :: NullOrUndefined (String) }) -> GroupCertificateAuthorityProperties
+newGroupCertificateAuthorityProperties' :: ({ "GroupCertificateAuthorityArn" :: Maybe (String), "GroupCertificateAuthorityId" :: Maybe (String) } -> { "GroupCertificateAuthorityArn" :: Maybe (String), "GroupCertificateAuthorityId" :: Maybe (String) }) -> GroupCertificateAuthorityProperties
 ```
 
 Constructs GroupCertificateAuthorityProperties's fields from required parameters
@@ -3520,7 +3520,7 @@ Constructs GroupCertificateAuthorityProperties's fields from required parameters
 
 ``` purescript
 newtype GroupCertificateConfiguration
-  = GroupCertificateConfiguration { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) }
+  = GroupCertificateConfiguration { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) }
 ```
 
 Information on the group certificate configuration
@@ -3545,7 +3545,7 @@ Constructs GroupCertificateConfiguration from required parameters
 #### `newGroupCertificateConfiguration'`
 
 ``` purescript
-newGroupCertificateConfiguration' :: ({ "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) } -> { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) }) -> GroupCertificateConfiguration
+newGroupCertificateConfiguration' :: ({ "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) } -> { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) }) -> GroupCertificateConfiguration
 ```
 
 Constructs GroupCertificateConfiguration's fields from required parameters
@@ -3554,7 +3554,7 @@ Constructs GroupCertificateConfiguration's fields from required parameters
 
 ``` purescript
 newtype GroupInformation
-  = GroupInformation { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = GroupInformation { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 Information on the group
@@ -3579,7 +3579,7 @@ Constructs GroupInformation from required parameters
 #### `newGroupInformation'`
 
 ``` purescript
-newGroupInformation' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "LastUpdatedTimestamp" :: NullOrUndefined (String), "LatestVersion" :: NullOrUndefined (String), "LatestVersionArn" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> GroupInformation
+newGroupInformation' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "LastUpdatedTimestamp" :: Maybe (String), "LatestVersion" :: Maybe (String), "LatestVersionArn" :: Maybe (String), "Name" :: Maybe (String) }) -> GroupInformation
 ```
 
 Constructs GroupInformation's fields from required parameters
@@ -3588,7 +3588,7 @@ Constructs GroupInformation's fields from required parameters
 
 ``` purescript
 newtype GroupOwnerSetting
-  = GroupOwnerSetting { "AutoAddGroupOwner" :: NullOrUndefined (Boolean), "GroupOwner" :: NullOrUndefined (String) }
+  = GroupOwnerSetting { "AutoAddGroupOwner" :: Maybe (Boolean), "GroupOwner" :: Maybe (String) }
 ```
 
 Group owner related settings for local resources.
@@ -3613,7 +3613,7 @@ Constructs GroupOwnerSetting from required parameters
 #### `newGroupOwnerSetting'`
 
 ``` purescript
-newGroupOwnerSetting' :: ({ "AutoAddGroupOwner" :: NullOrUndefined (Boolean), "GroupOwner" :: NullOrUndefined (String) } -> { "AutoAddGroupOwner" :: NullOrUndefined (Boolean), "GroupOwner" :: NullOrUndefined (String) }) -> GroupOwnerSetting
+newGroupOwnerSetting' :: ({ "AutoAddGroupOwner" :: Maybe (Boolean), "GroupOwner" :: Maybe (String) } -> { "AutoAddGroupOwner" :: Maybe (Boolean), "GroupOwner" :: Maybe (String) }) -> GroupOwnerSetting
 ```
 
 Constructs GroupOwnerSetting's fields from required parameters
@@ -3622,7 +3622,7 @@ Constructs GroupOwnerSetting's fields from required parameters
 
 ``` purescript
 newtype GroupVersion
-  = GroupVersion { "CoreDefinitionVersionArn" :: NullOrUndefined (String), "DeviceDefinitionVersionArn" :: NullOrUndefined (String), "FunctionDefinitionVersionArn" :: NullOrUndefined (String), "LoggerDefinitionVersionArn" :: NullOrUndefined (String), "ResourceDefinitionVersionArn" :: NullOrUndefined (String), "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) }
+  = GroupVersion { "CoreDefinitionVersionArn" :: Maybe (String), "DeviceDefinitionVersionArn" :: Maybe (String), "FunctionDefinitionVersionArn" :: Maybe (String), "LoggerDefinitionVersionArn" :: Maybe (String), "ResourceDefinitionVersionArn" :: Maybe (String), "SubscriptionDefinitionVersionArn" :: Maybe (String) }
 ```
 
 Information on group version
@@ -3647,7 +3647,7 @@ Constructs GroupVersion from required parameters
 #### `newGroupVersion'`
 
 ``` purescript
-newGroupVersion' :: ({ "CoreDefinitionVersionArn" :: NullOrUndefined (String), "DeviceDefinitionVersionArn" :: NullOrUndefined (String), "FunctionDefinitionVersionArn" :: NullOrUndefined (String), "LoggerDefinitionVersionArn" :: NullOrUndefined (String), "ResourceDefinitionVersionArn" :: NullOrUndefined (String), "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) } -> { "CoreDefinitionVersionArn" :: NullOrUndefined (String), "DeviceDefinitionVersionArn" :: NullOrUndefined (String), "FunctionDefinitionVersionArn" :: NullOrUndefined (String), "LoggerDefinitionVersionArn" :: NullOrUndefined (String), "ResourceDefinitionVersionArn" :: NullOrUndefined (String), "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) }) -> GroupVersion
+newGroupVersion' :: ({ "CoreDefinitionVersionArn" :: Maybe (String), "DeviceDefinitionVersionArn" :: Maybe (String), "FunctionDefinitionVersionArn" :: Maybe (String), "LoggerDefinitionVersionArn" :: Maybe (String), "ResourceDefinitionVersionArn" :: Maybe (String), "SubscriptionDefinitionVersionArn" :: Maybe (String) } -> { "CoreDefinitionVersionArn" :: Maybe (String), "DeviceDefinitionVersionArn" :: Maybe (String), "FunctionDefinitionVersionArn" :: Maybe (String), "LoggerDefinitionVersionArn" :: Maybe (String), "ResourceDefinitionVersionArn" :: Maybe (String), "SubscriptionDefinitionVersionArn" :: Maybe (String) }) -> GroupVersion
 ```
 
 Constructs GroupVersion's fields from required parameters
@@ -3656,7 +3656,7 @@ Constructs GroupVersion's fields from required parameters
 
 ``` purescript
 newtype InternalServerErrorException
-  = InternalServerErrorException { "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) }
+  = InternalServerErrorException { "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) }
 ```
 
 General Error
@@ -3681,7 +3681,7 @@ Constructs InternalServerErrorException from required parameters
 #### `newInternalServerErrorException'`
 
 ``` purescript
-newInternalServerErrorException' :: ({ "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) } -> { "ErrorDetails" :: NullOrUndefined (ErrorDetails), "Message" :: NullOrUndefined (String) }) -> InternalServerErrorException
+newInternalServerErrorException' :: ({ "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) } -> { "ErrorDetails" :: Maybe (ErrorDetails), "Message" :: Maybe (String) }) -> InternalServerErrorException
 ```
 
 Constructs InternalServerErrorException's fields from required parameters
@@ -3690,7 +3690,7 @@ Constructs InternalServerErrorException's fields from required parameters
 
 ``` purescript
 newtype ListCoreDefinitionVersionsRequest
-  = ListCoreDefinitionVersionsRequest { "CoreDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListCoreDefinitionVersionsRequest { "CoreDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3713,7 +3713,7 @@ Constructs ListCoreDefinitionVersionsRequest from required parameters
 #### `newListCoreDefinitionVersionsRequest'`
 
 ``` purescript
-newListCoreDefinitionVersionsRequest' :: String -> ({ "CoreDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "CoreDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListCoreDefinitionVersionsRequest
+newListCoreDefinitionVersionsRequest' :: String -> ({ "CoreDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "CoreDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListCoreDefinitionVersionsRequest
 ```
 
 Constructs ListCoreDefinitionVersionsRequest's fields from required parameters
@@ -3722,7 +3722,7 @@ Constructs ListCoreDefinitionVersionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListCoreDefinitionVersionsResponse
-  = ListCoreDefinitionVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListCoreDefinitionVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -3745,7 +3745,7 @@ Constructs ListCoreDefinitionVersionsResponse from required parameters
 #### `newListCoreDefinitionVersionsResponse'`
 
 ``` purescript
-newListCoreDefinitionVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListCoreDefinitionVersionsResponse
+newListCoreDefinitionVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListCoreDefinitionVersionsResponse
 ```
 
 Constructs ListCoreDefinitionVersionsResponse's fields from required parameters
@@ -3754,7 +3754,7 @@ Constructs ListCoreDefinitionVersionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListCoreDefinitionsRequest
-  = ListCoreDefinitionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListCoreDefinitionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3777,7 +3777,7 @@ Constructs ListCoreDefinitionsRequest from required parameters
 #### `newListCoreDefinitionsRequest'`
 
 ``` purescript
-newListCoreDefinitionsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListCoreDefinitionsRequest
+newListCoreDefinitionsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListCoreDefinitionsRequest
 ```
 
 Constructs ListCoreDefinitionsRequest's fields from required parameters
@@ -3786,7 +3786,7 @@ Constructs ListCoreDefinitionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListCoreDefinitionsResponse
-  = ListCoreDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListCoreDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3809,7 +3809,7 @@ Constructs ListCoreDefinitionsResponse from required parameters
 #### `newListCoreDefinitionsResponse'`
 
 ``` purescript
-newListCoreDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListCoreDefinitionsResponse
+newListCoreDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListCoreDefinitionsResponse
 ```
 
 Constructs ListCoreDefinitionsResponse's fields from required parameters
@@ -3818,7 +3818,7 @@ Constructs ListCoreDefinitionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListDefinitionsResponse
-  = ListDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 List of definition responses
@@ -3843,7 +3843,7 @@ Constructs ListDefinitionsResponse from required parameters
 #### `newListDefinitionsResponse'`
 
 ``` purescript
-newListDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListDefinitionsResponse
+newListDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListDefinitionsResponse
 ```
 
 Constructs ListDefinitionsResponse's fields from required parameters
@@ -3852,7 +3852,7 @@ Constructs ListDefinitionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListDeploymentsRequest
-  = ListDeploymentsRequest { "GroupId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListDeploymentsRequest { "GroupId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3875,7 +3875,7 @@ Constructs ListDeploymentsRequest from required parameters
 #### `newListDeploymentsRequest'`
 
 ``` purescript
-newListDeploymentsRequest' :: String -> ({ "GroupId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "GroupId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListDeploymentsRequest
+newListDeploymentsRequest' :: String -> ({ "GroupId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "GroupId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListDeploymentsRequest
 ```
 
 Constructs ListDeploymentsRequest's fields from required parameters
@@ -3884,7 +3884,7 @@ Constructs ListDeploymentsRequest's fields from required parameters
 
 ``` purescript
 newtype ListDeploymentsResponse
-  = ListDeploymentsResponse { "Deployments" :: NullOrUndefined (Deployments), "NextToken" :: NullOrUndefined (String) }
+  = ListDeploymentsResponse { "Deployments" :: Maybe (Deployments), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3907,7 +3907,7 @@ Constructs ListDeploymentsResponse from required parameters
 #### `newListDeploymentsResponse'`
 
 ``` purescript
-newListDeploymentsResponse' :: ({ "Deployments" :: NullOrUndefined (Deployments), "NextToken" :: NullOrUndefined (String) } -> { "Deployments" :: NullOrUndefined (Deployments), "NextToken" :: NullOrUndefined (String) }) -> ListDeploymentsResponse
+newListDeploymentsResponse' :: ({ "Deployments" :: Maybe (Deployments), "NextToken" :: Maybe (String) } -> { "Deployments" :: Maybe (Deployments), "NextToken" :: Maybe (String) }) -> ListDeploymentsResponse
 ```
 
 Constructs ListDeploymentsResponse's fields from required parameters
@@ -3916,7 +3916,7 @@ Constructs ListDeploymentsResponse's fields from required parameters
 
 ``` purescript
 newtype ListDeviceDefinitionVersionsRequest
-  = ListDeviceDefinitionVersionsRequest { "DeviceDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListDeviceDefinitionVersionsRequest { "DeviceDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3939,7 +3939,7 @@ Constructs ListDeviceDefinitionVersionsRequest from required parameters
 #### `newListDeviceDefinitionVersionsRequest'`
 
 ``` purescript
-newListDeviceDefinitionVersionsRequest' :: String -> ({ "DeviceDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "DeviceDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListDeviceDefinitionVersionsRequest
+newListDeviceDefinitionVersionsRequest' :: String -> ({ "DeviceDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "DeviceDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListDeviceDefinitionVersionsRequest
 ```
 
 Constructs ListDeviceDefinitionVersionsRequest's fields from required parameters
@@ -3948,7 +3948,7 @@ Constructs ListDeviceDefinitionVersionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListDeviceDefinitionVersionsResponse
-  = ListDeviceDefinitionVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListDeviceDefinitionVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -3971,7 +3971,7 @@ Constructs ListDeviceDefinitionVersionsResponse from required parameters
 #### `newListDeviceDefinitionVersionsResponse'`
 
 ``` purescript
-newListDeviceDefinitionVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListDeviceDefinitionVersionsResponse
+newListDeviceDefinitionVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListDeviceDefinitionVersionsResponse
 ```
 
 Constructs ListDeviceDefinitionVersionsResponse's fields from required parameters
@@ -3980,7 +3980,7 @@ Constructs ListDeviceDefinitionVersionsResponse's fields from required parameter
 
 ``` purescript
 newtype ListDeviceDefinitionsRequest
-  = ListDeviceDefinitionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListDeviceDefinitionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4003,7 +4003,7 @@ Constructs ListDeviceDefinitionsRequest from required parameters
 #### `newListDeviceDefinitionsRequest'`
 
 ``` purescript
-newListDeviceDefinitionsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListDeviceDefinitionsRequest
+newListDeviceDefinitionsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListDeviceDefinitionsRequest
 ```
 
 Constructs ListDeviceDefinitionsRequest's fields from required parameters
@@ -4012,7 +4012,7 @@ Constructs ListDeviceDefinitionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListDeviceDefinitionsResponse
-  = ListDeviceDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListDeviceDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4035,7 +4035,7 @@ Constructs ListDeviceDefinitionsResponse from required parameters
 #### `newListDeviceDefinitionsResponse'`
 
 ``` purescript
-newListDeviceDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListDeviceDefinitionsResponse
+newListDeviceDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListDeviceDefinitionsResponse
 ```
 
 Constructs ListDeviceDefinitionsResponse's fields from required parameters
@@ -4044,7 +4044,7 @@ Constructs ListDeviceDefinitionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListFunctionDefinitionVersionsRequest
-  = ListFunctionDefinitionVersionsRequest { "FunctionDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListFunctionDefinitionVersionsRequest { "FunctionDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4067,7 +4067,7 @@ Constructs ListFunctionDefinitionVersionsRequest from required parameters
 #### `newListFunctionDefinitionVersionsRequest'`
 
 ``` purescript
-newListFunctionDefinitionVersionsRequest' :: String -> ({ "FunctionDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "FunctionDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListFunctionDefinitionVersionsRequest
+newListFunctionDefinitionVersionsRequest' :: String -> ({ "FunctionDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "FunctionDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListFunctionDefinitionVersionsRequest
 ```
 
 Constructs ListFunctionDefinitionVersionsRequest's fields from required parameters
@@ -4076,7 +4076,7 @@ Constructs ListFunctionDefinitionVersionsRequest's fields from required paramete
 
 ``` purescript
 newtype ListFunctionDefinitionVersionsResponse
-  = ListFunctionDefinitionVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListFunctionDefinitionVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -4099,7 +4099,7 @@ Constructs ListFunctionDefinitionVersionsResponse from required parameters
 #### `newListFunctionDefinitionVersionsResponse'`
 
 ``` purescript
-newListFunctionDefinitionVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListFunctionDefinitionVersionsResponse
+newListFunctionDefinitionVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListFunctionDefinitionVersionsResponse
 ```
 
 Constructs ListFunctionDefinitionVersionsResponse's fields from required parameters
@@ -4108,7 +4108,7 @@ Constructs ListFunctionDefinitionVersionsResponse's fields from required paramet
 
 ``` purescript
 newtype ListFunctionDefinitionsRequest
-  = ListFunctionDefinitionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListFunctionDefinitionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4131,7 +4131,7 @@ Constructs ListFunctionDefinitionsRequest from required parameters
 #### `newListFunctionDefinitionsRequest'`
 
 ``` purescript
-newListFunctionDefinitionsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListFunctionDefinitionsRequest
+newListFunctionDefinitionsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListFunctionDefinitionsRequest
 ```
 
 Constructs ListFunctionDefinitionsRequest's fields from required parameters
@@ -4140,7 +4140,7 @@ Constructs ListFunctionDefinitionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListFunctionDefinitionsResponse
-  = ListFunctionDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListFunctionDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4163,7 +4163,7 @@ Constructs ListFunctionDefinitionsResponse from required parameters
 #### `newListFunctionDefinitionsResponse'`
 
 ``` purescript
-newListFunctionDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListFunctionDefinitionsResponse
+newListFunctionDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListFunctionDefinitionsResponse
 ```
 
 Constructs ListFunctionDefinitionsResponse's fields from required parameters
@@ -4204,7 +4204,7 @@ Constructs ListGroupCertificateAuthoritiesRequest's fields from required paramet
 
 ``` purescript
 newtype ListGroupCertificateAuthoritiesResponse
-  = ListGroupCertificateAuthoritiesResponse { "GroupCertificateAuthorities" :: NullOrUndefined (ListOfGroupCertificateAuthorityProperties) }
+  = ListGroupCertificateAuthoritiesResponse { "GroupCertificateAuthorities" :: Maybe (ListOfGroupCertificateAuthorityProperties) }
 ```
 
 ##### Instances
@@ -4227,7 +4227,7 @@ Constructs ListGroupCertificateAuthoritiesResponse from required parameters
 #### `newListGroupCertificateAuthoritiesResponse'`
 
 ``` purescript
-newListGroupCertificateAuthoritiesResponse' :: ({ "GroupCertificateAuthorities" :: NullOrUndefined (ListOfGroupCertificateAuthorityProperties) } -> { "GroupCertificateAuthorities" :: NullOrUndefined (ListOfGroupCertificateAuthorityProperties) }) -> ListGroupCertificateAuthoritiesResponse
+newListGroupCertificateAuthoritiesResponse' :: ({ "GroupCertificateAuthorities" :: Maybe (ListOfGroupCertificateAuthorityProperties) } -> { "GroupCertificateAuthorities" :: Maybe (ListOfGroupCertificateAuthorityProperties) }) -> ListGroupCertificateAuthoritiesResponse
 ```
 
 Constructs ListGroupCertificateAuthoritiesResponse's fields from required parameters
@@ -4236,7 +4236,7 @@ Constructs ListGroupCertificateAuthoritiesResponse's fields from required parame
 
 ``` purescript
 newtype ListGroupVersionsRequest
-  = ListGroupVersionsRequest { "GroupId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListGroupVersionsRequest { "GroupId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4259,7 +4259,7 @@ Constructs ListGroupVersionsRequest from required parameters
 #### `newListGroupVersionsRequest'`
 
 ``` purescript
-newListGroupVersionsRequest' :: String -> ({ "GroupId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "GroupId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListGroupVersionsRequest
+newListGroupVersionsRequest' :: String -> ({ "GroupId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "GroupId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListGroupVersionsRequest
 ```
 
 Constructs ListGroupVersionsRequest's fields from required parameters
@@ -4268,7 +4268,7 @@ Constructs ListGroupVersionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListGroupVersionsResponse
-  = ListGroupVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListGroupVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -4291,7 +4291,7 @@ Constructs ListGroupVersionsResponse from required parameters
 #### `newListGroupVersionsResponse'`
 
 ``` purescript
-newListGroupVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListGroupVersionsResponse
+newListGroupVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListGroupVersionsResponse
 ```
 
 Constructs ListGroupVersionsResponse's fields from required parameters
@@ -4300,7 +4300,7 @@ Constructs ListGroupVersionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListGroupsRequest
-  = ListGroupsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListGroupsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4323,7 +4323,7 @@ Constructs ListGroupsRequest from required parameters
 #### `newListGroupsRequest'`
 
 ``` purescript
-newListGroupsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListGroupsRequest
+newListGroupsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListGroupsRequest
 ```
 
 Constructs ListGroupsRequest's fields from required parameters
@@ -4332,7 +4332,7 @@ Constructs ListGroupsRequest's fields from required parameters
 
 ``` purescript
 newtype ListGroupsResponse
-  = ListGroupsResponse { "Groups" :: NullOrUndefined (ListOfGroupInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListGroupsResponse { "Groups" :: Maybe (ListOfGroupInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4355,7 +4355,7 @@ Constructs ListGroupsResponse from required parameters
 #### `newListGroupsResponse'`
 
 ``` purescript
-newListGroupsResponse' :: ({ "Groups" :: NullOrUndefined (ListOfGroupInformation), "NextToken" :: NullOrUndefined (String) } -> { "Groups" :: NullOrUndefined (ListOfGroupInformation), "NextToken" :: NullOrUndefined (String) }) -> ListGroupsResponse
+newListGroupsResponse' :: ({ "Groups" :: Maybe (ListOfGroupInformation), "NextToken" :: Maybe (String) } -> { "Groups" :: Maybe (ListOfGroupInformation), "NextToken" :: Maybe (String) }) -> ListGroupsResponse
 ```
 
 Constructs ListGroupsResponse's fields from required parameters
@@ -4364,7 +4364,7 @@ Constructs ListGroupsResponse's fields from required parameters
 
 ``` purescript
 newtype ListLoggerDefinitionVersionsRequest
-  = ListLoggerDefinitionVersionsRequest { "LoggerDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListLoggerDefinitionVersionsRequest { "LoggerDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4387,7 +4387,7 @@ Constructs ListLoggerDefinitionVersionsRequest from required parameters
 #### `newListLoggerDefinitionVersionsRequest'`
 
 ``` purescript
-newListLoggerDefinitionVersionsRequest' :: String -> ({ "LoggerDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "LoggerDefinitionId" :: String, "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListLoggerDefinitionVersionsRequest
+newListLoggerDefinitionVersionsRequest' :: String -> ({ "LoggerDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "LoggerDefinitionId" :: String, "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListLoggerDefinitionVersionsRequest
 ```
 
 Constructs ListLoggerDefinitionVersionsRequest's fields from required parameters
@@ -4396,7 +4396,7 @@ Constructs ListLoggerDefinitionVersionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListLoggerDefinitionVersionsResponse
-  = ListLoggerDefinitionVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListLoggerDefinitionVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -4419,7 +4419,7 @@ Constructs ListLoggerDefinitionVersionsResponse from required parameters
 #### `newListLoggerDefinitionVersionsResponse'`
 
 ``` purescript
-newListLoggerDefinitionVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListLoggerDefinitionVersionsResponse
+newListLoggerDefinitionVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListLoggerDefinitionVersionsResponse
 ```
 
 Constructs ListLoggerDefinitionVersionsResponse's fields from required parameters
@@ -4428,7 +4428,7 @@ Constructs ListLoggerDefinitionVersionsResponse's fields from required parameter
 
 ``` purescript
 newtype ListLoggerDefinitionsRequest
-  = ListLoggerDefinitionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListLoggerDefinitionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4451,7 +4451,7 @@ Constructs ListLoggerDefinitionsRequest from required parameters
 #### `newListLoggerDefinitionsRequest'`
 
 ``` purescript
-newListLoggerDefinitionsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListLoggerDefinitionsRequest
+newListLoggerDefinitionsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListLoggerDefinitionsRequest
 ```
 
 Constructs ListLoggerDefinitionsRequest's fields from required parameters
@@ -4460,7 +4460,7 @@ Constructs ListLoggerDefinitionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListLoggerDefinitionsResponse
-  = ListLoggerDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListLoggerDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4483,7 +4483,7 @@ Constructs ListLoggerDefinitionsResponse from required parameters
 #### `newListLoggerDefinitionsResponse'`
 
 ``` purescript
-newListLoggerDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListLoggerDefinitionsResponse
+newListLoggerDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListLoggerDefinitionsResponse
 ```
 
 Constructs ListLoggerDefinitionsResponse's fields from required parameters
@@ -4684,7 +4684,7 @@ Encode ListOfVersionInformation
 
 ``` purescript
 newtype ListResourceDefinitionVersionsRequest
-  = ListResourceDefinitionVersionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String), "ResourceDefinitionId" :: String }
+  = ListResourceDefinitionVersionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String), "ResourceDefinitionId" :: String }
 ```
 
 ##### Instances
@@ -4707,7 +4707,7 @@ Constructs ListResourceDefinitionVersionsRequest from required parameters
 #### `newListResourceDefinitionVersionsRequest'`
 
 ``` purescript
-newListResourceDefinitionVersionsRequest' :: String -> ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String), "ResourceDefinitionId" :: String } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String), "ResourceDefinitionId" :: String }) -> ListResourceDefinitionVersionsRequest
+newListResourceDefinitionVersionsRequest' :: String -> ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String), "ResourceDefinitionId" :: String } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String), "ResourceDefinitionId" :: String }) -> ListResourceDefinitionVersionsRequest
 ```
 
 Constructs ListResourceDefinitionVersionsRequest's fields from required parameters
@@ -4716,7 +4716,7 @@ Constructs ListResourceDefinitionVersionsRequest's fields from required paramete
 
 ``` purescript
 newtype ListResourceDefinitionVersionsResponse
-  = ListResourceDefinitionVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListResourceDefinitionVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -4739,7 +4739,7 @@ Constructs ListResourceDefinitionVersionsResponse from required parameters
 #### `newListResourceDefinitionVersionsResponse'`
 
 ``` purescript
-newListResourceDefinitionVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListResourceDefinitionVersionsResponse
+newListResourceDefinitionVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListResourceDefinitionVersionsResponse
 ```
 
 Constructs ListResourceDefinitionVersionsResponse's fields from required parameters
@@ -4748,7 +4748,7 @@ Constructs ListResourceDefinitionVersionsResponse's fields from required paramet
 
 ``` purescript
 newtype ListResourceDefinitionsRequest
-  = ListResourceDefinitionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListResourceDefinitionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4771,7 +4771,7 @@ Constructs ListResourceDefinitionsRequest from required parameters
 #### `newListResourceDefinitionsRequest'`
 
 ``` purescript
-newListResourceDefinitionsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListResourceDefinitionsRequest
+newListResourceDefinitionsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListResourceDefinitionsRequest
 ```
 
 Constructs ListResourceDefinitionsRequest's fields from required parameters
@@ -4780,7 +4780,7 @@ Constructs ListResourceDefinitionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListResourceDefinitionsResponse
-  = ListResourceDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListResourceDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4803,7 +4803,7 @@ Constructs ListResourceDefinitionsResponse from required parameters
 #### `newListResourceDefinitionsResponse'`
 
 ``` purescript
-newListResourceDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListResourceDefinitionsResponse
+newListResourceDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListResourceDefinitionsResponse
 ```
 
 Constructs ListResourceDefinitionsResponse's fields from required parameters
@@ -4812,7 +4812,7 @@ Constructs ListResourceDefinitionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListSubscriptionDefinitionVersionsRequest
-  = ListSubscriptionDefinitionVersionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String }
+  = ListSubscriptionDefinitionVersionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String), "SubscriptionDefinitionId" :: String }
 ```
 
 ##### Instances
@@ -4835,7 +4835,7 @@ Constructs ListSubscriptionDefinitionVersionsRequest from required parameters
 #### `newListSubscriptionDefinitionVersionsRequest'`
 
 ``` purescript
-newListSubscriptionDefinitionVersionsRequest' :: String -> ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String }) -> ListSubscriptionDefinitionVersionsRequest
+newListSubscriptionDefinitionVersionsRequest' :: String -> ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String), "SubscriptionDefinitionId" :: String } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String), "SubscriptionDefinitionId" :: String }) -> ListSubscriptionDefinitionVersionsRequest
 ```
 
 Constructs ListSubscriptionDefinitionVersionsRequest's fields from required parameters
@@ -4844,7 +4844,7 @@ Constructs ListSubscriptionDefinitionVersionsRequest's fields from required para
 
 ``` purescript
 newtype ListSubscriptionDefinitionVersionsResponse
-  = ListSubscriptionDefinitionVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListSubscriptionDefinitionVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 ##### Instances
@@ -4867,7 +4867,7 @@ Constructs ListSubscriptionDefinitionVersionsResponse from required parameters
 #### `newListSubscriptionDefinitionVersionsResponse'`
 
 ``` purescript
-newListSubscriptionDefinitionVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListSubscriptionDefinitionVersionsResponse
+newListSubscriptionDefinitionVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListSubscriptionDefinitionVersionsResponse
 ```
 
 Constructs ListSubscriptionDefinitionVersionsResponse's fields from required parameters
@@ -4876,7 +4876,7 @@ Constructs ListSubscriptionDefinitionVersionsResponse's fields from required par
 
 ``` purescript
 newtype ListSubscriptionDefinitionsRequest
-  = ListSubscriptionDefinitionsRequest { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }
+  = ListSubscriptionDefinitionsRequest { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4899,7 +4899,7 @@ Constructs ListSubscriptionDefinitionsRequest from required parameters
 #### `newListSubscriptionDefinitionsRequest'`
 
 ``` purescript
-newListSubscriptionDefinitionsRequest' :: ({ "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (String), "NextToken" :: NullOrUndefined (String) }) -> ListSubscriptionDefinitionsRequest
+newListSubscriptionDefinitionsRequest' :: ({ "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (String), "NextToken" :: Maybe (String) }) -> ListSubscriptionDefinitionsRequest
 ```
 
 Constructs ListSubscriptionDefinitionsRequest's fields from required parameters
@@ -4908,7 +4908,7 @@ Constructs ListSubscriptionDefinitionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListSubscriptionDefinitionsResponse
-  = ListSubscriptionDefinitionsResponse { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }
+  = ListSubscriptionDefinitionsResponse { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4931,7 +4931,7 @@ Constructs ListSubscriptionDefinitionsResponse from required parameters
 #### `newListSubscriptionDefinitionsResponse'`
 
 ``` purescript
-newListSubscriptionDefinitionsResponse' :: ({ "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) } -> { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation), "NextToken" :: NullOrUndefined (String) }) -> ListSubscriptionDefinitionsResponse
+newListSubscriptionDefinitionsResponse' :: ({ "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) } -> { "Definitions" :: Maybe (ListOfDefinitionInformation), "NextToken" :: Maybe (String) }) -> ListSubscriptionDefinitionsResponse
 ```
 
 Constructs ListSubscriptionDefinitionsResponse's fields from required parameters
@@ -4940,7 +4940,7 @@ Constructs ListSubscriptionDefinitionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListVersionsResponse
-  = ListVersionsResponse { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }
+  = ListVersionsResponse { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }
 ```
 
 List of versions response
@@ -4965,7 +4965,7 @@ Constructs ListVersionsResponse from required parameters
 #### `newListVersionsResponse'`
 
 ``` purescript
-newListVersionsResponse' :: ({ "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> { "NextToken" :: NullOrUndefined (String), "Versions" :: NullOrUndefined (ListOfVersionInformation) }) -> ListVersionsResponse
+newListVersionsResponse' :: ({ "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) } -> { "NextToken" :: Maybe (String), "Versions" :: Maybe (ListOfVersionInformation) }) -> ListVersionsResponse
 ```
 
 Constructs ListVersionsResponse's fields from required parameters
@@ -4974,7 +4974,7 @@ Constructs ListVersionsResponse's fields from required parameters
 
 ``` purescript
 newtype LocalDeviceResourceData
-  = LocalDeviceResourceData { "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting), "SourcePath" :: NullOrUndefined (String) }
+  = LocalDeviceResourceData { "GroupOwnerSetting" :: Maybe (GroupOwnerSetting), "SourcePath" :: Maybe (String) }
 ```
 
 Attributes that define the Local Device Resource.
@@ -4999,7 +4999,7 @@ Constructs LocalDeviceResourceData from required parameters
 #### `newLocalDeviceResourceData'`
 
 ``` purescript
-newLocalDeviceResourceData' :: ({ "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting), "SourcePath" :: NullOrUndefined (String) } -> { "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting), "SourcePath" :: NullOrUndefined (String) }) -> LocalDeviceResourceData
+newLocalDeviceResourceData' :: ({ "GroupOwnerSetting" :: Maybe (GroupOwnerSetting), "SourcePath" :: Maybe (String) } -> { "GroupOwnerSetting" :: Maybe (GroupOwnerSetting), "SourcePath" :: Maybe (String) }) -> LocalDeviceResourceData
 ```
 
 Constructs LocalDeviceResourceData's fields from required parameters
@@ -5008,7 +5008,7 @@ Constructs LocalDeviceResourceData's fields from required parameters
 
 ``` purescript
 newtype LocalVolumeResourceData
-  = LocalVolumeResourceData { "DestinationPath" :: NullOrUndefined (String), "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting), "SourcePath" :: NullOrUndefined (String) }
+  = LocalVolumeResourceData { "DestinationPath" :: Maybe (String), "GroupOwnerSetting" :: Maybe (GroupOwnerSetting), "SourcePath" :: Maybe (String) }
 ```
 
 Attributes that define the Local Volume Resource.
@@ -5033,7 +5033,7 @@ Constructs LocalVolumeResourceData from required parameters
 #### `newLocalVolumeResourceData'`
 
 ``` purescript
-newLocalVolumeResourceData' :: ({ "DestinationPath" :: NullOrUndefined (String), "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting), "SourcePath" :: NullOrUndefined (String) } -> { "DestinationPath" :: NullOrUndefined (String), "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting), "SourcePath" :: NullOrUndefined (String) }) -> LocalVolumeResourceData
+newLocalVolumeResourceData' :: ({ "DestinationPath" :: Maybe (String), "GroupOwnerSetting" :: Maybe (GroupOwnerSetting), "SourcePath" :: Maybe (String) } -> { "DestinationPath" :: Maybe (String), "GroupOwnerSetting" :: Maybe (GroupOwnerSetting), "SourcePath" :: Maybe (String) }) -> LocalVolumeResourceData
 ```
 
 Constructs LocalVolumeResourceData's fields from required parameters
@@ -5042,7 +5042,7 @@ Constructs LocalVolumeResourceData's fields from required parameters
 
 ``` purescript
 newtype Logger
-  = Logger { "Component" :: NullOrUndefined (LoggerComponent), "Id" :: NullOrUndefined (String), "Level" :: NullOrUndefined (LoggerLevel), "Space" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (LoggerType) }
+  = Logger { "Component" :: Maybe (LoggerComponent), "Id" :: Maybe (String), "Level" :: Maybe (LoggerLevel), "Space" :: Maybe (Int), "Type" :: Maybe (LoggerType) }
 ```
 
 Information on the Logger
@@ -5067,7 +5067,7 @@ Constructs Logger from required parameters
 #### `newLogger'`
 
 ``` purescript
-newLogger' :: ({ "Component" :: NullOrUndefined (LoggerComponent), "Id" :: NullOrUndefined (String), "Level" :: NullOrUndefined (LoggerLevel), "Space" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (LoggerType) } -> { "Component" :: NullOrUndefined (LoggerComponent), "Id" :: NullOrUndefined (String), "Level" :: NullOrUndefined (LoggerLevel), "Space" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (LoggerType) }) -> Logger
+newLogger' :: ({ "Component" :: Maybe (LoggerComponent), "Id" :: Maybe (String), "Level" :: Maybe (LoggerLevel), "Space" :: Maybe (Int), "Type" :: Maybe (LoggerType) } -> { "Component" :: Maybe (LoggerComponent), "Id" :: Maybe (String), "Level" :: Maybe (LoggerLevel), "Space" :: Maybe (Int), "Type" :: Maybe (LoggerType) }) -> Logger
 ```
 
 Constructs Logger's fields from required parameters
@@ -5092,7 +5092,7 @@ Encode LoggerComponent
 
 ``` purescript
 newtype LoggerDefinitionVersion
-  = LoggerDefinitionVersion { "Loggers" :: NullOrUndefined (ListOfLogger) }
+  = LoggerDefinitionVersion { "Loggers" :: Maybe (ListOfLogger) }
 ```
 
 Information on logger definition version
@@ -5117,7 +5117,7 @@ Constructs LoggerDefinitionVersion from required parameters
 #### `newLoggerDefinitionVersion'`
 
 ``` purescript
-newLoggerDefinitionVersion' :: ({ "Loggers" :: NullOrUndefined (ListOfLogger) } -> { "Loggers" :: NullOrUndefined (ListOfLogger) }) -> LoggerDefinitionVersion
+newLoggerDefinitionVersion' :: ({ "Loggers" :: Maybe (ListOfLogger) } -> { "Loggers" :: Maybe (ListOfLogger) }) -> LoggerDefinitionVersion
 ```
 
 Constructs LoggerDefinitionVersion's fields from required parameters
@@ -5192,7 +5192,7 @@ Encode Permission
 
 ``` purescript
 newtype ResetDeploymentsRequest
-  = ResetDeploymentsRequest { "AmznClientToken" :: NullOrUndefined (String), "Force" :: NullOrUndefined (Boolean), "GroupId" :: String }
+  = ResetDeploymentsRequest { "AmznClientToken" :: Maybe (String), "Force" :: Maybe (Boolean), "GroupId" :: String }
 ```
 
 Information needed to perform a reset of a group's deployments.
@@ -5217,7 +5217,7 @@ Constructs ResetDeploymentsRequest from required parameters
 #### `newResetDeploymentsRequest'`
 
 ``` purescript
-newResetDeploymentsRequest' :: String -> ({ "AmznClientToken" :: NullOrUndefined (String), "Force" :: NullOrUndefined (Boolean), "GroupId" :: String } -> { "AmznClientToken" :: NullOrUndefined (String), "Force" :: NullOrUndefined (Boolean), "GroupId" :: String }) -> ResetDeploymentsRequest
+newResetDeploymentsRequest' :: String -> ({ "AmznClientToken" :: Maybe (String), "Force" :: Maybe (Boolean), "GroupId" :: String } -> { "AmznClientToken" :: Maybe (String), "Force" :: Maybe (Boolean), "GroupId" :: String }) -> ResetDeploymentsRequest
 ```
 
 Constructs ResetDeploymentsRequest's fields from required parameters
@@ -5226,7 +5226,7 @@ Constructs ResetDeploymentsRequest's fields from required parameters
 
 ``` purescript
 newtype ResetDeploymentsResponse
-  = ResetDeploymentsResponse { "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String) }
+  = ResetDeploymentsResponse { "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5249,7 +5249,7 @@ Constructs ResetDeploymentsResponse from required parameters
 #### `newResetDeploymentsResponse'`
 
 ``` purescript
-newResetDeploymentsResponse' :: ({ "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String) } -> { "DeploymentArn" :: NullOrUndefined (String), "DeploymentId" :: NullOrUndefined (String) }) -> ResetDeploymentsResponse
+newResetDeploymentsResponse' :: ({ "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String) } -> { "DeploymentArn" :: Maybe (String), "DeploymentId" :: Maybe (String) }) -> ResetDeploymentsResponse
 ```
 
 Constructs ResetDeploymentsResponse's fields from required parameters
@@ -5258,7 +5258,7 @@ Constructs ResetDeploymentsResponse's fields from required parameters
 
 ``` purescript
 newtype Resource
-  = Resource { "Id" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String), "ResourceDataContainer" :: NullOrUndefined (ResourceDataContainer) }
+  = Resource { "Id" :: Maybe (String), "Name" :: Maybe (String), "ResourceDataContainer" :: Maybe (ResourceDataContainer) }
 ```
 
 Information on the resource.
@@ -5283,7 +5283,7 @@ Constructs Resource from required parameters
 #### `newResource'`
 
 ``` purescript
-newResource' :: ({ "Id" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String), "ResourceDataContainer" :: NullOrUndefined (ResourceDataContainer) } -> { "Id" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String), "ResourceDataContainer" :: NullOrUndefined (ResourceDataContainer) }) -> Resource
+newResource' :: ({ "Id" :: Maybe (String), "Name" :: Maybe (String), "ResourceDataContainer" :: Maybe (ResourceDataContainer) } -> { "Id" :: Maybe (String), "Name" :: Maybe (String), "ResourceDataContainer" :: Maybe (ResourceDataContainer) }) -> Resource
 ```
 
 Constructs Resource's fields from required parameters
@@ -5292,7 +5292,7 @@ Constructs Resource's fields from required parameters
 
 ``` purescript
 newtype ResourceAccessPolicy
-  = ResourceAccessPolicy { "Permission" :: NullOrUndefined (Permission), "ResourceId" :: NullOrUndefined (String) }
+  = ResourceAccessPolicy { "Permission" :: Maybe (Permission), "ResourceId" :: Maybe (String) }
 ```
 
 Policy for the function to access a resource.
@@ -5317,7 +5317,7 @@ Constructs ResourceAccessPolicy from required parameters
 #### `newResourceAccessPolicy'`
 
 ``` purescript
-newResourceAccessPolicy' :: ({ "Permission" :: NullOrUndefined (Permission), "ResourceId" :: NullOrUndefined (String) } -> { "Permission" :: NullOrUndefined (Permission), "ResourceId" :: NullOrUndefined (String) }) -> ResourceAccessPolicy
+newResourceAccessPolicy' :: ({ "Permission" :: Maybe (Permission), "ResourceId" :: Maybe (String) } -> { "Permission" :: Maybe (Permission), "ResourceId" :: Maybe (String) }) -> ResourceAccessPolicy
 ```
 
 Constructs ResourceAccessPolicy's fields from required parameters
@@ -5326,7 +5326,7 @@ Constructs ResourceAccessPolicy's fields from required parameters
 
 ``` purescript
 newtype ResourceDataContainer
-  = ResourceDataContainer { "LocalDeviceResourceData" :: NullOrUndefined (LocalDeviceResourceData), "LocalVolumeResourceData" :: NullOrUndefined (LocalVolumeResourceData) }
+  = ResourceDataContainer { "LocalDeviceResourceData" :: Maybe (LocalDeviceResourceData), "LocalVolumeResourceData" :: Maybe (LocalVolumeResourceData) }
 ```
 
 A container of data for all resource types.
@@ -5351,7 +5351,7 @@ Constructs ResourceDataContainer from required parameters
 #### `newResourceDataContainer'`
 
 ``` purescript
-newResourceDataContainer' :: ({ "LocalDeviceResourceData" :: NullOrUndefined (LocalDeviceResourceData), "LocalVolumeResourceData" :: NullOrUndefined (LocalVolumeResourceData) } -> { "LocalDeviceResourceData" :: NullOrUndefined (LocalDeviceResourceData), "LocalVolumeResourceData" :: NullOrUndefined (LocalVolumeResourceData) }) -> ResourceDataContainer
+newResourceDataContainer' :: ({ "LocalDeviceResourceData" :: Maybe (LocalDeviceResourceData), "LocalVolumeResourceData" :: Maybe (LocalVolumeResourceData) } -> { "LocalDeviceResourceData" :: Maybe (LocalDeviceResourceData), "LocalVolumeResourceData" :: Maybe (LocalVolumeResourceData) }) -> ResourceDataContainer
 ```
 
 Constructs ResourceDataContainer's fields from required parameters
@@ -5360,7 +5360,7 @@ Constructs ResourceDataContainer's fields from required parameters
 
 ``` purescript
 newtype ResourceDefinitionVersion
-  = ResourceDefinitionVersion { "Resources" :: NullOrUndefined (ListOfResource) }
+  = ResourceDefinitionVersion { "Resources" :: Maybe (ListOfResource) }
 ```
 
 Information on resource definition version
@@ -5385,7 +5385,7 @@ Constructs ResourceDefinitionVersion from required parameters
 #### `newResourceDefinitionVersion'`
 
 ``` purescript
-newResourceDefinitionVersion' :: ({ "Resources" :: NullOrUndefined (ListOfResource) } -> { "Resources" :: NullOrUndefined (ListOfResource) }) -> ResourceDefinitionVersion
+newResourceDefinitionVersion' :: ({ "Resources" :: Maybe (ListOfResource) } -> { "Resources" :: Maybe (ListOfResource) }) -> ResourceDefinitionVersion
 ```
 
 Constructs ResourceDefinitionVersion's fields from required parameters
@@ -5430,7 +5430,7 @@ Encode SoftwareToUpdate
 
 ``` purescript
 newtype Subscription
-  = Subscription { "Id" :: NullOrUndefined (String), "Source" :: NullOrUndefined (String), "Subject" :: NullOrUndefined (String), "Target" :: NullOrUndefined (String) }
+  = Subscription { "Id" :: Maybe (String), "Source" :: Maybe (String), "Subject" :: Maybe (String), "Target" :: Maybe (String) }
 ```
 
 Information on subscription
@@ -5455,7 +5455,7 @@ Constructs Subscription from required parameters
 #### `newSubscription'`
 
 ``` purescript
-newSubscription' :: ({ "Id" :: NullOrUndefined (String), "Source" :: NullOrUndefined (String), "Subject" :: NullOrUndefined (String), "Target" :: NullOrUndefined (String) } -> { "Id" :: NullOrUndefined (String), "Source" :: NullOrUndefined (String), "Subject" :: NullOrUndefined (String), "Target" :: NullOrUndefined (String) }) -> Subscription
+newSubscription' :: ({ "Id" :: Maybe (String), "Source" :: Maybe (String), "Subject" :: Maybe (String), "Target" :: Maybe (String) } -> { "Id" :: Maybe (String), "Source" :: Maybe (String), "Subject" :: Maybe (String), "Target" :: Maybe (String) }) -> Subscription
 ```
 
 Constructs Subscription's fields from required parameters
@@ -5464,7 +5464,7 @@ Constructs Subscription's fields from required parameters
 
 ``` purescript
 newtype SubscriptionDefinitionVersion
-  = SubscriptionDefinitionVersion { "Subscriptions" :: NullOrUndefined (ListOfSubscription) }
+  = SubscriptionDefinitionVersion { "Subscriptions" :: Maybe (ListOfSubscription) }
 ```
 
 Information on subscription definition version
@@ -5489,7 +5489,7 @@ Constructs SubscriptionDefinitionVersion from required parameters
 #### `newSubscriptionDefinitionVersion'`
 
 ``` purescript
-newSubscriptionDefinitionVersion' :: ({ "Subscriptions" :: NullOrUndefined (ListOfSubscription) } -> { "Subscriptions" :: NullOrUndefined (ListOfSubscription) }) -> SubscriptionDefinitionVersion
+newSubscriptionDefinitionVersion' :: ({ "Subscriptions" :: Maybe (ListOfSubscription) } -> { "Subscriptions" :: Maybe (ListOfSubscription) }) -> SubscriptionDefinitionVersion
 ```
 
 Constructs SubscriptionDefinitionVersion's fields from required parameters
@@ -5516,7 +5516,7 @@ Encode UpdateAgentLogLevel
 
 ``` purescript
 newtype UpdateConnectivityInfoRequest
-  = UpdateConnectivityInfoRequest { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo), "ThingName" :: String }
+  = UpdateConnectivityInfoRequest { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo), "ThingName" :: String }
 ```
 
 connectivity info request
@@ -5541,7 +5541,7 @@ Constructs UpdateConnectivityInfoRequest from required parameters
 #### `newUpdateConnectivityInfoRequest'`
 
 ``` purescript
-newUpdateConnectivityInfoRequest' :: String -> ({ "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo), "ThingName" :: String } -> { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo), "ThingName" :: String }) -> UpdateConnectivityInfoRequest
+newUpdateConnectivityInfoRequest' :: String -> ({ "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo), "ThingName" :: String } -> { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo), "ThingName" :: String }) -> UpdateConnectivityInfoRequest
 ```
 
 Constructs UpdateConnectivityInfoRequest's fields from required parameters
@@ -5550,7 +5550,7 @@ Constructs UpdateConnectivityInfoRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateConnectivityInfoResponse
-  = UpdateConnectivityInfoResponse { "Message" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = UpdateConnectivityInfoResponse { "Message" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5573,7 +5573,7 @@ Constructs UpdateConnectivityInfoResponse from required parameters
 #### `newUpdateConnectivityInfoResponse'`
 
 ``` purescript
-newUpdateConnectivityInfoResponse' :: ({ "Message" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> UpdateConnectivityInfoResponse
+newUpdateConnectivityInfoResponse' :: ({ "Message" :: Maybe (String), "Version" :: Maybe (String) } -> { "Message" :: Maybe (String), "Version" :: Maybe (String) }) -> UpdateConnectivityInfoResponse
 ```
 
 Constructs UpdateConnectivityInfoResponse's fields from required parameters
@@ -5582,7 +5582,7 @@ Constructs UpdateConnectivityInfoResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateCoreDefinitionRequest
-  = UpdateCoreDefinitionRequest { "CoreDefinitionId" :: String, "Name" :: NullOrUndefined (String) }
+  = UpdateCoreDefinitionRequest { "CoreDefinitionId" :: String, "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5605,7 +5605,7 @@ Constructs UpdateCoreDefinitionRequest from required parameters
 #### `newUpdateCoreDefinitionRequest'`
 
 ``` purescript
-newUpdateCoreDefinitionRequest' :: String -> ({ "CoreDefinitionId" :: String, "Name" :: NullOrUndefined (String) } -> { "CoreDefinitionId" :: String, "Name" :: NullOrUndefined (String) }) -> UpdateCoreDefinitionRequest
+newUpdateCoreDefinitionRequest' :: String -> ({ "CoreDefinitionId" :: String, "Name" :: Maybe (String) } -> { "CoreDefinitionId" :: String, "Name" :: Maybe (String) }) -> UpdateCoreDefinitionRequest
 ```
 
 Constructs UpdateCoreDefinitionRequest's fields from required parameters
@@ -5630,7 +5630,7 @@ Encode UpdateCoreDefinitionResponse
 
 ``` purescript
 newtype UpdateDeviceDefinitionRequest
-  = UpdateDeviceDefinitionRequest { "DeviceDefinitionId" :: String, "Name" :: NullOrUndefined (String) }
+  = UpdateDeviceDefinitionRequest { "DeviceDefinitionId" :: String, "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5653,7 +5653,7 @@ Constructs UpdateDeviceDefinitionRequest from required parameters
 #### `newUpdateDeviceDefinitionRequest'`
 
 ``` purescript
-newUpdateDeviceDefinitionRequest' :: String -> ({ "DeviceDefinitionId" :: String, "Name" :: NullOrUndefined (String) } -> { "DeviceDefinitionId" :: String, "Name" :: NullOrUndefined (String) }) -> UpdateDeviceDefinitionRequest
+newUpdateDeviceDefinitionRequest' :: String -> ({ "DeviceDefinitionId" :: String, "Name" :: Maybe (String) } -> { "DeviceDefinitionId" :: String, "Name" :: Maybe (String) }) -> UpdateDeviceDefinitionRequest
 ```
 
 Constructs UpdateDeviceDefinitionRequest's fields from required parameters
@@ -5678,7 +5678,7 @@ Encode UpdateDeviceDefinitionResponse
 
 ``` purescript
 newtype UpdateFunctionDefinitionRequest
-  = UpdateFunctionDefinitionRequest { "FunctionDefinitionId" :: String, "Name" :: NullOrUndefined (String) }
+  = UpdateFunctionDefinitionRequest { "FunctionDefinitionId" :: String, "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5701,7 +5701,7 @@ Constructs UpdateFunctionDefinitionRequest from required parameters
 #### `newUpdateFunctionDefinitionRequest'`
 
 ``` purescript
-newUpdateFunctionDefinitionRequest' :: String -> ({ "FunctionDefinitionId" :: String, "Name" :: NullOrUndefined (String) } -> { "FunctionDefinitionId" :: String, "Name" :: NullOrUndefined (String) }) -> UpdateFunctionDefinitionRequest
+newUpdateFunctionDefinitionRequest' :: String -> ({ "FunctionDefinitionId" :: String, "Name" :: Maybe (String) } -> { "FunctionDefinitionId" :: String, "Name" :: Maybe (String) }) -> UpdateFunctionDefinitionRequest
 ```
 
 Constructs UpdateFunctionDefinitionRequest's fields from required parameters
@@ -5726,7 +5726,7 @@ Encode UpdateFunctionDefinitionResponse
 
 ``` purescript
 newtype UpdateGroupCertificateConfigurationRequest
-  = UpdateGroupCertificateConfigurationRequest { "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: String }
+  = UpdateGroupCertificateConfigurationRequest { "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: String }
 ```
 
 ##### Instances
@@ -5749,7 +5749,7 @@ Constructs UpdateGroupCertificateConfigurationRequest from required parameters
 #### `newUpdateGroupCertificateConfigurationRequest'`
 
 ``` purescript
-newUpdateGroupCertificateConfigurationRequest' :: String -> ({ "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: String } -> { "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: String }) -> UpdateGroupCertificateConfigurationRequest
+newUpdateGroupCertificateConfigurationRequest' :: String -> ({ "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: String } -> { "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: String }) -> UpdateGroupCertificateConfigurationRequest
 ```
 
 Constructs UpdateGroupCertificateConfigurationRequest's fields from required parameters
@@ -5758,7 +5758,7 @@ Constructs UpdateGroupCertificateConfigurationRequest's fields from required par
 
 ``` purescript
 newtype UpdateGroupCertificateConfigurationResponse
-  = UpdateGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) }
+  = UpdateGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5781,7 +5781,7 @@ Constructs UpdateGroupCertificateConfigurationResponse from required parameters
 #### `newUpdateGroupCertificateConfigurationResponse'`
 
 ``` purescript
-newUpdateGroupCertificateConfigurationResponse' :: ({ "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) } -> { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String), "CertificateExpiryInMilliseconds" :: NullOrUndefined (String), "GroupId" :: NullOrUndefined (String) }) -> UpdateGroupCertificateConfigurationResponse
+newUpdateGroupCertificateConfigurationResponse' :: ({ "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) } -> { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String), "CertificateExpiryInMilliseconds" :: Maybe (String), "GroupId" :: Maybe (String) }) -> UpdateGroupCertificateConfigurationResponse
 ```
 
 Constructs UpdateGroupCertificateConfigurationResponse's fields from required parameters
@@ -5790,7 +5790,7 @@ Constructs UpdateGroupCertificateConfigurationResponse's fields from required pa
 
 ``` purescript
 newtype UpdateGroupRequest
-  = UpdateGroupRequest { "GroupId" :: String, "Name" :: NullOrUndefined (String) }
+  = UpdateGroupRequest { "GroupId" :: String, "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5813,7 +5813,7 @@ Constructs UpdateGroupRequest from required parameters
 #### `newUpdateGroupRequest'`
 
 ``` purescript
-newUpdateGroupRequest' :: String -> ({ "GroupId" :: String, "Name" :: NullOrUndefined (String) } -> { "GroupId" :: String, "Name" :: NullOrUndefined (String) }) -> UpdateGroupRequest
+newUpdateGroupRequest' :: String -> ({ "GroupId" :: String, "Name" :: Maybe (String) } -> { "GroupId" :: String, "Name" :: Maybe (String) }) -> UpdateGroupRequest
 ```
 
 Constructs UpdateGroupRequest's fields from required parameters
@@ -5838,7 +5838,7 @@ Encode UpdateGroupResponse
 
 ``` purescript
 newtype UpdateLoggerDefinitionRequest
-  = UpdateLoggerDefinitionRequest { "LoggerDefinitionId" :: String, "Name" :: NullOrUndefined (String) }
+  = UpdateLoggerDefinitionRequest { "LoggerDefinitionId" :: String, "Name" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5861,7 +5861,7 @@ Constructs UpdateLoggerDefinitionRequest from required parameters
 #### `newUpdateLoggerDefinitionRequest'`
 
 ``` purescript
-newUpdateLoggerDefinitionRequest' :: String -> ({ "LoggerDefinitionId" :: String, "Name" :: NullOrUndefined (String) } -> { "LoggerDefinitionId" :: String, "Name" :: NullOrUndefined (String) }) -> UpdateLoggerDefinitionRequest
+newUpdateLoggerDefinitionRequest' :: String -> ({ "LoggerDefinitionId" :: String, "Name" :: Maybe (String) } -> { "LoggerDefinitionId" :: String, "Name" :: Maybe (String) }) -> UpdateLoggerDefinitionRequest
 ```
 
 Constructs UpdateLoggerDefinitionRequest's fields from required parameters
@@ -5886,7 +5886,7 @@ Encode UpdateLoggerDefinitionResponse
 
 ``` purescript
 newtype UpdateResourceDefinitionRequest
-  = UpdateResourceDefinitionRequest { "Name" :: NullOrUndefined (String), "ResourceDefinitionId" :: String }
+  = UpdateResourceDefinitionRequest { "Name" :: Maybe (String), "ResourceDefinitionId" :: String }
 ```
 
 ##### Instances
@@ -5909,7 +5909,7 @@ Constructs UpdateResourceDefinitionRequest from required parameters
 #### `newUpdateResourceDefinitionRequest'`
 
 ``` purescript
-newUpdateResourceDefinitionRequest' :: String -> ({ "Name" :: NullOrUndefined (String), "ResourceDefinitionId" :: String } -> { "Name" :: NullOrUndefined (String), "ResourceDefinitionId" :: String }) -> UpdateResourceDefinitionRequest
+newUpdateResourceDefinitionRequest' :: String -> ({ "Name" :: Maybe (String), "ResourceDefinitionId" :: String } -> { "Name" :: Maybe (String), "ResourceDefinitionId" :: String }) -> UpdateResourceDefinitionRequest
 ```
 
 Constructs UpdateResourceDefinitionRequest's fields from required parameters
@@ -5934,7 +5934,7 @@ Encode UpdateResourceDefinitionResponse
 
 ``` purescript
 newtype UpdateSubscriptionDefinitionRequest
-  = UpdateSubscriptionDefinitionRequest { "Name" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String }
+  = UpdateSubscriptionDefinitionRequest { "Name" :: Maybe (String), "SubscriptionDefinitionId" :: String }
 ```
 
 ##### Instances
@@ -5957,7 +5957,7 @@ Constructs UpdateSubscriptionDefinitionRequest from required parameters
 #### `newUpdateSubscriptionDefinitionRequest'`
 
 ``` purescript
-newUpdateSubscriptionDefinitionRequest' :: String -> ({ "Name" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String } -> { "Name" :: NullOrUndefined (String), "SubscriptionDefinitionId" :: String }) -> UpdateSubscriptionDefinitionRequest
+newUpdateSubscriptionDefinitionRequest' :: String -> ({ "Name" :: Maybe (String), "SubscriptionDefinitionId" :: String } -> { "Name" :: Maybe (String), "SubscriptionDefinitionId" :: String }) -> UpdateSubscriptionDefinitionRequest
 ```
 
 Constructs UpdateSubscriptionDefinitionRequest's fields from required parameters
@@ -6036,7 +6036,7 @@ Encode UpdateTargetsOperatingSystem
 
 ``` purescript
 newtype VersionInformation
-  = VersionInformation { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }
+  = VersionInformation { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }
 ```
 
 Information on the version
@@ -6061,7 +6061,7 @@ Constructs VersionInformation from required parameters
 #### `newVersionInformation'`
 
 ``` purescript
-newVersionInformation' :: ({ "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "CreationTimestamp" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Version" :: NullOrUndefined (String) }) -> VersionInformation
+newVersionInformation' :: ({ "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) } -> { "Arn" :: Maybe (String), "CreationTimestamp" :: Maybe (String), "Id" :: Maybe (String), "Version" :: Maybe (String) }) -> VersionInformation
 ```
 
 Constructs VersionInformation's fields from required parameters

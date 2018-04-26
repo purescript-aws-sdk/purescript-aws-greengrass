@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -20,7 +19,7 @@ options = defaultOptions { unwrapSingleConstructors = true }
 
 newtype AssociateRoleToGroupRequest = AssociateRoleToGroupRequest 
   { "GroupId" :: (String)
-  , "RoleArn" :: NullOrUndefined (String)
+  , "RoleArn" :: Maybe (String)
   }
 derive instance newtypeAssociateRoleToGroupRequest :: Newtype AssociateRoleToGroupRequest _
 derive instance repGenericAssociateRoleToGroupRequest :: Generic AssociateRoleToGroupRequest _
@@ -30,17 +29,17 @@ instance encodeAssociateRoleToGroupRequest :: Encode AssociateRoleToGroupRequest
 
 -- | Constructs AssociateRoleToGroupRequest from required parameters
 newAssociateRoleToGroupRequest :: String -> AssociateRoleToGroupRequest
-newAssociateRoleToGroupRequest _GroupId = AssociateRoleToGroupRequest { "GroupId": _GroupId, "RoleArn": (NullOrUndefined Nothing) }
+newAssociateRoleToGroupRequest _GroupId = AssociateRoleToGroupRequest { "GroupId": _GroupId, "RoleArn": Nothing }
 
 -- | Constructs AssociateRoleToGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateRoleToGroupRequest' :: String -> ( { "GroupId" :: (String) , "RoleArn" :: NullOrUndefined (String) } -> {"GroupId" :: (String) , "RoleArn" :: NullOrUndefined (String) } ) -> AssociateRoleToGroupRequest
-newAssociateRoleToGroupRequest' _GroupId customize = (AssociateRoleToGroupRequest <<< customize) { "GroupId": _GroupId, "RoleArn": (NullOrUndefined Nothing) }
+newAssociateRoleToGroupRequest' :: String -> ( { "GroupId" :: (String) , "RoleArn" :: Maybe (String) } -> {"GroupId" :: (String) , "RoleArn" :: Maybe (String) } ) -> AssociateRoleToGroupRequest
+newAssociateRoleToGroupRequest' _GroupId customize = (AssociateRoleToGroupRequest <<< customize) { "GroupId": _GroupId, "RoleArn": Nothing }
 
 
 
 newtype AssociateRoleToGroupResponse = AssociateRoleToGroupResponse 
-  { "AssociatedAt" :: NullOrUndefined (String)
+  { "AssociatedAt" :: Maybe (String)
   }
 derive instance newtypeAssociateRoleToGroupResponse :: Newtype AssociateRoleToGroupResponse _
 derive instance repGenericAssociateRoleToGroupResponse :: Generic AssociateRoleToGroupResponse _
@@ -50,17 +49,17 @@ instance encodeAssociateRoleToGroupResponse :: Encode AssociateRoleToGroupRespon
 
 -- | Constructs AssociateRoleToGroupResponse from required parameters
 newAssociateRoleToGroupResponse :: AssociateRoleToGroupResponse
-newAssociateRoleToGroupResponse  = AssociateRoleToGroupResponse { "AssociatedAt": (NullOrUndefined Nothing) }
+newAssociateRoleToGroupResponse  = AssociateRoleToGroupResponse { "AssociatedAt": Nothing }
 
 -- | Constructs AssociateRoleToGroupResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateRoleToGroupResponse' :: ( { "AssociatedAt" :: NullOrUndefined (String) } -> {"AssociatedAt" :: NullOrUndefined (String) } ) -> AssociateRoleToGroupResponse
-newAssociateRoleToGroupResponse'  customize = (AssociateRoleToGroupResponse <<< customize) { "AssociatedAt": (NullOrUndefined Nothing) }
+newAssociateRoleToGroupResponse' :: ( { "AssociatedAt" :: Maybe (String) } -> {"AssociatedAt" :: Maybe (String) } ) -> AssociateRoleToGroupResponse
+newAssociateRoleToGroupResponse'  customize = (AssociateRoleToGroupResponse <<< customize) { "AssociatedAt": Nothing }
 
 
 
 newtype AssociateServiceRoleToAccountRequest = AssociateServiceRoleToAccountRequest 
-  { "RoleArn" :: NullOrUndefined (String)
+  { "RoleArn" :: Maybe (String)
   }
 derive instance newtypeAssociateServiceRoleToAccountRequest :: Newtype AssociateServiceRoleToAccountRequest _
 derive instance repGenericAssociateServiceRoleToAccountRequest :: Generic AssociateServiceRoleToAccountRequest _
@@ -70,17 +69,17 @@ instance encodeAssociateServiceRoleToAccountRequest :: Encode AssociateServiceRo
 
 -- | Constructs AssociateServiceRoleToAccountRequest from required parameters
 newAssociateServiceRoleToAccountRequest :: AssociateServiceRoleToAccountRequest
-newAssociateServiceRoleToAccountRequest  = AssociateServiceRoleToAccountRequest { "RoleArn": (NullOrUndefined Nothing) }
+newAssociateServiceRoleToAccountRequest  = AssociateServiceRoleToAccountRequest { "RoleArn": Nothing }
 
 -- | Constructs AssociateServiceRoleToAccountRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateServiceRoleToAccountRequest' :: ( { "RoleArn" :: NullOrUndefined (String) } -> {"RoleArn" :: NullOrUndefined (String) } ) -> AssociateServiceRoleToAccountRequest
-newAssociateServiceRoleToAccountRequest'  customize = (AssociateServiceRoleToAccountRequest <<< customize) { "RoleArn": (NullOrUndefined Nothing) }
+newAssociateServiceRoleToAccountRequest' :: ( { "RoleArn" :: Maybe (String) } -> {"RoleArn" :: Maybe (String) } ) -> AssociateServiceRoleToAccountRequest
+newAssociateServiceRoleToAccountRequest'  customize = (AssociateServiceRoleToAccountRequest <<< customize) { "RoleArn": Nothing }
 
 
 
 newtype AssociateServiceRoleToAccountResponse = AssociateServiceRoleToAccountResponse 
-  { "AssociatedAt" :: NullOrUndefined (String)
+  { "AssociatedAt" :: Maybe (String)
   }
 derive instance newtypeAssociateServiceRoleToAccountResponse :: Newtype AssociateServiceRoleToAccountResponse _
 derive instance repGenericAssociateServiceRoleToAccountResponse :: Generic AssociateServiceRoleToAccountResponse _
@@ -90,19 +89,19 @@ instance encodeAssociateServiceRoleToAccountResponse :: Encode AssociateServiceR
 
 -- | Constructs AssociateServiceRoleToAccountResponse from required parameters
 newAssociateServiceRoleToAccountResponse :: AssociateServiceRoleToAccountResponse
-newAssociateServiceRoleToAccountResponse  = AssociateServiceRoleToAccountResponse { "AssociatedAt": (NullOrUndefined Nothing) }
+newAssociateServiceRoleToAccountResponse  = AssociateServiceRoleToAccountResponse { "AssociatedAt": Nothing }
 
 -- | Constructs AssociateServiceRoleToAccountResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateServiceRoleToAccountResponse' :: ( { "AssociatedAt" :: NullOrUndefined (String) } -> {"AssociatedAt" :: NullOrUndefined (String) } ) -> AssociateServiceRoleToAccountResponse
-newAssociateServiceRoleToAccountResponse'  customize = (AssociateServiceRoleToAccountResponse <<< customize) { "AssociatedAt": (NullOrUndefined Nothing) }
+newAssociateServiceRoleToAccountResponse' :: ( { "AssociatedAt" :: Maybe (String) } -> {"AssociatedAt" :: Maybe (String) } ) -> AssociateServiceRoleToAccountResponse
+newAssociateServiceRoleToAccountResponse'  customize = (AssociateServiceRoleToAccountResponse <<< customize) { "AssociatedAt": Nothing }
 
 
 
 -- | General Error
 newtype BadRequestException = BadRequestException 
-  { "ErrorDetails" :: NullOrUndefined (ErrorDetails)
-  , "Message" :: NullOrUndefined (String)
+  { "ErrorDetails" :: Maybe (ErrorDetails)
+  , "Message" :: Maybe (String)
   }
 derive instance newtypeBadRequestException :: Newtype BadRequestException _
 derive instance repGenericBadRequestException :: Generic BadRequestException _
@@ -112,21 +111,21 @@ instance encodeBadRequestException :: Encode BadRequestException where encode = 
 
 -- | Constructs BadRequestException from required parameters
 newBadRequestException :: BadRequestException
-newBadRequestException  = BadRequestException { "ErrorDetails": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newBadRequestException  = BadRequestException { "ErrorDetails": Nothing, "Message": Nothing }
 
 -- | Constructs BadRequestException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBadRequestException' :: ( { "ErrorDetails" :: NullOrUndefined (ErrorDetails) , "Message" :: NullOrUndefined (String) } -> {"ErrorDetails" :: NullOrUndefined (ErrorDetails) , "Message" :: NullOrUndefined (String) } ) -> BadRequestException
-newBadRequestException'  customize = (BadRequestException <<< customize) { "ErrorDetails": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newBadRequestException' :: ( { "ErrorDetails" :: Maybe (ErrorDetails) , "Message" :: Maybe (String) } -> {"ErrorDetails" :: Maybe (ErrorDetails) , "Message" :: Maybe (String) } ) -> BadRequestException
+newBadRequestException'  customize = (BadRequestException <<< customize) { "ErrorDetails": Nothing, "Message": Nothing }
 
 
 
 -- | Connectivity Info
 newtype ConnectivityInfo = ConnectivityInfo 
-  { "HostAddress" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Metadata" :: NullOrUndefined (String)
-  , "PortNumber" :: NullOrUndefined (Int)
+  { "HostAddress" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Metadata" :: Maybe (String)
+  , "PortNumber" :: Maybe (Int)
   }
 derive instance newtypeConnectivityInfo :: Newtype ConnectivityInfo _
 derive instance repGenericConnectivityInfo :: Generic ConnectivityInfo _
@@ -136,21 +135,21 @@ instance encodeConnectivityInfo :: Encode ConnectivityInfo where encode = generi
 
 -- | Constructs ConnectivityInfo from required parameters
 newConnectivityInfo :: ConnectivityInfo
-newConnectivityInfo  = ConnectivityInfo { "HostAddress": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Metadata": (NullOrUndefined Nothing), "PortNumber": (NullOrUndefined Nothing) }
+newConnectivityInfo  = ConnectivityInfo { "HostAddress": Nothing, "Id": Nothing, "Metadata": Nothing, "PortNumber": Nothing }
 
 -- | Constructs ConnectivityInfo's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConnectivityInfo' :: ( { "HostAddress" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Metadata" :: NullOrUndefined (String) , "PortNumber" :: NullOrUndefined (Int) } -> {"HostAddress" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Metadata" :: NullOrUndefined (String) , "PortNumber" :: NullOrUndefined (Int) } ) -> ConnectivityInfo
-newConnectivityInfo'  customize = (ConnectivityInfo <<< customize) { "HostAddress": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Metadata": (NullOrUndefined Nothing), "PortNumber": (NullOrUndefined Nothing) }
+newConnectivityInfo' :: ( { "HostAddress" :: Maybe (String) , "Id" :: Maybe (String) , "Metadata" :: Maybe (String) , "PortNumber" :: Maybe (Int) } -> {"HostAddress" :: Maybe (String) , "Id" :: Maybe (String) , "Metadata" :: Maybe (String) , "PortNumber" :: Maybe (Int) } ) -> ConnectivityInfo
+newConnectivityInfo'  customize = (ConnectivityInfo <<< customize) { "HostAddress": Nothing, "Id": Nothing, "Metadata": Nothing, "PortNumber": Nothing }
 
 
 
 -- | Information on the core
 newtype Core = Core 
-  { "CertificateArn" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "SyncShadow" :: NullOrUndefined (Boolean)
-  , "ThingArn" :: NullOrUndefined (String)
+  { "CertificateArn" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "SyncShadow" :: Maybe (Boolean)
+  , "ThingArn" :: Maybe (String)
   }
 derive instance newtypeCore :: Newtype Core _
 derive instance repGenericCore :: Generic Core _
@@ -160,18 +159,18 @@ instance encodeCore :: Encode Core where encode = genericEncode options
 
 -- | Constructs Core from required parameters
 newCore :: Core
-newCore  = Core { "CertificateArn": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "SyncShadow": (NullOrUndefined Nothing), "ThingArn": (NullOrUndefined Nothing) }
+newCore  = Core { "CertificateArn": Nothing, "Id": Nothing, "SyncShadow": Nothing, "ThingArn": Nothing }
 
 -- | Constructs Core's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCore' :: ( { "CertificateArn" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "SyncShadow" :: NullOrUndefined (Boolean) , "ThingArn" :: NullOrUndefined (String) } -> {"CertificateArn" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "SyncShadow" :: NullOrUndefined (Boolean) , "ThingArn" :: NullOrUndefined (String) } ) -> Core
-newCore'  customize = (Core <<< customize) { "CertificateArn": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "SyncShadow": (NullOrUndefined Nothing), "ThingArn": (NullOrUndefined Nothing) }
+newCore' :: ( { "CertificateArn" :: Maybe (String) , "Id" :: Maybe (String) , "SyncShadow" :: Maybe (Boolean) , "ThingArn" :: Maybe (String) } -> {"CertificateArn" :: Maybe (String) , "Id" :: Maybe (String) , "SyncShadow" :: Maybe (Boolean) , "ThingArn" :: Maybe (String) } ) -> Core
+newCore'  customize = (Core <<< customize) { "CertificateArn": Nothing, "Id": Nothing, "SyncShadow": Nothing, "ThingArn": Nothing }
 
 
 
 -- | Information on core definition version
 newtype CoreDefinitionVersion = CoreDefinitionVersion 
-  { "Cores" :: NullOrUndefined (ListOfCore)
+  { "Cores" :: Maybe (ListOfCore)
   }
 derive instance newtypeCoreDefinitionVersion :: Newtype CoreDefinitionVersion _
 derive instance repGenericCoreDefinitionVersion :: Generic CoreDefinitionVersion _
@@ -181,20 +180,20 @@ instance encodeCoreDefinitionVersion :: Encode CoreDefinitionVersion where encod
 
 -- | Constructs CoreDefinitionVersion from required parameters
 newCoreDefinitionVersion :: CoreDefinitionVersion
-newCoreDefinitionVersion  = CoreDefinitionVersion { "Cores": (NullOrUndefined Nothing) }
+newCoreDefinitionVersion  = CoreDefinitionVersion { "Cores": Nothing }
 
 -- | Constructs CoreDefinitionVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCoreDefinitionVersion' :: ( { "Cores" :: NullOrUndefined (ListOfCore) } -> {"Cores" :: NullOrUndefined (ListOfCore) } ) -> CoreDefinitionVersion
-newCoreDefinitionVersion'  customize = (CoreDefinitionVersion <<< customize) { "Cores": (NullOrUndefined Nothing) }
+newCoreDefinitionVersion' :: ( { "Cores" :: Maybe (ListOfCore) } -> {"Cores" :: Maybe (ListOfCore) } ) -> CoreDefinitionVersion
+newCoreDefinitionVersion'  customize = (CoreDefinitionVersion <<< customize) { "Cores": Nothing }
 
 
 
 -- | Information on the core definition request
 newtype CreateCoreDefinitionRequest = CreateCoreDefinitionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (CoreDefinitionVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (CoreDefinitionVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateCoreDefinitionRequest :: Newtype CreateCoreDefinitionRequest _
 derive instance repGenericCreateCoreDefinitionRequest :: Generic CreateCoreDefinitionRequest _
@@ -204,23 +203,23 @@ instance encodeCreateCoreDefinitionRequest :: Encode CreateCoreDefinitionRequest
 
 -- | Constructs CreateCoreDefinitionRequest from required parameters
 newCreateCoreDefinitionRequest :: CreateCoreDefinitionRequest
-newCreateCoreDefinitionRequest  = CreateCoreDefinitionRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionRequest  = CreateCoreDefinitionRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateCoreDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateCoreDefinitionRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (CoreDefinitionVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (CoreDefinitionVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateCoreDefinitionRequest
-newCreateCoreDefinitionRequest'  customize = (CreateCoreDefinitionRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (CoreDefinitionVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (CoreDefinitionVersion) , "Name" :: Maybe (String) } ) -> CreateCoreDefinitionRequest
+newCreateCoreDefinitionRequest'  customize = (CreateCoreDefinitionRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateCoreDefinitionResponse = CreateCoreDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateCoreDefinitionResponse :: Newtype CreateCoreDefinitionResponse _
 derive instance repGenericCreateCoreDefinitionResponse :: Generic CreateCoreDefinitionResponse _
@@ -230,19 +229,19 @@ instance encodeCreateCoreDefinitionResponse :: Encode CreateCoreDefinitionRespon
 
 -- | Constructs CreateCoreDefinitionResponse from required parameters
 newCreateCoreDefinitionResponse :: CreateCoreDefinitionResponse
-newCreateCoreDefinitionResponse  = CreateCoreDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionResponse  = CreateCoreDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateCoreDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateCoreDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateCoreDefinitionResponse
-newCreateCoreDefinitionResponse'  customize = (CreateCoreDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateCoreDefinitionResponse
+newCreateCoreDefinitionResponse'  customize = (CreateCoreDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 newtype CreateCoreDefinitionVersionRequest = CreateCoreDefinitionVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "CoreDefinitionId" :: (String)
-  , "Cores" :: NullOrUndefined (ListOfCore)
+  , "Cores" :: Maybe (ListOfCore)
   }
 derive instance newtypeCreateCoreDefinitionVersionRequest :: Newtype CreateCoreDefinitionVersionRequest _
 derive instance repGenericCreateCoreDefinitionVersionRequest :: Generic CreateCoreDefinitionVersionRequest _
@@ -252,20 +251,20 @@ instance encodeCreateCoreDefinitionVersionRequest :: Encode CreateCoreDefinition
 
 -- | Constructs CreateCoreDefinitionVersionRequest from required parameters
 newCreateCoreDefinitionVersionRequest :: String -> CreateCoreDefinitionVersionRequest
-newCreateCoreDefinitionVersionRequest _CoreDefinitionId = CreateCoreDefinitionVersionRequest { "CoreDefinitionId": _CoreDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Cores": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionVersionRequest _CoreDefinitionId = CreateCoreDefinitionVersionRequest { "CoreDefinitionId": _CoreDefinitionId, "AmznClientToken": Nothing, "Cores": Nothing }
 
 -- | Constructs CreateCoreDefinitionVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateCoreDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "CoreDefinitionId" :: (String) , "Cores" :: NullOrUndefined (ListOfCore) } -> {"AmznClientToken" :: NullOrUndefined (String) , "CoreDefinitionId" :: (String) , "Cores" :: NullOrUndefined (ListOfCore) } ) -> CreateCoreDefinitionVersionRequest
-newCreateCoreDefinitionVersionRequest' _CoreDefinitionId customize = (CreateCoreDefinitionVersionRequest <<< customize) { "CoreDefinitionId": _CoreDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Cores": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "CoreDefinitionId" :: (String) , "Cores" :: Maybe (ListOfCore) } -> {"AmznClientToken" :: Maybe (String) , "CoreDefinitionId" :: (String) , "Cores" :: Maybe (ListOfCore) } ) -> CreateCoreDefinitionVersionRequest
+newCreateCoreDefinitionVersionRequest' _CoreDefinitionId customize = (CreateCoreDefinitionVersionRequest <<< customize) { "CoreDefinitionId": _CoreDefinitionId, "AmznClientToken": Nothing, "Cores": Nothing }
 
 
 
 newtype CreateCoreDefinitionVersionResponse = CreateCoreDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateCoreDefinitionVersionResponse :: Newtype CreateCoreDefinitionVersionResponse _
 derive instance repGenericCreateCoreDefinitionVersionResponse :: Generic CreateCoreDefinitionVersionResponse _
@@ -275,21 +274,21 @@ instance encodeCreateCoreDefinitionVersionResponse :: Encode CreateCoreDefinitio
 
 -- | Constructs CreateCoreDefinitionVersionResponse from required parameters
 newCreateCoreDefinitionVersionResponse :: CreateCoreDefinitionVersionResponse
-newCreateCoreDefinitionVersionResponse  = CreateCoreDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionVersionResponse  = CreateCoreDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateCoreDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateCoreDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateCoreDefinitionVersionResponse
-newCreateCoreDefinitionVersionResponse'  customize = (CreateCoreDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateCoreDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateCoreDefinitionVersionResponse
+newCreateCoreDefinitionVersionResponse'  customize = (CreateCoreDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 newtype CreateDeploymentRequest = CreateDeploymentRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "DeploymentId" :: NullOrUndefined (String)
-  , "DeploymentType" :: NullOrUndefined (DeploymentType)
+  { "AmznClientToken" :: Maybe (String)
+  , "DeploymentId" :: Maybe (String)
+  , "DeploymentType" :: Maybe (DeploymentType)
   , "GroupId" :: (String)
-  , "GroupVersionId" :: NullOrUndefined (String)
+  , "GroupVersionId" :: Maybe (String)
   }
 derive instance newtypeCreateDeploymentRequest :: Newtype CreateDeploymentRequest _
 derive instance repGenericCreateDeploymentRequest :: Generic CreateDeploymentRequest _
@@ -299,18 +298,18 @@ instance encodeCreateDeploymentRequest :: Encode CreateDeploymentRequest where e
 
 -- | Constructs CreateDeploymentRequest from required parameters
 newCreateDeploymentRequest :: String -> CreateDeploymentRequest
-newCreateDeploymentRequest _GroupId = CreateDeploymentRequest { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing), "DeploymentType": (NullOrUndefined Nothing), "GroupVersionId": (NullOrUndefined Nothing) }
+newCreateDeploymentRequest _GroupId = CreateDeploymentRequest { "GroupId": _GroupId, "AmznClientToken": Nothing, "DeploymentId": Nothing, "DeploymentType": Nothing, "GroupVersionId": Nothing }
 
 -- | Constructs CreateDeploymentRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDeploymentRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) , "DeploymentType" :: NullOrUndefined (DeploymentType) , "GroupId" :: (String) , "GroupVersionId" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) , "DeploymentType" :: NullOrUndefined (DeploymentType) , "GroupId" :: (String) , "GroupVersionId" :: NullOrUndefined (String) } ) -> CreateDeploymentRequest
-newCreateDeploymentRequest' _GroupId customize = (CreateDeploymentRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing), "DeploymentType": (NullOrUndefined Nothing), "GroupVersionId": (NullOrUndefined Nothing) }
+newCreateDeploymentRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "DeploymentId" :: Maybe (String) , "DeploymentType" :: Maybe (DeploymentType) , "GroupId" :: (String) , "GroupVersionId" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "DeploymentId" :: Maybe (String) , "DeploymentType" :: Maybe (DeploymentType) , "GroupId" :: (String) , "GroupVersionId" :: Maybe (String) } ) -> CreateDeploymentRequest
+newCreateDeploymentRequest' _GroupId customize = (CreateDeploymentRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": Nothing, "DeploymentId": Nothing, "DeploymentType": Nothing, "GroupVersionId": Nothing }
 
 
 
 newtype CreateDeploymentResponse = CreateDeploymentResponse 
-  { "DeploymentArn" :: NullOrUndefined (String)
-  , "DeploymentId" :: NullOrUndefined (String)
+  { "DeploymentArn" :: Maybe (String)
+  , "DeploymentId" :: Maybe (String)
   }
 derive instance newtypeCreateDeploymentResponse :: Newtype CreateDeploymentResponse _
 derive instance repGenericCreateDeploymentResponse :: Generic CreateDeploymentResponse _
@@ -320,19 +319,19 @@ instance encodeCreateDeploymentResponse :: Encode CreateDeploymentResponse where
 
 -- | Constructs CreateDeploymentResponse from required parameters
 newCreateDeploymentResponse :: CreateDeploymentResponse
-newCreateDeploymentResponse  = CreateDeploymentResponse { "DeploymentArn": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing) }
+newCreateDeploymentResponse  = CreateDeploymentResponse { "DeploymentArn": Nothing, "DeploymentId": Nothing }
 
 -- | Constructs CreateDeploymentResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDeploymentResponse' :: ( { "DeploymentArn" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) } -> {"DeploymentArn" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) } ) -> CreateDeploymentResponse
-newCreateDeploymentResponse'  customize = (CreateDeploymentResponse <<< customize) { "DeploymentArn": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing) }
+newCreateDeploymentResponse' :: ( { "DeploymentArn" :: Maybe (String) , "DeploymentId" :: Maybe (String) } -> {"DeploymentArn" :: Maybe (String) , "DeploymentId" :: Maybe (String) } ) -> CreateDeploymentResponse
+newCreateDeploymentResponse'  customize = (CreateDeploymentResponse <<< customize) { "DeploymentArn": Nothing, "DeploymentId": Nothing }
 
 
 
 newtype CreateDeviceDefinitionRequest = CreateDeviceDefinitionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (DeviceDefinitionVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (DeviceDefinitionVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateDeviceDefinitionRequest :: Newtype CreateDeviceDefinitionRequest _
 derive instance repGenericCreateDeviceDefinitionRequest :: Generic CreateDeviceDefinitionRequest _
@@ -342,23 +341,23 @@ instance encodeCreateDeviceDefinitionRequest :: Encode CreateDeviceDefinitionReq
 
 -- | Constructs CreateDeviceDefinitionRequest from required parameters
 newCreateDeviceDefinitionRequest :: CreateDeviceDefinitionRequest
-newCreateDeviceDefinitionRequest  = CreateDeviceDefinitionRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionRequest  = CreateDeviceDefinitionRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateDeviceDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDeviceDefinitionRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (DeviceDefinitionVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (DeviceDefinitionVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateDeviceDefinitionRequest
-newCreateDeviceDefinitionRequest'  customize = (CreateDeviceDefinitionRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (DeviceDefinitionVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (DeviceDefinitionVersion) , "Name" :: Maybe (String) } ) -> CreateDeviceDefinitionRequest
+newCreateDeviceDefinitionRequest'  customize = (CreateDeviceDefinitionRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateDeviceDefinitionResponse = CreateDeviceDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateDeviceDefinitionResponse :: Newtype CreateDeviceDefinitionResponse _
 derive instance repGenericCreateDeviceDefinitionResponse :: Generic CreateDeviceDefinitionResponse _
@@ -368,19 +367,19 @@ instance encodeCreateDeviceDefinitionResponse :: Encode CreateDeviceDefinitionRe
 
 -- | Constructs CreateDeviceDefinitionResponse from required parameters
 newCreateDeviceDefinitionResponse :: CreateDeviceDefinitionResponse
-newCreateDeviceDefinitionResponse  = CreateDeviceDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionResponse  = CreateDeviceDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateDeviceDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDeviceDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateDeviceDefinitionResponse
-newCreateDeviceDefinitionResponse'  customize = (CreateDeviceDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateDeviceDefinitionResponse
+newCreateDeviceDefinitionResponse'  customize = (CreateDeviceDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 newtype CreateDeviceDefinitionVersionRequest = CreateDeviceDefinitionVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "DeviceDefinitionId" :: (String)
-  , "Devices" :: NullOrUndefined (ListOfDevice)
+  , "Devices" :: Maybe (ListOfDevice)
   }
 derive instance newtypeCreateDeviceDefinitionVersionRequest :: Newtype CreateDeviceDefinitionVersionRequest _
 derive instance repGenericCreateDeviceDefinitionVersionRequest :: Generic CreateDeviceDefinitionVersionRequest _
@@ -390,20 +389,20 @@ instance encodeCreateDeviceDefinitionVersionRequest :: Encode CreateDeviceDefini
 
 -- | Constructs CreateDeviceDefinitionVersionRequest from required parameters
 newCreateDeviceDefinitionVersionRequest :: String -> CreateDeviceDefinitionVersionRequest
-newCreateDeviceDefinitionVersionRequest _DeviceDefinitionId = CreateDeviceDefinitionVersionRequest { "DeviceDefinitionId": _DeviceDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Devices": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionVersionRequest _DeviceDefinitionId = CreateDeviceDefinitionVersionRequest { "DeviceDefinitionId": _DeviceDefinitionId, "AmznClientToken": Nothing, "Devices": Nothing }
 
 -- | Constructs CreateDeviceDefinitionVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDeviceDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "DeviceDefinitionId" :: (String) , "Devices" :: NullOrUndefined (ListOfDevice) } -> {"AmznClientToken" :: NullOrUndefined (String) , "DeviceDefinitionId" :: (String) , "Devices" :: NullOrUndefined (ListOfDevice) } ) -> CreateDeviceDefinitionVersionRequest
-newCreateDeviceDefinitionVersionRequest' _DeviceDefinitionId customize = (CreateDeviceDefinitionVersionRequest <<< customize) { "DeviceDefinitionId": _DeviceDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Devices": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "DeviceDefinitionId" :: (String) , "Devices" :: Maybe (ListOfDevice) } -> {"AmznClientToken" :: Maybe (String) , "DeviceDefinitionId" :: (String) , "Devices" :: Maybe (ListOfDevice) } ) -> CreateDeviceDefinitionVersionRequest
+newCreateDeviceDefinitionVersionRequest' _DeviceDefinitionId customize = (CreateDeviceDefinitionVersionRequest <<< customize) { "DeviceDefinitionId": _DeviceDefinitionId, "AmznClientToken": Nothing, "Devices": Nothing }
 
 
 
 newtype CreateDeviceDefinitionVersionResponse = CreateDeviceDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateDeviceDefinitionVersionResponse :: Newtype CreateDeviceDefinitionVersionResponse _
 derive instance repGenericCreateDeviceDefinitionVersionResponse :: Generic CreateDeviceDefinitionVersionResponse _
@@ -413,19 +412,19 @@ instance encodeCreateDeviceDefinitionVersionResponse :: Encode CreateDeviceDefin
 
 -- | Constructs CreateDeviceDefinitionVersionResponse from required parameters
 newCreateDeviceDefinitionVersionResponse :: CreateDeviceDefinitionVersionResponse
-newCreateDeviceDefinitionVersionResponse  = CreateDeviceDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionVersionResponse  = CreateDeviceDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateDeviceDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateDeviceDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateDeviceDefinitionVersionResponse
-newCreateDeviceDefinitionVersionResponse'  customize = (CreateDeviceDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateDeviceDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateDeviceDefinitionVersionResponse
+newCreateDeviceDefinitionVersionResponse'  customize = (CreateDeviceDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 newtype CreateFunctionDefinitionRequest = CreateFunctionDefinitionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (FunctionDefinitionVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (FunctionDefinitionVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateFunctionDefinitionRequest :: Newtype CreateFunctionDefinitionRequest _
 derive instance repGenericCreateFunctionDefinitionRequest :: Generic CreateFunctionDefinitionRequest _
@@ -435,23 +434,23 @@ instance encodeCreateFunctionDefinitionRequest :: Encode CreateFunctionDefinitio
 
 -- | Constructs CreateFunctionDefinitionRequest from required parameters
 newCreateFunctionDefinitionRequest :: CreateFunctionDefinitionRequest
-newCreateFunctionDefinitionRequest  = CreateFunctionDefinitionRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionRequest  = CreateFunctionDefinitionRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateFunctionDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateFunctionDefinitionRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (FunctionDefinitionVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (FunctionDefinitionVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateFunctionDefinitionRequest
-newCreateFunctionDefinitionRequest'  customize = (CreateFunctionDefinitionRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (FunctionDefinitionVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (FunctionDefinitionVersion) , "Name" :: Maybe (String) } ) -> CreateFunctionDefinitionRequest
+newCreateFunctionDefinitionRequest'  customize = (CreateFunctionDefinitionRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateFunctionDefinitionResponse = CreateFunctionDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateFunctionDefinitionResponse :: Newtype CreateFunctionDefinitionResponse _
 derive instance repGenericCreateFunctionDefinitionResponse :: Generic CreateFunctionDefinitionResponse _
@@ -461,20 +460,20 @@ instance encodeCreateFunctionDefinitionResponse :: Encode CreateFunctionDefiniti
 
 -- | Constructs CreateFunctionDefinitionResponse from required parameters
 newCreateFunctionDefinitionResponse :: CreateFunctionDefinitionResponse
-newCreateFunctionDefinitionResponse  = CreateFunctionDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionResponse  = CreateFunctionDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateFunctionDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateFunctionDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateFunctionDefinitionResponse
-newCreateFunctionDefinitionResponse'  customize = (CreateFunctionDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateFunctionDefinitionResponse
+newCreateFunctionDefinitionResponse'  customize = (CreateFunctionDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 -- | Function definition version
 newtype CreateFunctionDefinitionVersionRequest = CreateFunctionDefinitionVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "FunctionDefinitionId" :: (String)
-  , "Functions" :: NullOrUndefined (ListOfFunction)
+  , "Functions" :: Maybe (ListOfFunction)
   }
 derive instance newtypeCreateFunctionDefinitionVersionRequest :: Newtype CreateFunctionDefinitionVersionRequest _
 derive instance repGenericCreateFunctionDefinitionVersionRequest :: Generic CreateFunctionDefinitionVersionRequest _
@@ -484,20 +483,20 @@ instance encodeCreateFunctionDefinitionVersionRequest :: Encode CreateFunctionDe
 
 -- | Constructs CreateFunctionDefinitionVersionRequest from required parameters
 newCreateFunctionDefinitionVersionRequest :: String -> CreateFunctionDefinitionVersionRequest
-newCreateFunctionDefinitionVersionRequest _FunctionDefinitionId = CreateFunctionDefinitionVersionRequest { "FunctionDefinitionId": _FunctionDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Functions": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionVersionRequest _FunctionDefinitionId = CreateFunctionDefinitionVersionRequest { "FunctionDefinitionId": _FunctionDefinitionId, "AmznClientToken": Nothing, "Functions": Nothing }
 
 -- | Constructs CreateFunctionDefinitionVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateFunctionDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "FunctionDefinitionId" :: (String) , "Functions" :: NullOrUndefined (ListOfFunction) } -> {"AmznClientToken" :: NullOrUndefined (String) , "FunctionDefinitionId" :: (String) , "Functions" :: NullOrUndefined (ListOfFunction) } ) -> CreateFunctionDefinitionVersionRequest
-newCreateFunctionDefinitionVersionRequest' _FunctionDefinitionId customize = (CreateFunctionDefinitionVersionRequest <<< customize) { "FunctionDefinitionId": _FunctionDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Functions": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "FunctionDefinitionId" :: (String) , "Functions" :: Maybe (ListOfFunction) } -> {"AmznClientToken" :: Maybe (String) , "FunctionDefinitionId" :: (String) , "Functions" :: Maybe (ListOfFunction) } ) -> CreateFunctionDefinitionVersionRequest
+newCreateFunctionDefinitionVersionRequest' _FunctionDefinitionId customize = (CreateFunctionDefinitionVersionRequest <<< customize) { "FunctionDefinitionId": _FunctionDefinitionId, "AmznClientToken": Nothing, "Functions": Nothing }
 
 
 
 newtype CreateFunctionDefinitionVersionResponse = CreateFunctionDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateFunctionDefinitionVersionResponse :: Newtype CreateFunctionDefinitionVersionResponse _
 derive instance repGenericCreateFunctionDefinitionVersionResponse :: Generic CreateFunctionDefinitionVersionResponse _
@@ -507,17 +506,17 @@ instance encodeCreateFunctionDefinitionVersionResponse :: Encode CreateFunctionD
 
 -- | Constructs CreateFunctionDefinitionVersionResponse from required parameters
 newCreateFunctionDefinitionVersionResponse :: CreateFunctionDefinitionVersionResponse
-newCreateFunctionDefinitionVersionResponse  = CreateFunctionDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionVersionResponse  = CreateFunctionDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateFunctionDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateFunctionDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateFunctionDefinitionVersionResponse
-newCreateFunctionDefinitionVersionResponse'  customize = (CreateFunctionDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateFunctionDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateFunctionDefinitionVersionResponse
+newCreateFunctionDefinitionVersionResponse'  customize = (CreateFunctionDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 newtype CreateGroupCertificateAuthorityRequest = CreateGroupCertificateAuthorityRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "GroupId" :: (String)
   }
 derive instance newtypeCreateGroupCertificateAuthorityRequest :: Newtype CreateGroupCertificateAuthorityRequest _
@@ -528,17 +527,17 @@ instance encodeCreateGroupCertificateAuthorityRequest :: Encode CreateGroupCerti
 
 -- | Constructs CreateGroupCertificateAuthorityRequest from required parameters
 newCreateGroupCertificateAuthorityRequest :: String -> CreateGroupCertificateAuthorityRequest
-newCreateGroupCertificateAuthorityRequest _GroupId = CreateGroupCertificateAuthorityRequest { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing) }
+newCreateGroupCertificateAuthorityRequest _GroupId = CreateGroupCertificateAuthorityRequest { "GroupId": _GroupId, "AmznClientToken": Nothing }
 
 -- | Constructs CreateGroupCertificateAuthorityRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateGroupCertificateAuthorityRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "GroupId" :: (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "GroupId" :: (String) } ) -> CreateGroupCertificateAuthorityRequest
-newCreateGroupCertificateAuthorityRequest' _GroupId customize = (CreateGroupCertificateAuthorityRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing) }
+newCreateGroupCertificateAuthorityRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "GroupId" :: (String) } -> {"AmznClientToken" :: Maybe (String) , "GroupId" :: (String) } ) -> CreateGroupCertificateAuthorityRequest
+newCreateGroupCertificateAuthorityRequest' _GroupId customize = (CreateGroupCertificateAuthorityRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": Nothing }
 
 
 
 newtype CreateGroupCertificateAuthorityResponse = CreateGroupCertificateAuthorityResponse 
-  { "GroupCertificateAuthorityArn" :: NullOrUndefined (String)
+  { "GroupCertificateAuthorityArn" :: Maybe (String)
   }
 derive instance newtypeCreateGroupCertificateAuthorityResponse :: Newtype CreateGroupCertificateAuthorityResponse _
 derive instance repGenericCreateGroupCertificateAuthorityResponse :: Generic CreateGroupCertificateAuthorityResponse _
@@ -548,19 +547,19 @@ instance encodeCreateGroupCertificateAuthorityResponse :: Encode CreateGroupCert
 
 -- | Constructs CreateGroupCertificateAuthorityResponse from required parameters
 newCreateGroupCertificateAuthorityResponse :: CreateGroupCertificateAuthorityResponse
-newCreateGroupCertificateAuthorityResponse  = CreateGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn": (NullOrUndefined Nothing) }
+newCreateGroupCertificateAuthorityResponse  = CreateGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn": Nothing }
 
 -- | Constructs CreateGroupCertificateAuthorityResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateGroupCertificateAuthorityResponse' :: ( { "GroupCertificateAuthorityArn" :: NullOrUndefined (String) } -> {"GroupCertificateAuthorityArn" :: NullOrUndefined (String) } ) -> CreateGroupCertificateAuthorityResponse
-newCreateGroupCertificateAuthorityResponse'  customize = (CreateGroupCertificateAuthorityResponse <<< customize) { "GroupCertificateAuthorityArn": (NullOrUndefined Nothing) }
+newCreateGroupCertificateAuthorityResponse' :: ( { "GroupCertificateAuthorityArn" :: Maybe (String) } -> {"GroupCertificateAuthorityArn" :: Maybe (String) } ) -> CreateGroupCertificateAuthorityResponse
+newCreateGroupCertificateAuthorityResponse'  customize = (CreateGroupCertificateAuthorityResponse <<< customize) { "GroupCertificateAuthorityArn": Nothing }
 
 
 
 newtype CreateGroupRequest = CreateGroupRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (GroupVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (GroupVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateGroupRequest :: Newtype CreateGroupRequest _
 derive instance repGenericCreateGroupRequest :: Generic CreateGroupRequest _
@@ -570,23 +569,23 @@ instance encodeCreateGroupRequest :: Encode CreateGroupRequest where encode = ge
 
 -- | Constructs CreateGroupRequest from required parameters
 newCreateGroupRequest :: CreateGroupRequest
-newCreateGroupRequest  = CreateGroupRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateGroupRequest  = CreateGroupRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateGroupRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (GroupVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (GroupVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateGroupRequest
-newCreateGroupRequest'  customize = (CreateGroupRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateGroupRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (GroupVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (GroupVersion) , "Name" :: Maybe (String) } ) -> CreateGroupRequest
+newCreateGroupRequest'  customize = (CreateGroupRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateGroupResponse = CreateGroupResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateGroupResponse :: Newtype CreateGroupResponse _
 derive instance repGenericCreateGroupResponse :: Generic CreateGroupResponse _
@@ -596,24 +595,24 @@ instance encodeCreateGroupResponse :: Encode CreateGroupResponse where encode = 
 
 -- | Constructs CreateGroupResponse from required parameters
 newCreateGroupResponse :: CreateGroupResponse
-newCreateGroupResponse  = CreateGroupResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateGroupResponse  = CreateGroupResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateGroupResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateGroupResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateGroupResponse
-newCreateGroupResponse'  customize = (CreateGroupResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateGroupResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateGroupResponse
+newCreateGroupResponse'  customize = (CreateGroupResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 newtype CreateGroupVersionRequest = CreateGroupVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "CoreDefinitionVersionArn" :: NullOrUndefined (String)
-  , "DeviceDefinitionVersionArn" :: NullOrUndefined (String)
-  , "FunctionDefinitionVersionArn" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "CoreDefinitionVersionArn" :: Maybe (String)
+  , "DeviceDefinitionVersionArn" :: Maybe (String)
+  , "FunctionDefinitionVersionArn" :: Maybe (String)
   , "GroupId" :: (String)
-  , "LoggerDefinitionVersionArn" :: NullOrUndefined (String)
-  , "ResourceDefinitionVersionArn" :: NullOrUndefined (String)
-  , "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String)
+  , "LoggerDefinitionVersionArn" :: Maybe (String)
+  , "ResourceDefinitionVersionArn" :: Maybe (String)
+  , "SubscriptionDefinitionVersionArn" :: Maybe (String)
   }
 derive instance newtypeCreateGroupVersionRequest :: Newtype CreateGroupVersionRequest _
 derive instance repGenericCreateGroupVersionRequest :: Generic CreateGroupVersionRequest _
@@ -623,20 +622,20 @@ instance encodeCreateGroupVersionRequest :: Encode CreateGroupVersionRequest whe
 
 -- | Constructs CreateGroupVersionRequest from required parameters
 newCreateGroupVersionRequest :: String -> CreateGroupVersionRequest
-newCreateGroupVersionRequest _GroupId = CreateGroupVersionRequest { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing), "CoreDefinitionVersionArn": (NullOrUndefined Nothing), "DeviceDefinitionVersionArn": (NullOrUndefined Nothing), "FunctionDefinitionVersionArn": (NullOrUndefined Nothing), "LoggerDefinitionVersionArn": (NullOrUndefined Nothing), "ResourceDefinitionVersionArn": (NullOrUndefined Nothing), "SubscriptionDefinitionVersionArn": (NullOrUndefined Nothing) }
+newCreateGroupVersionRequest _GroupId = CreateGroupVersionRequest { "GroupId": _GroupId, "AmznClientToken": Nothing, "CoreDefinitionVersionArn": Nothing, "DeviceDefinitionVersionArn": Nothing, "FunctionDefinitionVersionArn": Nothing, "LoggerDefinitionVersionArn": Nothing, "ResourceDefinitionVersionArn": Nothing, "SubscriptionDefinitionVersionArn": Nothing }
 
 -- | Constructs CreateGroupVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateGroupVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "CoreDefinitionVersionArn" :: NullOrUndefined (String) , "DeviceDefinitionVersionArn" :: NullOrUndefined (String) , "FunctionDefinitionVersionArn" :: NullOrUndefined (String) , "GroupId" :: (String) , "LoggerDefinitionVersionArn" :: NullOrUndefined (String) , "ResourceDefinitionVersionArn" :: NullOrUndefined (String) , "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "CoreDefinitionVersionArn" :: NullOrUndefined (String) , "DeviceDefinitionVersionArn" :: NullOrUndefined (String) , "FunctionDefinitionVersionArn" :: NullOrUndefined (String) , "GroupId" :: (String) , "LoggerDefinitionVersionArn" :: NullOrUndefined (String) , "ResourceDefinitionVersionArn" :: NullOrUndefined (String) , "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) } ) -> CreateGroupVersionRequest
-newCreateGroupVersionRequest' _GroupId customize = (CreateGroupVersionRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing), "CoreDefinitionVersionArn": (NullOrUndefined Nothing), "DeviceDefinitionVersionArn": (NullOrUndefined Nothing), "FunctionDefinitionVersionArn": (NullOrUndefined Nothing), "LoggerDefinitionVersionArn": (NullOrUndefined Nothing), "ResourceDefinitionVersionArn": (NullOrUndefined Nothing), "SubscriptionDefinitionVersionArn": (NullOrUndefined Nothing) }
+newCreateGroupVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "CoreDefinitionVersionArn" :: Maybe (String) , "DeviceDefinitionVersionArn" :: Maybe (String) , "FunctionDefinitionVersionArn" :: Maybe (String) , "GroupId" :: (String) , "LoggerDefinitionVersionArn" :: Maybe (String) , "ResourceDefinitionVersionArn" :: Maybe (String) , "SubscriptionDefinitionVersionArn" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "CoreDefinitionVersionArn" :: Maybe (String) , "DeviceDefinitionVersionArn" :: Maybe (String) , "FunctionDefinitionVersionArn" :: Maybe (String) , "GroupId" :: (String) , "LoggerDefinitionVersionArn" :: Maybe (String) , "ResourceDefinitionVersionArn" :: Maybe (String) , "SubscriptionDefinitionVersionArn" :: Maybe (String) } ) -> CreateGroupVersionRequest
+newCreateGroupVersionRequest' _GroupId customize = (CreateGroupVersionRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": Nothing, "CoreDefinitionVersionArn": Nothing, "DeviceDefinitionVersionArn": Nothing, "FunctionDefinitionVersionArn": Nothing, "LoggerDefinitionVersionArn": Nothing, "ResourceDefinitionVersionArn": Nothing, "SubscriptionDefinitionVersionArn": Nothing }
 
 
 
 newtype CreateGroupVersionResponse = CreateGroupVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateGroupVersionResponse :: Newtype CreateGroupVersionResponse _
 derive instance repGenericCreateGroupVersionResponse :: Generic CreateGroupVersionResponse _
@@ -646,19 +645,19 @@ instance encodeCreateGroupVersionResponse :: Encode CreateGroupVersionResponse w
 
 -- | Constructs CreateGroupVersionResponse from required parameters
 newCreateGroupVersionResponse :: CreateGroupVersionResponse
-newCreateGroupVersionResponse  = CreateGroupVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateGroupVersionResponse  = CreateGroupVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateGroupVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateGroupVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateGroupVersionResponse
-newCreateGroupVersionResponse'  customize = (CreateGroupVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateGroupVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateGroupVersionResponse
+newCreateGroupVersionResponse'  customize = (CreateGroupVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 newtype CreateLoggerDefinitionRequest = CreateLoggerDefinitionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (LoggerDefinitionVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (LoggerDefinitionVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateLoggerDefinitionRequest :: Newtype CreateLoggerDefinitionRequest _
 derive instance repGenericCreateLoggerDefinitionRequest :: Generic CreateLoggerDefinitionRequest _
@@ -668,23 +667,23 @@ instance encodeCreateLoggerDefinitionRequest :: Encode CreateLoggerDefinitionReq
 
 -- | Constructs CreateLoggerDefinitionRequest from required parameters
 newCreateLoggerDefinitionRequest :: CreateLoggerDefinitionRequest
-newCreateLoggerDefinitionRequest  = CreateLoggerDefinitionRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionRequest  = CreateLoggerDefinitionRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateLoggerDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoggerDefinitionRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (LoggerDefinitionVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (LoggerDefinitionVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateLoggerDefinitionRequest
-newCreateLoggerDefinitionRequest'  customize = (CreateLoggerDefinitionRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (LoggerDefinitionVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (LoggerDefinitionVersion) , "Name" :: Maybe (String) } ) -> CreateLoggerDefinitionRequest
+newCreateLoggerDefinitionRequest'  customize = (CreateLoggerDefinitionRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateLoggerDefinitionResponse = CreateLoggerDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateLoggerDefinitionResponse :: Newtype CreateLoggerDefinitionResponse _
 derive instance repGenericCreateLoggerDefinitionResponse :: Generic CreateLoggerDefinitionResponse _
@@ -694,19 +693,19 @@ instance encodeCreateLoggerDefinitionResponse :: Encode CreateLoggerDefinitionRe
 
 -- | Constructs CreateLoggerDefinitionResponse from required parameters
 newCreateLoggerDefinitionResponse :: CreateLoggerDefinitionResponse
-newCreateLoggerDefinitionResponse  = CreateLoggerDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionResponse  = CreateLoggerDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateLoggerDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoggerDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateLoggerDefinitionResponse
-newCreateLoggerDefinitionResponse'  customize = (CreateLoggerDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateLoggerDefinitionResponse
+newCreateLoggerDefinitionResponse'  customize = (CreateLoggerDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 newtype CreateLoggerDefinitionVersionRequest = CreateLoggerDefinitionVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "LoggerDefinitionId" :: (String)
-  , "Loggers" :: NullOrUndefined (ListOfLogger)
+  , "Loggers" :: Maybe (ListOfLogger)
   }
 derive instance newtypeCreateLoggerDefinitionVersionRequest :: Newtype CreateLoggerDefinitionVersionRequest _
 derive instance repGenericCreateLoggerDefinitionVersionRequest :: Generic CreateLoggerDefinitionVersionRequest _
@@ -716,20 +715,20 @@ instance encodeCreateLoggerDefinitionVersionRequest :: Encode CreateLoggerDefini
 
 -- | Constructs CreateLoggerDefinitionVersionRequest from required parameters
 newCreateLoggerDefinitionVersionRequest :: String -> CreateLoggerDefinitionVersionRequest
-newCreateLoggerDefinitionVersionRequest _LoggerDefinitionId = CreateLoggerDefinitionVersionRequest { "LoggerDefinitionId": _LoggerDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Loggers": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionVersionRequest _LoggerDefinitionId = CreateLoggerDefinitionVersionRequest { "LoggerDefinitionId": _LoggerDefinitionId, "AmznClientToken": Nothing, "Loggers": Nothing }
 
 -- | Constructs CreateLoggerDefinitionVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoggerDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "LoggerDefinitionId" :: (String) , "Loggers" :: NullOrUndefined (ListOfLogger) } -> {"AmznClientToken" :: NullOrUndefined (String) , "LoggerDefinitionId" :: (String) , "Loggers" :: NullOrUndefined (ListOfLogger) } ) -> CreateLoggerDefinitionVersionRequest
-newCreateLoggerDefinitionVersionRequest' _LoggerDefinitionId customize = (CreateLoggerDefinitionVersionRequest <<< customize) { "LoggerDefinitionId": _LoggerDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Loggers": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "LoggerDefinitionId" :: (String) , "Loggers" :: Maybe (ListOfLogger) } -> {"AmznClientToken" :: Maybe (String) , "LoggerDefinitionId" :: (String) , "Loggers" :: Maybe (ListOfLogger) } ) -> CreateLoggerDefinitionVersionRequest
+newCreateLoggerDefinitionVersionRequest' _LoggerDefinitionId customize = (CreateLoggerDefinitionVersionRequest <<< customize) { "LoggerDefinitionId": _LoggerDefinitionId, "AmznClientToken": Nothing, "Loggers": Nothing }
 
 
 
 newtype CreateLoggerDefinitionVersionResponse = CreateLoggerDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateLoggerDefinitionVersionResponse :: Newtype CreateLoggerDefinitionVersionResponse _
 derive instance repGenericCreateLoggerDefinitionVersionResponse :: Generic CreateLoggerDefinitionVersionResponse _
@@ -739,19 +738,19 @@ instance encodeCreateLoggerDefinitionVersionResponse :: Encode CreateLoggerDefin
 
 -- | Constructs CreateLoggerDefinitionVersionResponse from required parameters
 newCreateLoggerDefinitionVersionResponse :: CreateLoggerDefinitionVersionResponse
-newCreateLoggerDefinitionVersionResponse  = CreateLoggerDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionVersionResponse  = CreateLoggerDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateLoggerDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateLoggerDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateLoggerDefinitionVersionResponse
-newCreateLoggerDefinitionVersionResponse'  customize = (CreateLoggerDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateLoggerDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateLoggerDefinitionVersionResponse
+newCreateLoggerDefinitionVersionResponse'  customize = (CreateLoggerDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 newtype CreateResourceDefinitionRequest = CreateResourceDefinitionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (ResourceDefinitionVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (ResourceDefinitionVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateResourceDefinitionRequest :: Newtype CreateResourceDefinitionRequest _
 derive instance repGenericCreateResourceDefinitionRequest :: Generic CreateResourceDefinitionRequest _
@@ -761,23 +760,23 @@ instance encodeCreateResourceDefinitionRequest :: Encode CreateResourceDefinitio
 
 -- | Constructs CreateResourceDefinitionRequest from required parameters
 newCreateResourceDefinitionRequest :: CreateResourceDefinitionRequest
-newCreateResourceDefinitionRequest  = CreateResourceDefinitionRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionRequest  = CreateResourceDefinitionRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateResourceDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateResourceDefinitionRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (ResourceDefinitionVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (ResourceDefinitionVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateResourceDefinitionRequest
-newCreateResourceDefinitionRequest'  customize = (CreateResourceDefinitionRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (ResourceDefinitionVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (ResourceDefinitionVersion) , "Name" :: Maybe (String) } ) -> CreateResourceDefinitionRequest
+newCreateResourceDefinitionRequest'  customize = (CreateResourceDefinitionRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateResourceDefinitionResponse = CreateResourceDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateResourceDefinitionResponse :: Newtype CreateResourceDefinitionResponse _
 derive instance repGenericCreateResourceDefinitionResponse :: Generic CreateResourceDefinitionResponse _
@@ -787,19 +786,19 @@ instance encodeCreateResourceDefinitionResponse :: Encode CreateResourceDefiniti
 
 -- | Constructs CreateResourceDefinitionResponse from required parameters
 newCreateResourceDefinitionResponse :: CreateResourceDefinitionResponse
-newCreateResourceDefinitionResponse  = CreateResourceDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionResponse  = CreateResourceDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateResourceDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateResourceDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateResourceDefinitionResponse
-newCreateResourceDefinitionResponse'  customize = (CreateResourceDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateResourceDefinitionResponse
+newCreateResourceDefinitionResponse'  customize = (CreateResourceDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 newtype CreateResourceDefinitionVersionRequest = CreateResourceDefinitionVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "ResourceDefinitionId" :: (String)
-  , "Resources" :: NullOrUndefined (ListOfResource)
+  , "Resources" :: Maybe (ListOfResource)
   }
 derive instance newtypeCreateResourceDefinitionVersionRequest :: Newtype CreateResourceDefinitionVersionRequest _
 derive instance repGenericCreateResourceDefinitionVersionRequest :: Generic CreateResourceDefinitionVersionRequest _
@@ -809,20 +808,20 @@ instance encodeCreateResourceDefinitionVersionRequest :: Encode CreateResourceDe
 
 -- | Constructs CreateResourceDefinitionVersionRequest from required parameters
 newCreateResourceDefinitionVersionRequest :: String -> CreateResourceDefinitionVersionRequest
-newCreateResourceDefinitionVersionRequest _ResourceDefinitionId = CreateResourceDefinitionVersionRequest { "ResourceDefinitionId": _ResourceDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Resources": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionVersionRequest _ResourceDefinitionId = CreateResourceDefinitionVersionRequest { "ResourceDefinitionId": _ResourceDefinitionId, "AmznClientToken": Nothing, "Resources": Nothing }
 
 -- | Constructs CreateResourceDefinitionVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateResourceDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "ResourceDefinitionId" :: (String) , "Resources" :: NullOrUndefined (ListOfResource) } -> {"AmznClientToken" :: NullOrUndefined (String) , "ResourceDefinitionId" :: (String) , "Resources" :: NullOrUndefined (ListOfResource) } ) -> CreateResourceDefinitionVersionRequest
-newCreateResourceDefinitionVersionRequest' _ResourceDefinitionId customize = (CreateResourceDefinitionVersionRequest <<< customize) { "ResourceDefinitionId": _ResourceDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Resources": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "ResourceDefinitionId" :: (String) , "Resources" :: Maybe (ListOfResource) } -> {"AmznClientToken" :: Maybe (String) , "ResourceDefinitionId" :: (String) , "Resources" :: Maybe (ListOfResource) } ) -> CreateResourceDefinitionVersionRequest
+newCreateResourceDefinitionVersionRequest' _ResourceDefinitionId customize = (CreateResourceDefinitionVersionRequest <<< customize) { "ResourceDefinitionId": _ResourceDefinitionId, "AmznClientToken": Nothing, "Resources": Nothing }
 
 
 
 newtype CreateResourceDefinitionVersionResponse = CreateResourceDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateResourceDefinitionVersionResponse :: Newtype CreateResourceDefinitionVersionResponse _
 derive instance repGenericCreateResourceDefinitionVersionResponse :: Generic CreateResourceDefinitionVersionResponse _
@@ -832,23 +831,23 @@ instance encodeCreateResourceDefinitionVersionResponse :: Encode CreateResourceD
 
 -- | Constructs CreateResourceDefinitionVersionResponse from required parameters
 newCreateResourceDefinitionVersionResponse :: CreateResourceDefinitionVersionResponse
-newCreateResourceDefinitionVersionResponse  = CreateResourceDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionVersionResponse  = CreateResourceDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateResourceDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateResourceDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateResourceDefinitionVersionResponse
-newCreateResourceDefinitionVersionResponse'  customize = (CreateResourceDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateResourceDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateResourceDefinitionVersionResponse
+newCreateResourceDefinitionVersionResponse'  customize = (CreateResourceDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 newtype CreateSoftwareUpdateJobRequest = CreateSoftwareUpdateJobRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "S3UrlSignerRole" :: NullOrUndefined (S3UrlSignerRole)
-  , "SoftwareToUpdate" :: NullOrUndefined (SoftwareToUpdate)
-  , "UpdateAgentLogLevel" :: NullOrUndefined (UpdateAgentLogLevel)
-  , "UpdateTargets" :: NullOrUndefined (UpdateTargets)
-  , "UpdateTargetsArchitecture" :: NullOrUndefined (UpdateTargetsArchitecture)
-  , "UpdateTargetsOperatingSystem" :: NullOrUndefined (UpdateTargetsOperatingSystem)
+  { "AmznClientToken" :: Maybe (String)
+  , "S3UrlSignerRole" :: Maybe (S3UrlSignerRole)
+  , "SoftwareToUpdate" :: Maybe (SoftwareToUpdate)
+  , "UpdateAgentLogLevel" :: Maybe (UpdateAgentLogLevel)
+  , "UpdateTargets" :: Maybe (UpdateTargets)
+  , "UpdateTargetsArchitecture" :: Maybe (UpdateTargetsArchitecture)
+  , "UpdateTargetsOperatingSystem" :: Maybe (UpdateTargetsOperatingSystem)
   }
 derive instance newtypeCreateSoftwareUpdateJobRequest :: Newtype CreateSoftwareUpdateJobRequest _
 derive instance repGenericCreateSoftwareUpdateJobRequest :: Generic CreateSoftwareUpdateJobRequest _
@@ -858,18 +857,18 @@ instance encodeCreateSoftwareUpdateJobRequest :: Encode CreateSoftwareUpdateJobR
 
 -- | Constructs CreateSoftwareUpdateJobRequest from required parameters
 newCreateSoftwareUpdateJobRequest :: CreateSoftwareUpdateJobRequest
-newCreateSoftwareUpdateJobRequest  = CreateSoftwareUpdateJobRequest { "AmznClientToken": (NullOrUndefined Nothing), "S3UrlSignerRole": (NullOrUndefined Nothing), "SoftwareToUpdate": (NullOrUndefined Nothing), "UpdateAgentLogLevel": (NullOrUndefined Nothing), "UpdateTargets": (NullOrUndefined Nothing), "UpdateTargetsArchitecture": (NullOrUndefined Nothing), "UpdateTargetsOperatingSystem": (NullOrUndefined Nothing) }
+newCreateSoftwareUpdateJobRequest  = CreateSoftwareUpdateJobRequest { "AmznClientToken": Nothing, "S3UrlSignerRole": Nothing, "SoftwareToUpdate": Nothing, "UpdateAgentLogLevel": Nothing, "UpdateTargets": Nothing, "UpdateTargetsArchitecture": Nothing, "UpdateTargetsOperatingSystem": Nothing }
 
 -- | Constructs CreateSoftwareUpdateJobRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSoftwareUpdateJobRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "S3UrlSignerRole" :: NullOrUndefined (S3UrlSignerRole) , "SoftwareToUpdate" :: NullOrUndefined (SoftwareToUpdate) , "UpdateAgentLogLevel" :: NullOrUndefined (UpdateAgentLogLevel) , "UpdateTargets" :: NullOrUndefined (UpdateTargets) , "UpdateTargetsArchitecture" :: NullOrUndefined (UpdateTargetsArchitecture) , "UpdateTargetsOperatingSystem" :: NullOrUndefined (UpdateTargetsOperatingSystem) } -> {"AmznClientToken" :: NullOrUndefined (String) , "S3UrlSignerRole" :: NullOrUndefined (S3UrlSignerRole) , "SoftwareToUpdate" :: NullOrUndefined (SoftwareToUpdate) , "UpdateAgentLogLevel" :: NullOrUndefined (UpdateAgentLogLevel) , "UpdateTargets" :: NullOrUndefined (UpdateTargets) , "UpdateTargetsArchitecture" :: NullOrUndefined (UpdateTargetsArchitecture) , "UpdateTargetsOperatingSystem" :: NullOrUndefined (UpdateTargetsOperatingSystem) } ) -> CreateSoftwareUpdateJobRequest
-newCreateSoftwareUpdateJobRequest'  customize = (CreateSoftwareUpdateJobRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "S3UrlSignerRole": (NullOrUndefined Nothing), "SoftwareToUpdate": (NullOrUndefined Nothing), "UpdateAgentLogLevel": (NullOrUndefined Nothing), "UpdateTargets": (NullOrUndefined Nothing), "UpdateTargetsArchitecture": (NullOrUndefined Nothing), "UpdateTargetsOperatingSystem": (NullOrUndefined Nothing) }
+newCreateSoftwareUpdateJobRequest' :: ( { "AmznClientToken" :: Maybe (String) , "S3UrlSignerRole" :: Maybe (S3UrlSignerRole) , "SoftwareToUpdate" :: Maybe (SoftwareToUpdate) , "UpdateAgentLogLevel" :: Maybe (UpdateAgentLogLevel) , "UpdateTargets" :: Maybe (UpdateTargets) , "UpdateTargetsArchitecture" :: Maybe (UpdateTargetsArchitecture) , "UpdateTargetsOperatingSystem" :: Maybe (UpdateTargetsOperatingSystem) } -> {"AmznClientToken" :: Maybe (String) , "S3UrlSignerRole" :: Maybe (S3UrlSignerRole) , "SoftwareToUpdate" :: Maybe (SoftwareToUpdate) , "UpdateAgentLogLevel" :: Maybe (UpdateAgentLogLevel) , "UpdateTargets" :: Maybe (UpdateTargets) , "UpdateTargetsArchitecture" :: Maybe (UpdateTargetsArchitecture) , "UpdateTargetsOperatingSystem" :: Maybe (UpdateTargetsOperatingSystem) } ) -> CreateSoftwareUpdateJobRequest
+newCreateSoftwareUpdateJobRequest'  customize = (CreateSoftwareUpdateJobRequest <<< customize) { "AmznClientToken": Nothing, "S3UrlSignerRole": Nothing, "SoftwareToUpdate": Nothing, "UpdateAgentLogLevel": Nothing, "UpdateTargets": Nothing, "UpdateTargetsArchitecture": Nothing, "UpdateTargetsOperatingSystem": Nothing }
 
 
 
 newtype CreateSoftwareUpdateJobResponse = CreateSoftwareUpdateJobResponse 
-  { "IotJobArn" :: NullOrUndefined (String)
-  , "IotJobId" :: NullOrUndefined (String)
+  { "IotJobArn" :: Maybe (String)
+  , "IotJobId" :: Maybe (String)
   }
 derive instance newtypeCreateSoftwareUpdateJobResponse :: Newtype CreateSoftwareUpdateJobResponse _
 derive instance repGenericCreateSoftwareUpdateJobResponse :: Generic CreateSoftwareUpdateJobResponse _
@@ -879,19 +878,19 @@ instance encodeCreateSoftwareUpdateJobResponse :: Encode CreateSoftwareUpdateJob
 
 -- | Constructs CreateSoftwareUpdateJobResponse from required parameters
 newCreateSoftwareUpdateJobResponse :: CreateSoftwareUpdateJobResponse
-newCreateSoftwareUpdateJobResponse  = CreateSoftwareUpdateJobResponse { "IotJobArn": (NullOrUndefined Nothing), "IotJobId": (NullOrUndefined Nothing) }
+newCreateSoftwareUpdateJobResponse  = CreateSoftwareUpdateJobResponse { "IotJobArn": Nothing, "IotJobId": Nothing }
 
 -- | Constructs CreateSoftwareUpdateJobResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSoftwareUpdateJobResponse' :: ( { "IotJobArn" :: NullOrUndefined (String) , "IotJobId" :: NullOrUndefined (String) } -> {"IotJobArn" :: NullOrUndefined (String) , "IotJobId" :: NullOrUndefined (String) } ) -> CreateSoftwareUpdateJobResponse
-newCreateSoftwareUpdateJobResponse'  customize = (CreateSoftwareUpdateJobResponse <<< customize) { "IotJobArn": (NullOrUndefined Nothing), "IotJobId": (NullOrUndefined Nothing) }
+newCreateSoftwareUpdateJobResponse' :: ( { "IotJobArn" :: Maybe (String) , "IotJobId" :: Maybe (String) } -> {"IotJobArn" :: Maybe (String) , "IotJobId" :: Maybe (String) } ) -> CreateSoftwareUpdateJobResponse
+newCreateSoftwareUpdateJobResponse'  customize = (CreateSoftwareUpdateJobResponse <<< customize) { "IotJobArn": Nothing, "IotJobId": Nothing }
 
 
 
 newtype CreateSubscriptionDefinitionRequest = CreateSubscriptionDefinitionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "InitialVersion" :: NullOrUndefined (SubscriptionDefinitionVersion)
-  , "Name" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
+  , "InitialVersion" :: Maybe (SubscriptionDefinitionVersion)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateSubscriptionDefinitionRequest :: Newtype CreateSubscriptionDefinitionRequest _
 derive instance repGenericCreateSubscriptionDefinitionRequest :: Generic CreateSubscriptionDefinitionRequest _
@@ -901,23 +900,23 @@ instance encodeCreateSubscriptionDefinitionRequest :: Encode CreateSubscriptionD
 
 -- | Constructs CreateSubscriptionDefinitionRequest from required parameters
 newCreateSubscriptionDefinitionRequest :: CreateSubscriptionDefinitionRequest
-newCreateSubscriptionDefinitionRequest  = CreateSubscriptionDefinitionRequest { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionRequest  = CreateSubscriptionDefinitionRequest { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 -- | Constructs CreateSubscriptionDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSubscriptionDefinitionRequest' :: ( { "AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (SubscriptionDefinitionVersion) , "Name" :: NullOrUndefined (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "InitialVersion" :: NullOrUndefined (SubscriptionDefinitionVersion) , "Name" :: NullOrUndefined (String) } ) -> CreateSubscriptionDefinitionRequest
-newCreateSubscriptionDefinitionRequest'  customize = (CreateSubscriptionDefinitionRequest <<< customize) { "AmznClientToken": (NullOrUndefined Nothing), "InitialVersion": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionRequest' :: ( { "AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (SubscriptionDefinitionVersion) , "Name" :: Maybe (String) } -> {"AmznClientToken" :: Maybe (String) , "InitialVersion" :: Maybe (SubscriptionDefinitionVersion) , "Name" :: Maybe (String) } ) -> CreateSubscriptionDefinitionRequest
+newCreateSubscriptionDefinitionRequest'  customize = (CreateSubscriptionDefinitionRequest <<< customize) { "AmznClientToken": Nothing, "InitialVersion": Nothing, "Name": Nothing }
 
 
 
 newtype CreateSubscriptionDefinitionResponse = CreateSubscriptionDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeCreateSubscriptionDefinitionResponse :: Newtype CreateSubscriptionDefinitionResponse _
 derive instance repGenericCreateSubscriptionDefinitionResponse :: Generic CreateSubscriptionDefinitionResponse _
@@ -927,19 +926,19 @@ instance encodeCreateSubscriptionDefinitionResponse :: Encode CreateSubscription
 
 -- | Constructs CreateSubscriptionDefinitionResponse from required parameters
 newCreateSubscriptionDefinitionResponse :: CreateSubscriptionDefinitionResponse
-newCreateSubscriptionDefinitionResponse  = CreateSubscriptionDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionResponse  = CreateSubscriptionDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs CreateSubscriptionDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSubscriptionDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> CreateSubscriptionDefinitionResponse
-newCreateSubscriptionDefinitionResponse'  customize = (CreateSubscriptionDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> CreateSubscriptionDefinitionResponse
+newCreateSubscriptionDefinitionResponse'  customize = (CreateSubscriptionDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 newtype CreateSubscriptionDefinitionVersionRequest = CreateSubscriptionDefinitionVersionRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
+  { "AmznClientToken" :: Maybe (String)
   , "SubscriptionDefinitionId" :: (String)
-  , "Subscriptions" :: NullOrUndefined (ListOfSubscription)
+  , "Subscriptions" :: Maybe (ListOfSubscription)
   }
 derive instance newtypeCreateSubscriptionDefinitionVersionRequest :: Newtype CreateSubscriptionDefinitionVersionRequest _
 derive instance repGenericCreateSubscriptionDefinitionVersionRequest :: Generic CreateSubscriptionDefinitionVersionRequest _
@@ -949,20 +948,20 @@ instance encodeCreateSubscriptionDefinitionVersionRequest :: Encode CreateSubscr
 
 -- | Constructs CreateSubscriptionDefinitionVersionRequest from required parameters
 newCreateSubscriptionDefinitionVersionRequest :: String -> CreateSubscriptionDefinitionVersionRequest
-newCreateSubscriptionDefinitionVersionRequest _SubscriptionDefinitionId = CreateSubscriptionDefinitionVersionRequest { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Subscriptions": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionVersionRequest _SubscriptionDefinitionId = CreateSubscriptionDefinitionVersionRequest { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "AmznClientToken": Nothing, "Subscriptions": Nothing }
 
 -- | Constructs CreateSubscriptionDefinitionVersionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSubscriptionDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "SubscriptionDefinitionId" :: (String) , "Subscriptions" :: NullOrUndefined (ListOfSubscription) } -> {"AmznClientToken" :: NullOrUndefined (String) , "SubscriptionDefinitionId" :: (String) , "Subscriptions" :: NullOrUndefined (ListOfSubscription) } ) -> CreateSubscriptionDefinitionVersionRequest
-newCreateSubscriptionDefinitionVersionRequest' _SubscriptionDefinitionId customize = (CreateSubscriptionDefinitionVersionRequest <<< customize) { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "AmznClientToken": (NullOrUndefined Nothing), "Subscriptions": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionVersionRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "SubscriptionDefinitionId" :: (String) , "Subscriptions" :: Maybe (ListOfSubscription) } -> {"AmznClientToken" :: Maybe (String) , "SubscriptionDefinitionId" :: (String) , "Subscriptions" :: Maybe (ListOfSubscription) } ) -> CreateSubscriptionDefinitionVersionRequest
+newCreateSubscriptionDefinitionVersionRequest' _SubscriptionDefinitionId customize = (CreateSubscriptionDefinitionVersionRequest <<< customize) { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "AmznClientToken": Nothing, "Subscriptions": Nothing }
 
 
 
 newtype CreateSubscriptionDefinitionVersionResponse = CreateSubscriptionDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeCreateSubscriptionDefinitionVersionResponse :: Newtype CreateSubscriptionDefinitionVersionResponse _
 derive instance repGenericCreateSubscriptionDefinitionVersionResponse :: Generic CreateSubscriptionDefinitionVersionResponse _
@@ -972,24 +971,24 @@ instance encodeCreateSubscriptionDefinitionVersionResponse :: Encode CreateSubsc
 
 -- | Constructs CreateSubscriptionDefinitionVersionResponse from required parameters
 newCreateSubscriptionDefinitionVersionResponse :: CreateSubscriptionDefinitionVersionResponse
-newCreateSubscriptionDefinitionVersionResponse  = CreateSubscriptionDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionVersionResponse  = CreateSubscriptionDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs CreateSubscriptionDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSubscriptionDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> CreateSubscriptionDefinitionVersionResponse
-newCreateSubscriptionDefinitionVersionResponse'  customize = (CreateSubscriptionDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCreateSubscriptionDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> CreateSubscriptionDefinitionVersionResponse
+newCreateSubscriptionDefinitionVersionResponse'  customize = (CreateSubscriptionDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 -- | Information on the Definition
 newtype DefinitionInformation = DefinitionInformation 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeDefinitionInformation :: Newtype DefinitionInformation _
 derive instance repGenericDefinitionInformation :: Generic DefinitionInformation _
@@ -999,12 +998,12 @@ instance encodeDefinitionInformation :: Encode DefinitionInformation where encod
 
 -- | Constructs DefinitionInformation from required parameters
 newDefinitionInformation :: DefinitionInformation
-newDefinitionInformation  = DefinitionInformation { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newDefinitionInformation  = DefinitionInformation { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs DefinitionInformation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDefinitionInformation' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> DefinitionInformation
-newDefinitionInformation'  customize = (DefinitionInformation <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newDefinitionInformation' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> DefinitionInformation
+newDefinitionInformation'  customize = (DefinitionInformation <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -1213,11 +1212,11 @@ instance encodeDeleteSubscriptionDefinitionResponse :: Encode DeleteSubscription
 
 -- | Information on the deployment
 newtype Deployment = Deployment 
-  { "CreatedAt" :: NullOrUndefined (String)
-  , "DeploymentArn" :: NullOrUndefined (String)
-  , "DeploymentId" :: NullOrUndefined (String)
-  , "DeploymentType" :: NullOrUndefined (DeploymentType)
-  , "GroupArn" :: NullOrUndefined (String)
+  { "CreatedAt" :: Maybe (String)
+  , "DeploymentArn" :: Maybe (String)
+  , "DeploymentId" :: Maybe (String)
+  , "DeploymentType" :: Maybe (DeploymentType)
+  , "GroupArn" :: Maybe (String)
   }
 derive instance newtypeDeployment :: Newtype Deployment _
 derive instance repGenericDeployment :: Generic Deployment _
@@ -1227,12 +1226,12 @@ instance encodeDeployment :: Encode Deployment where encode = genericEncode opti
 
 -- | Constructs Deployment from required parameters
 newDeployment :: Deployment
-newDeployment  = Deployment { "CreatedAt": (NullOrUndefined Nothing), "DeploymentArn": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing), "DeploymentType": (NullOrUndefined Nothing), "GroupArn": (NullOrUndefined Nothing) }
+newDeployment  = Deployment { "CreatedAt": Nothing, "DeploymentArn": Nothing, "DeploymentId": Nothing, "DeploymentType": Nothing, "GroupArn": Nothing }
 
 -- | Constructs Deployment's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeployment' :: ( { "CreatedAt" :: NullOrUndefined (String) , "DeploymentArn" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) , "DeploymentType" :: NullOrUndefined (DeploymentType) , "GroupArn" :: NullOrUndefined (String) } -> {"CreatedAt" :: NullOrUndefined (String) , "DeploymentArn" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) , "DeploymentType" :: NullOrUndefined (DeploymentType) , "GroupArn" :: NullOrUndefined (String) } ) -> Deployment
-newDeployment'  customize = (Deployment <<< customize) { "CreatedAt": (NullOrUndefined Nothing), "DeploymentArn": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing), "DeploymentType": (NullOrUndefined Nothing), "GroupArn": (NullOrUndefined Nothing) }
+newDeployment' :: ( { "CreatedAt" :: Maybe (String) , "DeploymentArn" :: Maybe (String) , "DeploymentId" :: Maybe (String) , "DeploymentType" :: Maybe (DeploymentType) , "GroupArn" :: Maybe (String) } -> {"CreatedAt" :: Maybe (String) , "DeploymentArn" :: Maybe (String) , "DeploymentId" :: Maybe (String) , "DeploymentType" :: Maybe (DeploymentType) , "GroupArn" :: Maybe (String) } ) -> Deployment
+newDeployment'  customize = (Deployment <<< customize) { "CreatedAt": Nothing, "DeploymentArn": Nothing, "DeploymentId": Nothing, "DeploymentType": Nothing, "GroupArn": Nothing }
 
 
 
@@ -1256,10 +1255,10 @@ instance encodeDeployments :: Encode Deployments where encode = genericEncode op
 
 -- | Information on a Device
 newtype Device = Device 
-  { "CertificateArn" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "SyncShadow" :: NullOrUndefined (Boolean)
-  , "ThingArn" :: NullOrUndefined (String)
+  { "CertificateArn" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "SyncShadow" :: Maybe (Boolean)
+  , "ThingArn" :: Maybe (String)
   }
 derive instance newtypeDevice :: Newtype Device _
 derive instance repGenericDevice :: Generic Device _
@@ -1269,18 +1268,18 @@ instance encodeDevice :: Encode Device where encode = genericEncode options
 
 -- | Constructs Device from required parameters
 newDevice :: Device
-newDevice  = Device { "CertificateArn": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "SyncShadow": (NullOrUndefined Nothing), "ThingArn": (NullOrUndefined Nothing) }
+newDevice  = Device { "CertificateArn": Nothing, "Id": Nothing, "SyncShadow": Nothing, "ThingArn": Nothing }
 
 -- | Constructs Device's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDevice' :: ( { "CertificateArn" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "SyncShadow" :: NullOrUndefined (Boolean) , "ThingArn" :: NullOrUndefined (String) } -> {"CertificateArn" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "SyncShadow" :: NullOrUndefined (Boolean) , "ThingArn" :: NullOrUndefined (String) } ) -> Device
-newDevice'  customize = (Device <<< customize) { "CertificateArn": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "SyncShadow": (NullOrUndefined Nothing), "ThingArn": (NullOrUndefined Nothing) }
+newDevice' :: ( { "CertificateArn" :: Maybe (String) , "Id" :: Maybe (String) , "SyncShadow" :: Maybe (Boolean) , "ThingArn" :: Maybe (String) } -> {"CertificateArn" :: Maybe (String) , "Id" :: Maybe (String) , "SyncShadow" :: Maybe (Boolean) , "ThingArn" :: Maybe (String) } ) -> Device
+newDevice'  customize = (Device <<< customize) { "CertificateArn": Nothing, "Id": Nothing, "SyncShadow": Nothing, "ThingArn": Nothing }
 
 
 
 -- | Information on device definition version
 newtype DeviceDefinitionVersion = DeviceDefinitionVersion 
-  { "Devices" :: NullOrUndefined (ListOfDevice)
+  { "Devices" :: Maybe (ListOfDevice)
   }
 derive instance newtypeDeviceDefinitionVersion :: Newtype DeviceDefinitionVersion _
 derive instance repGenericDeviceDefinitionVersion :: Generic DeviceDefinitionVersion _
@@ -1290,12 +1289,12 @@ instance encodeDeviceDefinitionVersion :: Encode DeviceDefinitionVersion where e
 
 -- | Constructs DeviceDefinitionVersion from required parameters
 newDeviceDefinitionVersion :: DeviceDefinitionVersion
-newDeviceDefinitionVersion  = DeviceDefinitionVersion { "Devices": (NullOrUndefined Nothing) }
+newDeviceDefinitionVersion  = DeviceDefinitionVersion { "Devices": Nothing }
 
 -- | Constructs DeviceDefinitionVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeviceDefinitionVersion' :: ( { "Devices" :: NullOrUndefined (ListOfDevice) } -> {"Devices" :: NullOrUndefined (ListOfDevice) } ) -> DeviceDefinitionVersion
-newDeviceDefinitionVersion'  customize = (DeviceDefinitionVersion <<< customize) { "Devices": (NullOrUndefined Nothing) }
+newDeviceDefinitionVersion' :: ( { "Devices" :: Maybe (ListOfDevice) } -> {"Devices" :: Maybe (ListOfDevice) } ) -> DeviceDefinitionVersion
+newDeviceDefinitionVersion'  customize = (DeviceDefinitionVersion <<< customize) { "Devices": Nothing }
 
 
 
@@ -1320,7 +1319,7 @@ newDisassociateRoleFromGroupRequest' _GroupId customize = (DisassociateRoleFromG
 
 
 newtype DisassociateRoleFromGroupResponse = DisassociateRoleFromGroupResponse 
-  { "DisassociatedAt" :: NullOrUndefined (String)
+  { "DisassociatedAt" :: Maybe (String)
   }
 derive instance newtypeDisassociateRoleFromGroupResponse :: Newtype DisassociateRoleFromGroupResponse _
 derive instance repGenericDisassociateRoleFromGroupResponse :: Generic DisassociateRoleFromGroupResponse _
@@ -1330,12 +1329,12 @@ instance encodeDisassociateRoleFromGroupResponse :: Encode DisassociateRoleFromG
 
 -- | Constructs DisassociateRoleFromGroupResponse from required parameters
 newDisassociateRoleFromGroupResponse :: DisassociateRoleFromGroupResponse
-newDisassociateRoleFromGroupResponse  = DisassociateRoleFromGroupResponse { "DisassociatedAt": (NullOrUndefined Nothing) }
+newDisassociateRoleFromGroupResponse  = DisassociateRoleFromGroupResponse { "DisassociatedAt": Nothing }
 
 -- | Constructs DisassociateRoleFromGroupResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisassociateRoleFromGroupResponse' :: ( { "DisassociatedAt" :: NullOrUndefined (String) } -> {"DisassociatedAt" :: NullOrUndefined (String) } ) -> DisassociateRoleFromGroupResponse
-newDisassociateRoleFromGroupResponse'  customize = (DisassociateRoleFromGroupResponse <<< customize) { "DisassociatedAt": (NullOrUndefined Nothing) }
+newDisassociateRoleFromGroupResponse' :: ( { "DisassociatedAt" :: Maybe (String) } -> {"DisassociatedAt" :: Maybe (String) } ) -> DisassociateRoleFromGroupResponse
+newDisassociateRoleFromGroupResponse'  customize = (DisassociateRoleFromGroupResponse <<< customize) { "DisassociatedAt": Nothing }
 
 
 
@@ -1349,7 +1348,7 @@ instance encodeDisassociateServiceRoleFromAccountRequest :: Encode DisassociateS
 
 
 newtype DisassociateServiceRoleFromAccountResponse = DisassociateServiceRoleFromAccountResponse 
-  { "DisassociatedAt" :: NullOrUndefined (String)
+  { "DisassociatedAt" :: Maybe (String)
   }
 derive instance newtypeDisassociateServiceRoleFromAccountResponse :: Newtype DisassociateServiceRoleFromAccountResponse _
 derive instance repGenericDisassociateServiceRoleFromAccountResponse :: Generic DisassociateServiceRoleFromAccountResponse _
@@ -1359,12 +1358,12 @@ instance encodeDisassociateServiceRoleFromAccountResponse :: Encode Disassociate
 
 -- | Constructs DisassociateServiceRoleFromAccountResponse from required parameters
 newDisassociateServiceRoleFromAccountResponse :: DisassociateServiceRoleFromAccountResponse
-newDisassociateServiceRoleFromAccountResponse  = DisassociateServiceRoleFromAccountResponse { "DisassociatedAt": (NullOrUndefined Nothing) }
+newDisassociateServiceRoleFromAccountResponse  = DisassociateServiceRoleFromAccountResponse { "DisassociatedAt": Nothing }
 
 -- | Constructs DisassociateServiceRoleFromAccountResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisassociateServiceRoleFromAccountResponse' :: ( { "DisassociatedAt" :: NullOrUndefined (String) } -> {"DisassociatedAt" :: NullOrUndefined (String) } ) -> DisassociateServiceRoleFromAccountResponse
-newDisassociateServiceRoleFromAccountResponse'  customize = (DisassociateServiceRoleFromAccountResponse <<< customize) { "DisassociatedAt": (NullOrUndefined Nothing) }
+newDisassociateServiceRoleFromAccountResponse' :: ( { "DisassociatedAt" :: Maybe (String) } -> {"DisassociatedAt" :: Maybe (String) } ) -> DisassociateServiceRoleFromAccountResponse
+newDisassociateServiceRoleFromAccountResponse'  customize = (DisassociateServiceRoleFromAccountResponse <<< customize) { "DisassociatedAt": Nothing }
 
 
 
@@ -1380,8 +1379,8 @@ instance encodeEmpty :: Encode Empty where encode = genericEncode options
 
 -- | ErrorDetail
 newtype ErrorDetail = ErrorDetail 
-  { "DetailedErrorCode" :: NullOrUndefined (String)
-  , "DetailedErrorMessage" :: NullOrUndefined (String)
+  { "DetailedErrorCode" :: Maybe (String)
+  , "DetailedErrorMessage" :: Maybe (String)
   }
 derive instance newtypeErrorDetail :: Newtype ErrorDetail _
 derive instance repGenericErrorDetail :: Generic ErrorDetail _
@@ -1391,12 +1390,12 @@ instance encodeErrorDetail :: Encode ErrorDetail where encode = genericEncode op
 
 -- | Constructs ErrorDetail from required parameters
 newErrorDetail :: ErrorDetail
-newErrorDetail  = ErrorDetail { "DetailedErrorCode": (NullOrUndefined Nothing), "DetailedErrorMessage": (NullOrUndefined Nothing) }
+newErrorDetail  = ErrorDetail { "DetailedErrorCode": Nothing, "DetailedErrorMessage": Nothing }
 
 -- | Constructs ErrorDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newErrorDetail' :: ( { "DetailedErrorCode" :: NullOrUndefined (String) , "DetailedErrorMessage" :: NullOrUndefined (String) } -> {"DetailedErrorCode" :: NullOrUndefined (String) , "DetailedErrorMessage" :: NullOrUndefined (String) } ) -> ErrorDetail
-newErrorDetail'  customize = (ErrorDetail <<< customize) { "DetailedErrorCode": (NullOrUndefined Nothing), "DetailedErrorMessage": (NullOrUndefined Nothing) }
+newErrorDetail' :: ( { "DetailedErrorCode" :: Maybe (String) , "DetailedErrorMessage" :: Maybe (String) } -> {"DetailedErrorCode" :: Maybe (String) , "DetailedErrorMessage" :: Maybe (String) } ) -> ErrorDetail
+newErrorDetail'  customize = (ErrorDetail <<< customize) { "DetailedErrorCode": Nothing, "DetailedErrorMessage": Nothing }
 
 
 
@@ -1412,9 +1411,9 @@ instance encodeErrorDetails :: Encode ErrorDetails where encode = genericEncode 
 
 -- | Information on function
 newtype Function'' = Function'' 
-  { "FunctionArn" :: NullOrUndefined (String)
-  , "FunctionConfiguration" :: NullOrUndefined (FunctionConfiguration)
-  , "Id" :: NullOrUndefined (String)
+  { "FunctionArn" :: Maybe (String)
+  , "FunctionConfiguration" :: Maybe (FunctionConfiguration)
+  , "Id" :: Maybe (String)
   }
 derive instance newtypeFunction'' :: Newtype Function'' _
 derive instance repGenericFunction'' :: Generic Function'' _
@@ -1424,23 +1423,23 @@ instance encodeFunction'' :: Encode Function'' where encode = genericEncode opti
 
 -- | Constructs Function'' from required parameters
 newFunction'' :: Function''
-newFunction''  = Function'' { "FunctionArn": (NullOrUndefined Nothing), "FunctionConfiguration": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing) }
+newFunction''  = Function'' { "FunctionArn": Nothing, "FunctionConfiguration": Nothing, "Id": Nothing }
 
 -- | Constructs Function'''s fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newFunction''' :: ( { "FunctionArn" :: NullOrUndefined (String) , "FunctionConfiguration" :: NullOrUndefined (FunctionConfiguration) , "Id" :: NullOrUndefined (String) } -> {"FunctionArn" :: NullOrUndefined (String) , "FunctionConfiguration" :: NullOrUndefined (FunctionConfiguration) , "Id" :: NullOrUndefined (String) } ) -> Function''
-newFunction'''  customize = (Function'' <<< customize) { "FunctionArn": (NullOrUndefined Nothing), "FunctionConfiguration": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing) }
+newFunction''' :: ( { "FunctionArn" :: Maybe (String) , "FunctionConfiguration" :: Maybe (FunctionConfiguration) , "Id" :: Maybe (String) } -> {"FunctionArn" :: Maybe (String) , "FunctionConfiguration" :: Maybe (FunctionConfiguration) , "Id" :: Maybe (String) } ) -> Function''
+newFunction'''  customize = (Function'' <<< customize) { "FunctionArn": Nothing, "FunctionConfiguration": Nothing, "Id": Nothing }
 
 
 
 -- | Configuration of the function
 newtype FunctionConfiguration = FunctionConfiguration 
-  { "Environment" :: NullOrUndefined (FunctionConfigurationEnvironment)
-  , "ExecArgs" :: NullOrUndefined (String)
-  , "Executable" :: NullOrUndefined (String)
-  , "MemorySize" :: NullOrUndefined (Int)
-  , "Pinned" :: NullOrUndefined (Boolean)
-  , "Timeout" :: NullOrUndefined (Int)
+  { "Environment" :: Maybe (FunctionConfigurationEnvironment)
+  , "ExecArgs" :: Maybe (String)
+  , "Executable" :: Maybe (String)
+  , "MemorySize" :: Maybe (Int)
+  , "Pinned" :: Maybe (Boolean)
+  , "Timeout" :: Maybe (Int)
   }
 derive instance newtypeFunctionConfiguration :: Newtype FunctionConfiguration _
 derive instance repGenericFunctionConfiguration :: Generic FunctionConfiguration _
@@ -1450,20 +1449,20 @@ instance encodeFunctionConfiguration :: Encode FunctionConfiguration where encod
 
 -- | Constructs FunctionConfiguration from required parameters
 newFunctionConfiguration :: FunctionConfiguration
-newFunctionConfiguration  = FunctionConfiguration { "Environment": (NullOrUndefined Nothing), "ExecArgs": (NullOrUndefined Nothing), "Executable": (NullOrUndefined Nothing), "MemorySize": (NullOrUndefined Nothing), "Pinned": (NullOrUndefined Nothing), "Timeout": (NullOrUndefined Nothing) }
+newFunctionConfiguration  = FunctionConfiguration { "Environment": Nothing, "ExecArgs": Nothing, "Executable": Nothing, "MemorySize": Nothing, "Pinned": Nothing, "Timeout": Nothing }
 
 -- | Constructs FunctionConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newFunctionConfiguration' :: ( { "Environment" :: NullOrUndefined (FunctionConfigurationEnvironment) , "ExecArgs" :: NullOrUndefined (String) , "Executable" :: NullOrUndefined (String) , "MemorySize" :: NullOrUndefined (Int) , "Pinned" :: NullOrUndefined (Boolean) , "Timeout" :: NullOrUndefined (Int) } -> {"Environment" :: NullOrUndefined (FunctionConfigurationEnvironment) , "ExecArgs" :: NullOrUndefined (String) , "Executable" :: NullOrUndefined (String) , "MemorySize" :: NullOrUndefined (Int) , "Pinned" :: NullOrUndefined (Boolean) , "Timeout" :: NullOrUndefined (Int) } ) -> FunctionConfiguration
-newFunctionConfiguration'  customize = (FunctionConfiguration <<< customize) { "Environment": (NullOrUndefined Nothing), "ExecArgs": (NullOrUndefined Nothing), "Executable": (NullOrUndefined Nothing), "MemorySize": (NullOrUndefined Nothing), "Pinned": (NullOrUndefined Nothing), "Timeout": (NullOrUndefined Nothing) }
+newFunctionConfiguration' :: ( { "Environment" :: Maybe (FunctionConfigurationEnvironment) , "ExecArgs" :: Maybe (String) , "Executable" :: Maybe (String) , "MemorySize" :: Maybe (Int) , "Pinned" :: Maybe (Boolean) , "Timeout" :: Maybe (Int) } -> {"Environment" :: Maybe (FunctionConfigurationEnvironment) , "ExecArgs" :: Maybe (String) , "Executable" :: Maybe (String) , "MemorySize" :: Maybe (Int) , "Pinned" :: Maybe (Boolean) , "Timeout" :: Maybe (Int) } ) -> FunctionConfiguration
+newFunctionConfiguration'  customize = (FunctionConfiguration <<< customize) { "Environment": Nothing, "ExecArgs": Nothing, "Executable": Nothing, "MemorySize": Nothing, "Pinned": Nothing, "Timeout": Nothing }
 
 
 
 -- | Environment of the function configuration
 newtype FunctionConfigurationEnvironment = FunctionConfigurationEnvironment 
-  { "AccessSysfs" :: NullOrUndefined (Boolean)
-  , "ResourceAccessPolicies" :: NullOrUndefined (ListOfResourceAccessPolicy)
-  , "Variables" :: NullOrUndefined (MapOf__string)
+  { "AccessSysfs" :: Maybe (Boolean)
+  , "ResourceAccessPolicies" :: Maybe (ListOfResourceAccessPolicy)
+  , "Variables" :: Maybe (MapOf__string)
   }
 derive instance newtypeFunctionConfigurationEnvironment :: Newtype FunctionConfigurationEnvironment _
 derive instance repGenericFunctionConfigurationEnvironment :: Generic FunctionConfigurationEnvironment _
@@ -1473,18 +1472,18 @@ instance encodeFunctionConfigurationEnvironment :: Encode FunctionConfigurationE
 
 -- | Constructs FunctionConfigurationEnvironment from required parameters
 newFunctionConfigurationEnvironment :: FunctionConfigurationEnvironment
-newFunctionConfigurationEnvironment  = FunctionConfigurationEnvironment { "AccessSysfs": (NullOrUndefined Nothing), "ResourceAccessPolicies": (NullOrUndefined Nothing), "Variables": (NullOrUndefined Nothing) }
+newFunctionConfigurationEnvironment  = FunctionConfigurationEnvironment { "AccessSysfs": Nothing, "ResourceAccessPolicies": Nothing, "Variables": Nothing }
 
 -- | Constructs FunctionConfigurationEnvironment's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newFunctionConfigurationEnvironment' :: ( { "AccessSysfs" :: NullOrUndefined (Boolean) , "ResourceAccessPolicies" :: NullOrUndefined (ListOfResourceAccessPolicy) , "Variables" :: NullOrUndefined (MapOf__string) } -> {"AccessSysfs" :: NullOrUndefined (Boolean) , "ResourceAccessPolicies" :: NullOrUndefined (ListOfResourceAccessPolicy) , "Variables" :: NullOrUndefined (MapOf__string) } ) -> FunctionConfigurationEnvironment
-newFunctionConfigurationEnvironment'  customize = (FunctionConfigurationEnvironment <<< customize) { "AccessSysfs": (NullOrUndefined Nothing), "ResourceAccessPolicies": (NullOrUndefined Nothing), "Variables": (NullOrUndefined Nothing) }
+newFunctionConfigurationEnvironment' :: ( { "AccessSysfs" :: Maybe (Boolean) , "ResourceAccessPolicies" :: Maybe (ListOfResourceAccessPolicy) , "Variables" :: Maybe (MapOf__string) } -> {"AccessSysfs" :: Maybe (Boolean) , "ResourceAccessPolicies" :: Maybe (ListOfResourceAccessPolicy) , "Variables" :: Maybe (MapOf__string) } ) -> FunctionConfigurationEnvironment
+newFunctionConfigurationEnvironment'  customize = (FunctionConfigurationEnvironment <<< customize) { "AccessSysfs": Nothing, "ResourceAccessPolicies": Nothing, "Variables": Nothing }
 
 
 
 -- | Information on the function definition version
 newtype FunctionDefinitionVersion = FunctionDefinitionVersion 
-  { "Functions" :: NullOrUndefined (ListOfFunction)
+  { "Functions" :: Maybe (ListOfFunction)
   }
 derive instance newtypeFunctionDefinitionVersion :: Newtype FunctionDefinitionVersion _
 derive instance repGenericFunctionDefinitionVersion :: Generic FunctionDefinitionVersion _
@@ -1494,19 +1493,19 @@ instance encodeFunctionDefinitionVersion :: Encode FunctionDefinitionVersion whe
 
 -- | Constructs FunctionDefinitionVersion from required parameters
 newFunctionDefinitionVersion :: FunctionDefinitionVersion
-newFunctionDefinitionVersion  = FunctionDefinitionVersion { "Functions": (NullOrUndefined Nothing) }
+newFunctionDefinitionVersion  = FunctionDefinitionVersion { "Functions": Nothing }
 
 -- | Constructs FunctionDefinitionVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newFunctionDefinitionVersion' :: ( { "Functions" :: NullOrUndefined (ListOfFunction) } -> {"Functions" :: NullOrUndefined (ListOfFunction) } ) -> FunctionDefinitionVersion
-newFunctionDefinitionVersion'  customize = (FunctionDefinitionVersion <<< customize) { "Functions": (NullOrUndefined Nothing) }
+newFunctionDefinitionVersion' :: ( { "Functions" :: Maybe (ListOfFunction) } -> {"Functions" :: Maybe (ListOfFunction) } ) -> FunctionDefinitionVersion
+newFunctionDefinitionVersion'  customize = (FunctionDefinitionVersion <<< customize) { "Functions": Nothing }
 
 
 
 -- | General Error
 newtype GeneralError = GeneralError 
-  { "ErrorDetails" :: NullOrUndefined (ErrorDetails)
-  , "Message" :: NullOrUndefined (String)
+  { "ErrorDetails" :: Maybe (ErrorDetails)
+  , "Message" :: Maybe (String)
   }
 derive instance newtypeGeneralError :: Newtype GeneralError _
 derive instance repGenericGeneralError :: Generic GeneralError _
@@ -1516,12 +1515,12 @@ instance encodeGeneralError :: Encode GeneralError where encode = genericEncode 
 
 -- | Constructs GeneralError from required parameters
 newGeneralError :: GeneralError
-newGeneralError  = GeneralError { "ErrorDetails": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newGeneralError  = GeneralError { "ErrorDetails": Nothing, "Message": Nothing }
 
 -- | Constructs GeneralError's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGeneralError' :: ( { "ErrorDetails" :: NullOrUndefined (ErrorDetails) , "Message" :: NullOrUndefined (String) } -> {"ErrorDetails" :: NullOrUndefined (ErrorDetails) , "Message" :: NullOrUndefined (String) } ) -> GeneralError
-newGeneralError'  customize = (GeneralError <<< customize) { "ErrorDetails": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newGeneralError' :: ( { "ErrorDetails" :: Maybe (ErrorDetails) , "Message" :: Maybe (String) } -> {"ErrorDetails" :: Maybe (ErrorDetails) , "Message" :: Maybe (String) } ) -> GeneralError
+newGeneralError'  customize = (GeneralError <<< customize) { "ErrorDetails": Nothing, "Message": Nothing }
 
 
 
@@ -1546,8 +1545,8 @@ newGetAssociatedRoleRequest' _GroupId customize = (GetAssociatedRoleRequest <<< 
 
 
 newtype GetAssociatedRoleResponse = GetAssociatedRoleResponse 
-  { "AssociatedAt" :: NullOrUndefined (String)
-  , "RoleArn" :: NullOrUndefined (String)
+  { "AssociatedAt" :: Maybe (String)
+  , "RoleArn" :: Maybe (String)
   }
 derive instance newtypeGetAssociatedRoleResponse :: Newtype GetAssociatedRoleResponse _
 derive instance repGenericGetAssociatedRoleResponse :: Generic GetAssociatedRoleResponse _
@@ -1557,12 +1556,12 @@ instance encodeGetAssociatedRoleResponse :: Encode GetAssociatedRoleResponse whe
 
 -- | Constructs GetAssociatedRoleResponse from required parameters
 newGetAssociatedRoleResponse :: GetAssociatedRoleResponse
-newGetAssociatedRoleResponse  = GetAssociatedRoleResponse { "AssociatedAt": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newGetAssociatedRoleResponse  = GetAssociatedRoleResponse { "AssociatedAt": Nothing, "RoleArn": Nothing }
 
 -- | Constructs GetAssociatedRoleResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetAssociatedRoleResponse' :: ( { "AssociatedAt" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } -> {"AssociatedAt" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } ) -> GetAssociatedRoleResponse
-newGetAssociatedRoleResponse'  customize = (GetAssociatedRoleResponse <<< customize) { "AssociatedAt": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newGetAssociatedRoleResponse' :: ( { "AssociatedAt" :: Maybe (String) , "RoleArn" :: Maybe (String) } -> {"AssociatedAt" :: Maybe (String) , "RoleArn" :: Maybe (String) } ) -> GetAssociatedRoleResponse
+newGetAssociatedRoleResponse'  customize = (GetAssociatedRoleResponse <<< customize) { "AssociatedAt": Nothing, "RoleArn": Nothing }
 
 
 
@@ -1587,8 +1586,8 @@ newGetConnectivityInfoRequest' _ThingName customize = (GetConnectivityInfoReques
 
 
 newtype GetConnectivityInfoResponse = GetConnectivityInfoResponse 
-  { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo)
-  , "Message" :: NullOrUndefined (String)
+  { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo)
+  , "Message" :: Maybe (String)
   }
 derive instance newtypeGetConnectivityInfoResponse :: Newtype GetConnectivityInfoResponse _
 derive instance repGenericGetConnectivityInfoResponse :: Generic GetConnectivityInfoResponse _
@@ -1598,12 +1597,12 @@ instance encodeGetConnectivityInfoResponse :: Encode GetConnectivityInfoResponse
 
 -- | Constructs GetConnectivityInfoResponse from required parameters
 newGetConnectivityInfoResponse :: GetConnectivityInfoResponse
-newGetConnectivityInfoResponse  = GetConnectivityInfoResponse { "ConnectivityInfo": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newGetConnectivityInfoResponse  = GetConnectivityInfoResponse { "ConnectivityInfo": Nothing, "Message": Nothing }
 
 -- | Constructs GetConnectivityInfoResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetConnectivityInfoResponse' :: ( { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo) , "Message" :: NullOrUndefined (String) } -> {"ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo) , "Message" :: NullOrUndefined (String) } ) -> GetConnectivityInfoResponse
-newGetConnectivityInfoResponse'  customize = (GetConnectivityInfoResponse <<< customize) { "ConnectivityInfo": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newGetConnectivityInfoResponse' :: ( { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo) , "Message" :: Maybe (String) } -> {"ConnectivityInfo" :: Maybe (ListOfConnectivityInfo) , "Message" :: Maybe (String) } ) -> GetConnectivityInfoResponse
+newGetConnectivityInfoResponse'  customize = (GetConnectivityInfoResponse <<< customize) { "ConnectivityInfo": Nothing, "Message": Nothing }
 
 
 
@@ -1628,13 +1627,13 @@ newGetCoreDefinitionRequest' _CoreDefinitionId customize = (GetCoreDefinitionReq
 
 
 newtype GetCoreDefinitionResponse = GetCoreDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetCoreDefinitionResponse :: Newtype GetCoreDefinitionResponse _
 derive instance repGenericGetCoreDefinitionResponse :: Generic GetCoreDefinitionResponse _
@@ -1644,12 +1643,12 @@ instance encodeGetCoreDefinitionResponse :: Encode GetCoreDefinitionResponse whe
 
 -- | Constructs GetCoreDefinitionResponse from required parameters
 newGetCoreDefinitionResponse :: GetCoreDefinitionResponse
-newGetCoreDefinitionResponse  = GetCoreDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetCoreDefinitionResponse  = GetCoreDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetCoreDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetCoreDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetCoreDefinitionResponse
-newGetCoreDefinitionResponse'  customize = (GetCoreDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetCoreDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetCoreDefinitionResponse
+newGetCoreDefinitionResponse'  customize = (GetCoreDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -1675,11 +1674,11 @@ newGetCoreDefinitionVersionRequest' _CoreDefinitionId _CoreDefinitionVersionId c
 
 
 newtype GetCoreDefinitionVersionResponse = GetCoreDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (CoreDefinitionVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (CoreDefinitionVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetCoreDefinitionVersionResponse :: Newtype GetCoreDefinitionVersionResponse _
 derive instance repGenericGetCoreDefinitionVersionResponse :: Generic GetCoreDefinitionVersionResponse _
@@ -1689,12 +1688,12 @@ instance encodeGetCoreDefinitionVersionResponse :: Encode GetCoreDefinitionVersi
 
 -- | Constructs GetCoreDefinitionVersionResponse from required parameters
 newGetCoreDefinitionVersionResponse :: GetCoreDefinitionVersionResponse
-newGetCoreDefinitionVersionResponse  = GetCoreDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetCoreDefinitionVersionResponse  = GetCoreDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetCoreDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetCoreDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (CoreDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (CoreDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetCoreDefinitionVersionResponse
-newGetCoreDefinitionVersionResponse'  customize = (GetCoreDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetCoreDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (CoreDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (CoreDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetCoreDefinitionVersionResponse
+newGetCoreDefinitionVersionResponse'  customize = (GetCoreDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
@@ -1720,11 +1719,11 @@ newGetDeploymentStatusRequest' _DeploymentId _GroupId customize = (GetDeployment
 
 
 newtype GetDeploymentStatusResponse = GetDeploymentStatusResponse 
-  { "DeploymentStatus" :: NullOrUndefined (String)
-  , "DeploymentType" :: NullOrUndefined (DeploymentType)
-  , "ErrorDetails" :: NullOrUndefined (ErrorDetails)
-  , "ErrorMessage" :: NullOrUndefined (String)
-  , "UpdatedAt" :: NullOrUndefined (String)
+  { "DeploymentStatus" :: Maybe (String)
+  , "DeploymentType" :: Maybe (DeploymentType)
+  , "ErrorDetails" :: Maybe (ErrorDetails)
+  , "ErrorMessage" :: Maybe (String)
+  , "UpdatedAt" :: Maybe (String)
   }
 derive instance newtypeGetDeploymentStatusResponse :: Newtype GetDeploymentStatusResponse _
 derive instance repGenericGetDeploymentStatusResponse :: Generic GetDeploymentStatusResponse _
@@ -1734,12 +1733,12 @@ instance encodeGetDeploymentStatusResponse :: Encode GetDeploymentStatusResponse
 
 -- | Constructs GetDeploymentStatusResponse from required parameters
 newGetDeploymentStatusResponse :: GetDeploymentStatusResponse
-newGetDeploymentStatusResponse  = GetDeploymentStatusResponse { "DeploymentStatus": (NullOrUndefined Nothing), "DeploymentType": (NullOrUndefined Nothing), "ErrorDetails": (NullOrUndefined Nothing), "ErrorMessage": (NullOrUndefined Nothing), "UpdatedAt": (NullOrUndefined Nothing) }
+newGetDeploymentStatusResponse  = GetDeploymentStatusResponse { "DeploymentStatus": Nothing, "DeploymentType": Nothing, "ErrorDetails": Nothing, "ErrorMessage": Nothing, "UpdatedAt": Nothing }
 
 -- | Constructs GetDeploymentStatusResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDeploymentStatusResponse' :: ( { "DeploymentStatus" :: NullOrUndefined (String) , "DeploymentType" :: NullOrUndefined (DeploymentType) , "ErrorDetails" :: NullOrUndefined (ErrorDetails) , "ErrorMessage" :: NullOrUndefined (String) , "UpdatedAt" :: NullOrUndefined (String) } -> {"DeploymentStatus" :: NullOrUndefined (String) , "DeploymentType" :: NullOrUndefined (DeploymentType) , "ErrorDetails" :: NullOrUndefined (ErrorDetails) , "ErrorMessage" :: NullOrUndefined (String) , "UpdatedAt" :: NullOrUndefined (String) } ) -> GetDeploymentStatusResponse
-newGetDeploymentStatusResponse'  customize = (GetDeploymentStatusResponse <<< customize) { "DeploymentStatus": (NullOrUndefined Nothing), "DeploymentType": (NullOrUndefined Nothing), "ErrorDetails": (NullOrUndefined Nothing), "ErrorMessage": (NullOrUndefined Nothing), "UpdatedAt": (NullOrUndefined Nothing) }
+newGetDeploymentStatusResponse' :: ( { "DeploymentStatus" :: Maybe (String) , "DeploymentType" :: Maybe (DeploymentType) , "ErrorDetails" :: Maybe (ErrorDetails) , "ErrorMessage" :: Maybe (String) , "UpdatedAt" :: Maybe (String) } -> {"DeploymentStatus" :: Maybe (String) , "DeploymentType" :: Maybe (DeploymentType) , "ErrorDetails" :: Maybe (ErrorDetails) , "ErrorMessage" :: Maybe (String) , "UpdatedAt" :: Maybe (String) } ) -> GetDeploymentStatusResponse
+newGetDeploymentStatusResponse'  customize = (GetDeploymentStatusResponse <<< customize) { "DeploymentStatus": Nothing, "DeploymentType": Nothing, "ErrorDetails": Nothing, "ErrorMessage": Nothing, "UpdatedAt": Nothing }
 
 
 
@@ -1764,13 +1763,13 @@ newGetDeviceDefinitionRequest' _DeviceDefinitionId customize = (GetDeviceDefinit
 
 
 newtype GetDeviceDefinitionResponse = GetDeviceDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetDeviceDefinitionResponse :: Newtype GetDeviceDefinitionResponse _
 derive instance repGenericGetDeviceDefinitionResponse :: Generic GetDeviceDefinitionResponse _
@@ -1780,12 +1779,12 @@ instance encodeGetDeviceDefinitionResponse :: Encode GetDeviceDefinitionResponse
 
 -- | Constructs GetDeviceDefinitionResponse from required parameters
 newGetDeviceDefinitionResponse :: GetDeviceDefinitionResponse
-newGetDeviceDefinitionResponse  = GetDeviceDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetDeviceDefinitionResponse  = GetDeviceDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetDeviceDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDeviceDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetDeviceDefinitionResponse
-newGetDeviceDefinitionResponse'  customize = (GetDeviceDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetDeviceDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetDeviceDefinitionResponse
+newGetDeviceDefinitionResponse'  customize = (GetDeviceDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -1811,11 +1810,11 @@ newGetDeviceDefinitionVersionRequest' _DeviceDefinitionId _DeviceDefinitionVersi
 
 
 newtype GetDeviceDefinitionVersionResponse = GetDeviceDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (DeviceDefinitionVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (DeviceDefinitionVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetDeviceDefinitionVersionResponse :: Newtype GetDeviceDefinitionVersionResponse _
 derive instance repGenericGetDeviceDefinitionVersionResponse :: Generic GetDeviceDefinitionVersionResponse _
@@ -1825,12 +1824,12 @@ instance encodeGetDeviceDefinitionVersionResponse :: Encode GetDeviceDefinitionV
 
 -- | Constructs GetDeviceDefinitionVersionResponse from required parameters
 newGetDeviceDefinitionVersionResponse :: GetDeviceDefinitionVersionResponse
-newGetDeviceDefinitionVersionResponse  = GetDeviceDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetDeviceDefinitionVersionResponse  = GetDeviceDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetDeviceDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDeviceDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (DeviceDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (DeviceDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetDeviceDefinitionVersionResponse
-newGetDeviceDefinitionVersionResponse'  customize = (GetDeviceDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetDeviceDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (DeviceDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (DeviceDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetDeviceDefinitionVersionResponse
+newGetDeviceDefinitionVersionResponse'  customize = (GetDeviceDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
@@ -1855,13 +1854,13 @@ newGetFunctionDefinitionRequest' _FunctionDefinitionId customize = (GetFunctionD
 
 
 newtype GetFunctionDefinitionResponse = GetFunctionDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetFunctionDefinitionResponse :: Newtype GetFunctionDefinitionResponse _
 derive instance repGenericGetFunctionDefinitionResponse :: Generic GetFunctionDefinitionResponse _
@@ -1871,12 +1870,12 @@ instance encodeGetFunctionDefinitionResponse :: Encode GetFunctionDefinitionResp
 
 -- | Constructs GetFunctionDefinitionResponse from required parameters
 newGetFunctionDefinitionResponse :: GetFunctionDefinitionResponse
-newGetFunctionDefinitionResponse  = GetFunctionDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetFunctionDefinitionResponse  = GetFunctionDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetFunctionDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetFunctionDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetFunctionDefinitionResponse
-newGetFunctionDefinitionResponse'  customize = (GetFunctionDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetFunctionDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetFunctionDefinitionResponse
+newGetFunctionDefinitionResponse'  customize = (GetFunctionDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -1902,11 +1901,11 @@ newGetFunctionDefinitionVersionRequest' _FunctionDefinitionId _FunctionDefinitio
 
 
 newtype GetFunctionDefinitionVersionResponse = GetFunctionDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (FunctionDefinitionVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (FunctionDefinitionVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetFunctionDefinitionVersionResponse :: Newtype GetFunctionDefinitionVersionResponse _
 derive instance repGenericGetFunctionDefinitionVersionResponse :: Generic GetFunctionDefinitionVersionResponse _
@@ -1916,12 +1915,12 @@ instance encodeGetFunctionDefinitionVersionResponse :: Encode GetFunctionDefinit
 
 -- | Constructs GetFunctionDefinitionVersionResponse from required parameters
 newGetFunctionDefinitionVersionResponse :: GetFunctionDefinitionVersionResponse
-newGetFunctionDefinitionVersionResponse  = GetFunctionDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetFunctionDefinitionVersionResponse  = GetFunctionDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetFunctionDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetFunctionDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (FunctionDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (FunctionDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetFunctionDefinitionVersionResponse
-newGetFunctionDefinitionVersionResponse'  customize = (GetFunctionDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetFunctionDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (FunctionDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (FunctionDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetFunctionDefinitionVersionResponse
+newGetFunctionDefinitionVersionResponse'  customize = (GetFunctionDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
@@ -1947,9 +1946,9 @@ newGetGroupCertificateAuthorityRequest' _CertificateAuthorityId _GroupId customi
 
 
 newtype GetGroupCertificateAuthorityResponse = GetGroupCertificateAuthorityResponse 
-  { "GroupCertificateAuthorityArn" :: NullOrUndefined (String)
-  , "GroupCertificateAuthorityId" :: NullOrUndefined (String)
-  , "PemEncodedCertificate" :: NullOrUndefined (String)
+  { "GroupCertificateAuthorityArn" :: Maybe (String)
+  , "GroupCertificateAuthorityId" :: Maybe (String)
+  , "PemEncodedCertificate" :: Maybe (String)
   }
 derive instance newtypeGetGroupCertificateAuthorityResponse :: Newtype GetGroupCertificateAuthorityResponse _
 derive instance repGenericGetGroupCertificateAuthorityResponse :: Generic GetGroupCertificateAuthorityResponse _
@@ -1959,12 +1958,12 @@ instance encodeGetGroupCertificateAuthorityResponse :: Encode GetGroupCertificat
 
 -- | Constructs GetGroupCertificateAuthorityResponse from required parameters
 newGetGroupCertificateAuthorityResponse :: GetGroupCertificateAuthorityResponse
-newGetGroupCertificateAuthorityResponse  = GetGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn": (NullOrUndefined Nothing), "GroupCertificateAuthorityId": (NullOrUndefined Nothing), "PemEncodedCertificate": (NullOrUndefined Nothing) }
+newGetGroupCertificateAuthorityResponse  = GetGroupCertificateAuthorityResponse { "GroupCertificateAuthorityArn": Nothing, "GroupCertificateAuthorityId": Nothing, "PemEncodedCertificate": Nothing }
 
 -- | Constructs GetGroupCertificateAuthorityResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetGroupCertificateAuthorityResponse' :: ( { "GroupCertificateAuthorityArn" :: NullOrUndefined (String) , "GroupCertificateAuthorityId" :: NullOrUndefined (String) , "PemEncodedCertificate" :: NullOrUndefined (String) } -> {"GroupCertificateAuthorityArn" :: NullOrUndefined (String) , "GroupCertificateAuthorityId" :: NullOrUndefined (String) , "PemEncodedCertificate" :: NullOrUndefined (String) } ) -> GetGroupCertificateAuthorityResponse
-newGetGroupCertificateAuthorityResponse'  customize = (GetGroupCertificateAuthorityResponse <<< customize) { "GroupCertificateAuthorityArn": (NullOrUndefined Nothing), "GroupCertificateAuthorityId": (NullOrUndefined Nothing), "PemEncodedCertificate": (NullOrUndefined Nothing) }
+newGetGroupCertificateAuthorityResponse' :: ( { "GroupCertificateAuthorityArn" :: Maybe (String) , "GroupCertificateAuthorityId" :: Maybe (String) , "PemEncodedCertificate" :: Maybe (String) } -> {"GroupCertificateAuthorityArn" :: Maybe (String) , "GroupCertificateAuthorityId" :: Maybe (String) , "PemEncodedCertificate" :: Maybe (String) } ) -> GetGroupCertificateAuthorityResponse
+newGetGroupCertificateAuthorityResponse'  customize = (GetGroupCertificateAuthorityResponse <<< customize) { "GroupCertificateAuthorityArn": Nothing, "GroupCertificateAuthorityId": Nothing, "PemEncodedCertificate": Nothing }
 
 
 
@@ -1989,9 +1988,9 @@ newGetGroupCertificateConfigurationRequest' _GroupId customize = (GetGroupCertif
 
 
 newtype GetGroupCertificateConfigurationResponse = GetGroupCertificateConfigurationResponse 
-  { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String)
-  , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String)
-  , "GroupId" :: NullOrUndefined (String)
+  { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String)
+  , "CertificateExpiryInMilliseconds" :: Maybe (String)
+  , "GroupId" :: Maybe (String)
   }
 derive instance newtypeGetGroupCertificateConfigurationResponse :: Newtype GetGroupCertificateConfigurationResponse _
 derive instance repGenericGetGroupCertificateConfigurationResponse :: Generic GetGroupCertificateConfigurationResponse _
@@ -2001,12 +2000,12 @@ instance encodeGetGroupCertificateConfigurationResponse :: Encode GetGroupCertif
 
 -- | Constructs GetGroupCertificateConfigurationResponse from required parameters
 newGetGroupCertificateConfigurationResponse :: GetGroupCertificateConfigurationResponse
-newGetGroupCertificateConfigurationResponse  = GetGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds": (NullOrUndefined Nothing), "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing), "GroupId": (NullOrUndefined Nothing) }
+newGetGroupCertificateConfigurationResponse  = GetGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds": Nothing, "CertificateExpiryInMilliseconds": Nothing, "GroupId": Nothing }
 
 -- | Constructs GetGroupCertificateConfigurationResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetGroupCertificateConfigurationResponse' :: ( { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String) , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: NullOrUndefined (String) } -> {"CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String) , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: NullOrUndefined (String) } ) -> GetGroupCertificateConfigurationResponse
-newGetGroupCertificateConfigurationResponse'  customize = (GetGroupCertificateConfigurationResponse <<< customize) { "CertificateAuthorityExpiryInMilliseconds": (NullOrUndefined Nothing), "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing), "GroupId": (NullOrUndefined Nothing) }
+newGetGroupCertificateConfigurationResponse' :: ( { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String) , "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: Maybe (String) } -> {"CertificateAuthorityExpiryInMilliseconds" :: Maybe (String) , "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: Maybe (String) } ) -> GetGroupCertificateConfigurationResponse
+newGetGroupCertificateConfigurationResponse'  customize = (GetGroupCertificateConfigurationResponse <<< customize) { "CertificateAuthorityExpiryInMilliseconds": Nothing, "CertificateExpiryInMilliseconds": Nothing, "GroupId": Nothing }
 
 
 
@@ -2031,13 +2030,13 @@ newGetGroupRequest' _GroupId customize = (GetGroupRequest <<< customize) { "Grou
 
 
 newtype GetGroupResponse = GetGroupResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetGroupResponse :: Newtype GetGroupResponse _
 derive instance repGenericGetGroupResponse :: Generic GetGroupResponse _
@@ -2047,12 +2046,12 @@ instance encodeGetGroupResponse :: Encode GetGroupResponse where encode = generi
 
 -- | Constructs GetGroupResponse from required parameters
 newGetGroupResponse :: GetGroupResponse
-newGetGroupResponse  = GetGroupResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetGroupResponse  = GetGroupResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetGroupResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetGroupResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetGroupResponse
-newGetGroupResponse'  customize = (GetGroupResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetGroupResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetGroupResponse
+newGetGroupResponse'  customize = (GetGroupResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -2078,11 +2077,11 @@ newGetGroupVersionRequest' _GroupId _GroupVersionId customize = (GetGroupVersion
 
 
 newtype GetGroupVersionResponse = GetGroupVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (GroupVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (GroupVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetGroupVersionResponse :: Newtype GetGroupVersionResponse _
 derive instance repGenericGetGroupVersionResponse :: Generic GetGroupVersionResponse _
@@ -2092,12 +2091,12 @@ instance encodeGetGroupVersionResponse :: Encode GetGroupVersionResponse where e
 
 -- | Constructs GetGroupVersionResponse from required parameters
 newGetGroupVersionResponse :: GetGroupVersionResponse
-newGetGroupVersionResponse  = GetGroupVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetGroupVersionResponse  = GetGroupVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetGroupVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetGroupVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (GroupVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (GroupVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetGroupVersionResponse
-newGetGroupVersionResponse'  customize = (GetGroupVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetGroupVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (GroupVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (GroupVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetGroupVersionResponse
+newGetGroupVersionResponse'  customize = (GetGroupVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
@@ -2122,13 +2121,13 @@ newGetLoggerDefinitionRequest' _LoggerDefinitionId customize = (GetLoggerDefinit
 
 
 newtype GetLoggerDefinitionResponse = GetLoggerDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetLoggerDefinitionResponse :: Newtype GetLoggerDefinitionResponse _
 derive instance repGenericGetLoggerDefinitionResponse :: Generic GetLoggerDefinitionResponse _
@@ -2138,12 +2137,12 @@ instance encodeGetLoggerDefinitionResponse :: Encode GetLoggerDefinitionResponse
 
 -- | Constructs GetLoggerDefinitionResponse from required parameters
 newGetLoggerDefinitionResponse :: GetLoggerDefinitionResponse
-newGetLoggerDefinitionResponse  = GetLoggerDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetLoggerDefinitionResponse  = GetLoggerDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetLoggerDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoggerDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetLoggerDefinitionResponse
-newGetLoggerDefinitionResponse'  customize = (GetLoggerDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetLoggerDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetLoggerDefinitionResponse
+newGetLoggerDefinitionResponse'  customize = (GetLoggerDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -2169,11 +2168,11 @@ newGetLoggerDefinitionVersionRequest' _LoggerDefinitionId _LoggerDefinitionVersi
 
 
 newtype GetLoggerDefinitionVersionResponse = GetLoggerDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (LoggerDefinitionVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (LoggerDefinitionVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetLoggerDefinitionVersionResponse :: Newtype GetLoggerDefinitionVersionResponse _
 derive instance repGenericGetLoggerDefinitionVersionResponse :: Generic GetLoggerDefinitionVersionResponse _
@@ -2183,12 +2182,12 @@ instance encodeGetLoggerDefinitionVersionResponse :: Encode GetLoggerDefinitionV
 
 -- | Constructs GetLoggerDefinitionVersionResponse from required parameters
 newGetLoggerDefinitionVersionResponse :: GetLoggerDefinitionVersionResponse
-newGetLoggerDefinitionVersionResponse  = GetLoggerDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetLoggerDefinitionVersionResponse  = GetLoggerDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetLoggerDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetLoggerDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (LoggerDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (LoggerDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetLoggerDefinitionVersionResponse
-newGetLoggerDefinitionVersionResponse'  customize = (GetLoggerDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetLoggerDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (LoggerDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (LoggerDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetLoggerDefinitionVersionResponse
+newGetLoggerDefinitionVersionResponse'  customize = (GetLoggerDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
@@ -2213,13 +2212,13 @@ newGetResourceDefinitionRequest' _ResourceDefinitionId customize = (GetResourceD
 
 
 newtype GetResourceDefinitionResponse = GetResourceDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetResourceDefinitionResponse :: Newtype GetResourceDefinitionResponse _
 derive instance repGenericGetResourceDefinitionResponse :: Generic GetResourceDefinitionResponse _
@@ -2229,12 +2228,12 @@ instance encodeGetResourceDefinitionResponse :: Encode GetResourceDefinitionResp
 
 -- | Constructs GetResourceDefinitionResponse from required parameters
 newGetResourceDefinitionResponse :: GetResourceDefinitionResponse
-newGetResourceDefinitionResponse  = GetResourceDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetResourceDefinitionResponse  = GetResourceDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetResourceDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetResourceDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetResourceDefinitionResponse
-newGetResourceDefinitionResponse'  customize = (GetResourceDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetResourceDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetResourceDefinitionResponse
+newGetResourceDefinitionResponse'  customize = (GetResourceDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -2260,11 +2259,11 @@ newGetResourceDefinitionVersionRequest' _ResourceDefinitionId _ResourceDefinitio
 
 
 newtype GetResourceDefinitionVersionResponse = GetResourceDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (ResourceDefinitionVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (ResourceDefinitionVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetResourceDefinitionVersionResponse :: Newtype GetResourceDefinitionVersionResponse _
 derive instance repGenericGetResourceDefinitionVersionResponse :: Generic GetResourceDefinitionVersionResponse _
@@ -2274,12 +2273,12 @@ instance encodeGetResourceDefinitionVersionResponse :: Encode GetResourceDefinit
 
 -- | Constructs GetResourceDefinitionVersionResponse from required parameters
 newGetResourceDefinitionVersionResponse :: GetResourceDefinitionVersionResponse
-newGetResourceDefinitionVersionResponse  = GetResourceDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetResourceDefinitionVersionResponse  = GetResourceDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetResourceDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetResourceDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (ResourceDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (ResourceDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetResourceDefinitionVersionResponse
-newGetResourceDefinitionVersionResponse'  customize = (GetResourceDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetResourceDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (ResourceDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (ResourceDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetResourceDefinitionVersionResponse
+newGetResourceDefinitionVersionResponse'  customize = (GetResourceDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
@@ -2293,8 +2292,8 @@ instance encodeGetServiceRoleForAccountRequest :: Encode GetServiceRoleForAccoun
 
 
 newtype GetServiceRoleForAccountResponse = GetServiceRoleForAccountResponse 
-  { "AssociatedAt" :: NullOrUndefined (String)
-  , "RoleArn" :: NullOrUndefined (String)
+  { "AssociatedAt" :: Maybe (String)
+  , "RoleArn" :: Maybe (String)
   }
 derive instance newtypeGetServiceRoleForAccountResponse :: Newtype GetServiceRoleForAccountResponse _
 derive instance repGenericGetServiceRoleForAccountResponse :: Generic GetServiceRoleForAccountResponse _
@@ -2304,12 +2303,12 @@ instance encodeGetServiceRoleForAccountResponse :: Encode GetServiceRoleForAccou
 
 -- | Constructs GetServiceRoleForAccountResponse from required parameters
 newGetServiceRoleForAccountResponse :: GetServiceRoleForAccountResponse
-newGetServiceRoleForAccountResponse  = GetServiceRoleForAccountResponse { "AssociatedAt": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newGetServiceRoleForAccountResponse  = GetServiceRoleForAccountResponse { "AssociatedAt": Nothing, "RoleArn": Nothing }
 
 -- | Constructs GetServiceRoleForAccountResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetServiceRoleForAccountResponse' :: ( { "AssociatedAt" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } -> {"AssociatedAt" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } ) -> GetServiceRoleForAccountResponse
-newGetServiceRoleForAccountResponse'  customize = (GetServiceRoleForAccountResponse <<< customize) { "AssociatedAt": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newGetServiceRoleForAccountResponse' :: ( { "AssociatedAt" :: Maybe (String) , "RoleArn" :: Maybe (String) } -> {"AssociatedAt" :: Maybe (String) , "RoleArn" :: Maybe (String) } ) -> GetServiceRoleForAccountResponse
+newGetServiceRoleForAccountResponse'  customize = (GetServiceRoleForAccountResponse <<< customize) { "AssociatedAt": Nothing, "RoleArn": Nothing }
 
 
 
@@ -2334,13 +2333,13 @@ newGetSubscriptionDefinitionRequest' _SubscriptionDefinitionId customize = (GetS
 
 
 newtype GetSubscriptionDefinitionResponse = GetSubscriptionDefinitionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGetSubscriptionDefinitionResponse :: Newtype GetSubscriptionDefinitionResponse _
 derive instance repGenericGetSubscriptionDefinitionResponse :: Generic GetSubscriptionDefinitionResponse _
@@ -2350,12 +2349,12 @@ instance encodeGetSubscriptionDefinitionResponse :: Encode GetSubscriptionDefini
 
 -- | Constructs GetSubscriptionDefinitionResponse from required parameters
 newGetSubscriptionDefinitionResponse :: GetSubscriptionDefinitionResponse
-newGetSubscriptionDefinitionResponse  = GetSubscriptionDefinitionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetSubscriptionDefinitionResponse  = GetSubscriptionDefinitionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GetSubscriptionDefinitionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSubscriptionDefinitionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GetSubscriptionDefinitionResponse
-newGetSubscriptionDefinitionResponse'  customize = (GetSubscriptionDefinitionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGetSubscriptionDefinitionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GetSubscriptionDefinitionResponse
+newGetSubscriptionDefinitionResponse'  customize = (GetSubscriptionDefinitionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
@@ -2381,11 +2380,11 @@ newGetSubscriptionDefinitionVersionRequest' _SubscriptionDefinitionId _Subscript
 
 
 newtype GetSubscriptionDefinitionVersionResponse = GetSubscriptionDefinitionVersionResponse 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (SubscriptionDefinitionVersion)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Definition" :: Maybe (SubscriptionDefinitionVersion)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeGetSubscriptionDefinitionVersionResponse :: Newtype GetSubscriptionDefinitionVersionResponse _
 derive instance repGenericGetSubscriptionDefinitionVersionResponse :: Generic GetSubscriptionDefinitionVersionResponse _
@@ -2395,19 +2394,19 @@ instance encodeGetSubscriptionDefinitionVersionResponse :: Encode GetSubscriptio
 
 -- | Constructs GetSubscriptionDefinitionVersionResponse from required parameters
 newGetSubscriptionDefinitionVersionResponse :: GetSubscriptionDefinitionVersionResponse
-newGetSubscriptionDefinitionVersionResponse  = GetSubscriptionDefinitionVersionResponse { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetSubscriptionDefinitionVersionResponse  = GetSubscriptionDefinitionVersionResponse { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs GetSubscriptionDefinitionVersionResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSubscriptionDefinitionVersionResponse' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (SubscriptionDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (SubscriptionDefinitionVersion) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> GetSubscriptionDefinitionVersionResponse
-newGetSubscriptionDefinitionVersionResponse'  customize = (GetSubscriptionDefinitionVersionResponse <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGetSubscriptionDefinitionVersionResponse' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (SubscriptionDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Definition" :: Maybe (SubscriptionDefinitionVersion) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> GetSubscriptionDefinitionVersionResponse
+newGetSubscriptionDefinitionVersionResponse'  customize = (GetSubscriptionDefinitionVersionResponse <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Definition": Nothing, "Id": Nothing, "Version": Nothing }
 
 
 
 -- | Information on group certificate authority properties
 newtype GroupCertificateAuthorityProperties = GroupCertificateAuthorityProperties 
-  { "GroupCertificateAuthorityArn" :: NullOrUndefined (String)
-  , "GroupCertificateAuthorityId" :: NullOrUndefined (String)
+  { "GroupCertificateAuthorityArn" :: Maybe (String)
+  , "GroupCertificateAuthorityId" :: Maybe (String)
   }
 derive instance newtypeGroupCertificateAuthorityProperties :: Newtype GroupCertificateAuthorityProperties _
 derive instance repGenericGroupCertificateAuthorityProperties :: Generic GroupCertificateAuthorityProperties _
@@ -2417,20 +2416,20 @@ instance encodeGroupCertificateAuthorityProperties :: Encode GroupCertificateAut
 
 -- | Constructs GroupCertificateAuthorityProperties from required parameters
 newGroupCertificateAuthorityProperties :: GroupCertificateAuthorityProperties
-newGroupCertificateAuthorityProperties  = GroupCertificateAuthorityProperties { "GroupCertificateAuthorityArn": (NullOrUndefined Nothing), "GroupCertificateAuthorityId": (NullOrUndefined Nothing) }
+newGroupCertificateAuthorityProperties  = GroupCertificateAuthorityProperties { "GroupCertificateAuthorityArn": Nothing, "GroupCertificateAuthorityId": Nothing }
 
 -- | Constructs GroupCertificateAuthorityProperties's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGroupCertificateAuthorityProperties' :: ( { "GroupCertificateAuthorityArn" :: NullOrUndefined (String) , "GroupCertificateAuthorityId" :: NullOrUndefined (String) } -> {"GroupCertificateAuthorityArn" :: NullOrUndefined (String) , "GroupCertificateAuthorityId" :: NullOrUndefined (String) } ) -> GroupCertificateAuthorityProperties
-newGroupCertificateAuthorityProperties'  customize = (GroupCertificateAuthorityProperties <<< customize) { "GroupCertificateAuthorityArn": (NullOrUndefined Nothing), "GroupCertificateAuthorityId": (NullOrUndefined Nothing) }
+newGroupCertificateAuthorityProperties' :: ( { "GroupCertificateAuthorityArn" :: Maybe (String) , "GroupCertificateAuthorityId" :: Maybe (String) } -> {"GroupCertificateAuthorityArn" :: Maybe (String) , "GroupCertificateAuthorityId" :: Maybe (String) } ) -> GroupCertificateAuthorityProperties
+newGroupCertificateAuthorityProperties'  customize = (GroupCertificateAuthorityProperties <<< customize) { "GroupCertificateAuthorityArn": Nothing, "GroupCertificateAuthorityId": Nothing }
 
 
 
 -- | Information on the group certificate configuration
 newtype GroupCertificateConfiguration = GroupCertificateConfiguration 
-  { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String)
-  , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String)
-  , "GroupId" :: NullOrUndefined (String)
+  { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String)
+  , "CertificateExpiryInMilliseconds" :: Maybe (String)
+  , "GroupId" :: Maybe (String)
   }
 derive instance newtypeGroupCertificateConfiguration :: Newtype GroupCertificateConfiguration _
 derive instance repGenericGroupCertificateConfiguration :: Generic GroupCertificateConfiguration _
@@ -2440,24 +2439,24 @@ instance encodeGroupCertificateConfiguration :: Encode GroupCertificateConfigura
 
 -- | Constructs GroupCertificateConfiguration from required parameters
 newGroupCertificateConfiguration :: GroupCertificateConfiguration
-newGroupCertificateConfiguration  = GroupCertificateConfiguration { "CertificateAuthorityExpiryInMilliseconds": (NullOrUndefined Nothing), "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing), "GroupId": (NullOrUndefined Nothing) }
+newGroupCertificateConfiguration  = GroupCertificateConfiguration { "CertificateAuthorityExpiryInMilliseconds": Nothing, "CertificateExpiryInMilliseconds": Nothing, "GroupId": Nothing }
 
 -- | Constructs GroupCertificateConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGroupCertificateConfiguration' :: ( { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String) , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: NullOrUndefined (String) } -> {"CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String) , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: NullOrUndefined (String) } ) -> GroupCertificateConfiguration
-newGroupCertificateConfiguration'  customize = (GroupCertificateConfiguration <<< customize) { "CertificateAuthorityExpiryInMilliseconds": (NullOrUndefined Nothing), "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing), "GroupId": (NullOrUndefined Nothing) }
+newGroupCertificateConfiguration' :: ( { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String) , "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: Maybe (String) } -> {"CertificateAuthorityExpiryInMilliseconds" :: Maybe (String) , "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: Maybe (String) } ) -> GroupCertificateConfiguration
+newGroupCertificateConfiguration'  customize = (GroupCertificateConfiguration <<< customize) { "CertificateAuthorityExpiryInMilliseconds": Nothing, "CertificateExpiryInMilliseconds": Nothing, "GroupId": Nothing }
 
 
 
 -- | Information on the group
 newtype GroupInformation = GroupInformation 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "LastUpdatedTimestamp" :: NullOrUndefined (String)
-  , "LatestVersion" :: NullOrUndefined (String)
-  , "LatestVersionArn" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "LastUpdatedTimestamp" :: Maybe (String)
+  , "LatestVersion" :: Maybe (String)
+  , "LatestVersionArn" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeGroupInformation :: Newtype GroupInformation _
 derive instance repGenericGroupInformation :: Generic GroupInformation _
@@ -2467,19 +2466,19 @@ instance encodeGroupInformation :: Encode GroupInformation where encode = generi
 
 -- | Constructs GroupInformation from required parameters
 newGroupInformation :: GroupInformation
-newGroupInformation  = GroupInformation { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGroupInformation  = GroupInformation { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 -- | Constructs GroupInformation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGroupInformation' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "LastUpdatedTimestamp" :: NullOrUndefined (String) , "LatestVersion" :: NullOrUndefined (String) , "LatestVersionArn" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> GroupInformation
-newGroupInformation'  customize = (GroupInformation <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "LastUpdatedTimestamp": (NullOrUndefined Nothing), "LatestVersion": (NullOrUndefined Nothing), "LatestVersionArn": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newGroupInformation' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "LastUpdatedTimestamp" :: Maybe (String) , "LatestVersion" :: Maybe (String) , "LatestVersionArn" :: Maybe (String) , "Name" :: Maybe (String) } ) -> GroupInformation
+newGroupInformation'  customize = (GroupInformation <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "LastUpdatedTimestamp": Nothing, "LatestVersion": Nothing, "LatestVersionArn": Nothing, "Name": Nothing }
 
 
 
 -- | Group owner related settings for local resources.
 newtype GroupOwnerSetting = GroupOwnerSetting 
-  { "AutoAddGroupOwner" :: NullOrUndefined (Boolean)
-  , "GroupOwner" :: NullOrUndefined (String)
+  { "AutoAddGroupOwner" :: Maybe (Boolean)
+  , "GroupOwner" :: Maybe (String)
   }
 derive instance newtypeGroupOwnerSetting :: Newtype GroupOwnerSetting _
 derive instance repGenericGroupOwnerSetting :: Generic GroupOwnerSetting _
@@ -2489,23 +2488,23 @@ instance encodeGroupOwnerSetting :: Encode GroupOwnerSetting where encode = gene
 
 -- | Constructs GroupOwnerSetting from required parameters
 newGroupOwnerSetting :: GroupOwnerSetting
-newGroupOwnerSetting  = GroupOwnerSetting { "AutoAddGroupOwner": (NullOrUndefined Nothing), "GroupOwner": (NullOrUndefined Nothing) }
+newGroupOwnerSetting  = GroupOwnerSetting { "AutoAddGroupOwner": Nothing, "GroupOwner": Nothing }
 
 -- | Constructs GroupOwnerSetting's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGroupOwnerSetting' :: ( { "AutoAddGroupOwner" :: NullOrUndefined (Boolean) , "GroupOwner" :: NullOrUndefined (String) } -> {"AutoAddGroupOwner" :: NullOrUndefined (Boolean) , "GroupOwner" :: NullOrUndefined (String) } ) -> GroupOwnerSetting
-newGroupOwnerSetting'  customize = (GroupOwnerSetting <<< customize) { "AutoAddGroupOwner": (NullOrUndefined Nothing), "GroupOwner": (NullOrUndefined Nothing) }
+newGroupOwnerSetting' :: ( { "AutoAddGroupOwner" :: Maybe (Boolean) , "GroupOwner" :: Maybe (String) } -> {"AutoAddGroupOwner" :: Maybe (Boolean) , "GroupOwner" :: Maybe (String) } ) -> GroupOwnerSetting
+newGroupOwnerSetting'  customize = (GroupOwnerSetting <<< customize) { "AutoAddGroupOwner": Nothing, "GroupOwner": Nothing }
 
 
 
 -- | Information on group version
 newtype GroupVersion = GroupVersion 
-  { "CoreDefinitionVersionArn" :: NullOrUndefined (String)
-  , "DeviceDefinitionVersionArn" :: NullOrUndefined (String)
-  , "FunctionDefinitionVersionArn" :: NullOrUndefined (String)
-  , "LoggerDefinitionVersionArn" :: NullOrUndefined (String)
-  , "ResourceDefinitionVersionArn" :: NullOrUndefined (String)
-  , "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String)
+  { "CoreDefinitionVersionArn" :: Maybe (String)
+  , "DeviceDefinitionVersionArn" :: Maybe (String)
+  , "FunctionDefinitionVersionArn" :: Maybe (String)
+  , "LoggerDefinitionVersionArn" :: Maybe (String)
+  , "ResourceDefinitionVersionArn" :: Maybe (String)
+  , "SubscriptionDefinitionVersionArn" :: Maybe (String)
   }
 derive instance newtypeGroupVersion :: Newtype GroupVersion _
 derive instance repGenericGroupVersion :: Generic GroupVersion _
@@ -2515,19 +2514,19 @@ instance encodeGroupVersion :: Encode GroupVersion where encode = genericEncode 
 
 -- | Constructs GroupVersion from required parameters
 newGroupVersion :: GroupVersion
-newGroupVersion  = GroupVersion { "CoreDefinitionVersionArn": (NullOrUndefined Nothing), "DeviceDefinitionVersionArn": (NullOrUndefined Nothing), "FunctionDefinitionVersionArn": (NullOrUndefined Nothing), "LoggerDefinitionVersionArn": (NullOrUndefined Nothing), "ResourceDefinitionVersionArn": (NullOrUndefined Nothing), "SubscriptionDefinitionVersionArn": (NullOrUndefined Nothing) }
+newGroupVersion  = GroupVersion { "CoreDefinitionVersionArn": Nothing, "DeviceDefinitionVersionArn": Nothing, "FunctionDefinitionVersionArn": Nothing, "LoggerDefinitionVersionArn": Nothing, "ResourceDefinitionVersionArn": Nothing, "SubscriptionDefinitionVersionArn": Nothing }
 
 -- | Constructs GroupVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGroupVersion' :: ( { "CoreDefinitionVersionArn" :: NullOrUndefined (String) , "DeviceDefinitionVersionArn" :: NullOrUndefined (String) , "FunctionDefinitionVersionArn" :: NullOrUndefined (String) , "LoggerDefinitionVersionArn" :: NullOrUndefined (String) , "ResourceDefinitionVersionArn" :: NullOrUndefined (String) , "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) } -> {"CoreDefinitionVersionArn" :: NullOrUndefined (String) , "DeviceDefinitionVersionArn" :: NullOrUndefined (String) , "FunctionDefinitionVersionArn" :: NullOrUndefined (String) , "LoggerDefinitionVersionArn" :: NullOrUndefined (String) , "ResourceDefinitionVersionArn" :: NullOrUndefined (String) , "SubscriptionDefinitionVersionArn" :: NullOrUndefined (String) } ) -> GroupVersion
-newGroupVersion'  customize = (GroupVersion <<< customize) { "CoreDefinitionVersionArn": (NullOrUndefined Nothing), "DeviceDefinitionVersionArn": (NullOrUndefined Nothing), "FunctionDefinitionVersionArn": (NullOrUndefined Nothing), "LoggerDefinitionVersionArn": (NullOrUndefined Nothing), "ResourceDefinitionVersionArn": (NullOrUndefined Nothing), "SubscriptionDefinitionVersionArn": (NullOrUndefined Nothing) }
+newGroupVersion' :: ( { "CoreDefinitionVersionArn" :: Maybe (String) , "DeviceDefinitionVersionArn" :: Maybe (String) , "FunctionDefinitionVersionArn" :: Maybe (String) , "LoggerDefinitionVersionArn" :: Maybe (String) , "ResourceDefinitionVersionArn" :: Maybe (String) , "SubscriptionDefinitionVersionArn" :: Maybe (String) } -> {"CoreDefinitionVersionArn" :: Maybe (String) , "DeviceDefinitionVersionArn" :: Maybe (String) , "FunctionDefinitionVersionArn" :: Maybe (String) , "LoggerDefinitionVersionArn" :: Maybe (String) , "ResourceDefinitionVersionArn" :: Maybe (String) , "SubscriptionDefinitionVersionArn" :: Maybe (String) } ) -> GroupVersion
+newGroupVersion'  customize = (GroupVersion <<< customize) { "CoreDefinitionVersionArn": Nothing, "DeviceDefinitionVersionArn": Nothing, "FunctionDefinitionVersionArn": Nothing, "LoggerDefinitionVersionArn": Nothing, "ResourceDefinitionVersionArn": Nothing, "SubscriptionDefinitionVersionArn": Nothing }
 
 
 
 -- | General Error
 newtype InternalServerErrorException = InternalServerErrorException 
-  { "ErrorDetails" :: NullOrUndefined (ErrorDetails)
-  , "Message" :: NullOrUndefined (String)
+  { "ErrorDetails" :: Maybe (ErrorDetails)
+  , "Message" :: Maybe (String)
   }
 derive instance newtypeInternalServerErrorException :: Newtype InternalServerErrorException _
 derive instance repGenericInternalServerErrorException :: Generic InternalServerErrorException _
@@ -2537,19 +2536,19 @@ instance encodeInternalServerErrorException :: Encode InternalServerErrorExcepti
 
 -- | Constructs InternalServerErrorException from required parameters
 newInternalServerErrorException :: InternalServerErrorException
-newInternalServerErrorException  = InternalServerErrorException { "ErrorDetails": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newInternalServerErrorException  = InternalServerErrorException { "ErrorDetails": Nothing, "Message": Nothing }
 
 -- | Constructs InternalServerErrorException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInternalServerErrorException' :: ( { "ErrorDetails" :: NullOrUndefined (ErrorDetails) , "Message" :: NullOrUndefined (String) } -> {"ErrorDetails" :: NullOrUndefined (ErrorDetails) , "Message" :: NullOrUndefined (String) } ) -> InternalServerErrorException
-newInternalServerErrorException'  customize = (InternalServerErrorException <<< customize) { "ErrorDetails": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newInternalServerErrorException' :: ( { "ErrorDetails" :: Maybe (ErrorDetails) , "Message" :: Maybe (String) } -> {"ErrorDetails" :: Maybe (ErrorDetails) , "Message" :: Maybe (String) } ) -> InternalServerErrorException
+newInternalServerErrorException'  customize = (InternalServerErrorException <<< customize) { "ErrorDetails": Nothing, "Message": Nothing }
 
 
 
 newtype ListCoreDefinitionVersionsRequest = ListCoreDefinitionVersionsRequest 
   { "CoreDefinitionId" :: (String)
-  , "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  , "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListCoreDefinitionVersionsRequest :: Newtype ListCoreDefinitionVersionsRequest _
 derive instance repGenericListCoreDefinitionVersionsRequest :: Generic ListCoreDefinitionVersionsRequest _
@@ -2559,18 +2558,18 @@ instance encodeListCoreDefinitionVersionsRequest :: Encode ListCoreDefinitionVer
 
 -- | Constructs ListCoreDefinitionVersionsRequest from required parameters
 newListCoreDefinitionVersionsRequest :: String -> ListCoreDefinitionVersionsRequest
-newListCoreDefinitionVersionsRequest _CoreDefinitionId = ListCoreDefinitionVersionsRequest { "CoreDefinitionId": _CoreDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListCoreDefinitionVersionsRequest _CoreDefinitionId = ListCoreDefinitionVersionsRequest { "CoreDefinitionId": _CoreDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListCoreDefinitionVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListCoreDefinitionVersionsRequest' :: String -> ( { "CoreDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"CoreDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListCoreDefinitionVersionsRequest
-newListCoreDefinitionVersionsRequest' _CoreDefinitionId customize = (ListCoreDefinitionVersionsRequest <<< customize) { "CoreDefinitionId": _CoreDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListCoreDefinitionVersionsRequest' :: String -> ( { "CoreDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"CoreDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListCoreDefinitionVersionsRequest
+newListCoreDefinitionVersionsRequest' _CoreDefinitionId customize = (ListCoreDefinitionVersionsRequest <<< customize) { "CoreDefinitionId": _CoreDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListCoreDefinitionVersionsResponse = ListCoreDefinitionVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListCoreDefinitionVersionsResponse :: Newtype ListCoreDefinitionVersionsResponse _
 derive instance repGenericListCoreDefinitionVersionsResponse :: Generic ListCoreDefinitionVersionsResponse _
@@ -2580,18 +2579,18 @@ instance encodeListCoreDefinitionVersionsResponse :: Encode ListCoreDefinitionVe
 
 -- | Constructs ListCoreDefinitionVersionsResponse from required parameters
 newListCoreDefinitionVersionsResponse :: ListCoreDefinitionVersionsResponse
-newListCoreDefinitionVersionsResponse  = ListCoreDefinitionVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListCoreDefinitionVersionsResponse  = ListCoreDefinitionVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListCoreDefinitionVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListCoreDefinitionVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListCoreDefinitionVersionsResponse
-newListCoreDefinitionVersionsResponse'  customize = (ListCoreDefinitionVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListCoreDefinitionVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListCoreDefinitionVersionsResponse
+newListCoreDefinitionVersionsResponse'  customize = (ListCoreDefinitionVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListCoreDefinitionsRequest = ListCoreDefinitionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListCoreDefinitionsRequest :: Newtype ListCoreDefinitionsRequest _
 derive instance repGenericListCoreDefinitionsRequest :: Generic ListCoreDefinitionsRequest _
@@ -2601,18 +2600,18 @@ instance encodeListCoreDefinitionsRequest :: Encode ListCoreDefinitionsRequest w
 
 -- | Constructs ListCoreDefinitionsRequest from required parameters
 newListCoreDefinitionsRequest :: ListCoreDefinitionsRequest
-newListCoreDefinitionsRequest  = ListCoreDefinitionsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListCoreDefinitionsRequest  = ListCoreDefinitionsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListCoreDefinitionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListCoreDefinitionsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListCoreDefinitionsRequest
-newListCoreDefinitionsRequest'  customize = (ListCoreDefinitionsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListCoreDefinitionsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListCoreDefinitionsRequest
+newListCoreDefinitionsRequest'  customize = (ListCoreDefinitionsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListCoreDefinitionsResponse = ListCoreDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListCoreDefinitionsResponse :: Newtype ListCoreDefinitionsResponse _
 derive instance repGenericListCoreDefinitionsResponse :: Generic ListCoreDefinitionsResponse _
@@ -2622,19 +2621,19 @@ instance encodeListCoreDefinitionsResponse :: Encode ListCoreDefinitionsResponse
 
 -- | Constructs ListCoreDefinitionsResponse from required parameters
 newListCoreDefinitionsResponse :: ListCoreDefinitionsResponse
-newListCoreDefinitionsResponse  = ListCoreDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListCoreDefinitionsResponse  = ListCoreDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListCoreDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListCoreDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListCoreDefinitionsResponse
-newListCoreDefinitionsResponse'  customize = (ListCoreDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListCoreDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListCoreDefinitionsResponse
+newListCoreDefinitionsResponse'  customize = (ListCoreDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
 -- | List of definition responses
 newtype ListDefinitionsResponse = ListDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListDefinitionsResponse :: Newtype ListDefinitionsResponse _
 derive instance repGenericListDefinitionsResponse :: Generic ListDefinitionsResponse _
@@ -2644,19 +2643,19 @@ instance encodeListDefinitionsResponse :: Encode ListDefinitionsResponse where e
 
 -- | Constructs ListDefinitionsResponse from required parameters
 newListDefinitionsResponse :: ListDefinitionsResponse
-newListDefinitionsResponse  = ListDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDefinitionsResponse  = ListDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListDefinitionsResponse
-newListDefinitionsResponse'  customize = (ListDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListDefinitionsResponse
+newListDefinitionsResponse'  customize = (ListDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListDeploymentsRequest = ListDeploymentsRequest 
   { "GroupId" :: (String)
-  , "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  , "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListDeploymentsRequest :: Newtype ListDeploymentsRequest _
 derive instance repGenericListDeploymentsRequest :: Generic ListDeploymentsRequest _
@@ -2666,18 +2665,18 @@ instance encodeListDeploymentsRequest :: Encode ListDeploymentsRequest where enc
 
 -- | Constructs ListDeploymentsRequest from required parameters
 newListDeploymentsRequest :: String -> ListDeploymentsRequest
-newListDeploymentsRequest _GroupId = ListDeploymentsRequest { "GroupId": _GroupId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeploymentsRequest _GroupId = ListDeploymentsRequest { "GroupId": _GroupId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListDeploymentsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDeploymentsRequest' :: String -> ( { "GroupId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"GroupId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListDeploymentsRequest
-newListDeploymentsRequest' _GroupId customize = (ListDeploymentsRequest <<< customize) { "GroupId": _GroupId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeploymentsRequest' :: String -> ( { "GroupId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"GroupId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListDeploymentsRequest
+newListDeploymentsRequest' _GroupId customize = (ListDeploymentsRequest <<< customize) { "GroupId": _GroupId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListDeploymentsResponse = ListDeploymentsResponse 
-  { "Deployments" :: NullOrUndefined (Deployments)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Deployments" :: Maybe (Deployments)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListDeploymentsResponse :: Newtype ListDeploymentsResponse _
 derive instance repGenericListDeploymentsResponse :: Generic ListDeploymentsResponse _
@@ -2687,19 +2686,19 @@ instance encodeListDeploymentsResponse :: Encode ListDeploymentsResponse where e
 
 -- | Constructs ListDeploymentsResponse from required parameters
 newListDeploymentsResponse :: ListDeploymentsResponse
-newListDeploymentsResponse  = ListDeploymentsResponse { "Deployments": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeploymentsResponse  = ListDeploymentsResponse { "Deployments": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListDeploymentsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDeploymentsResponse' :: ( { "Deployments" :: NullOrUndefined (Deployments) , "NextToken" :: NullOrUndefined (String) } -> {"Deployments" :: NullOrUndefined (Deployments) , "NextToken" :: NullOrUndefined (String) } ) -> ListDeploymentsResponse
-newListDeploymentsResponse'  customize = (ListDeploymentsResponse <<< customize) { "Deployments": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeploymentsResponse' :: ( { "Deployments" :: Maybe (Deployments) , "NextToken" :: Maybe (String) } -> {"Deployments" :: Maybe (Deployments) , "NextToken" :: Maybe (String) } ) -> ListDeploymentsResponse
+newListDeploymentsResponse'  customize = (ListDeploymentsResponse <<< customize) { "Deployments": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListDeviceDefinitionVersionsRequest = ListDeviceDefinitionVersionsRequest 
   { "DeviceDefinitionId" :: (String)
-  , "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  , "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListDeviceDefinitionVersionsRequest :: Newtype ListDeviceDefinitionVersionsRequest _
 derive instance repGenericListDeviceDefinitionVersionsRequest :: Generic ListDeviceDefinitionVersionsRequest _
@@ -2709,18 +2708,18 @@ instance encodeListDeviceDefinitionVersionsRequest :: Encode ListDeviceDefinitio
 
 -- | Constructs ListDeviceDefinitionVersionsRequest from required parameters
 newListDeviceDefinitionVersionsRequest :: String -> ListDeviceDefinitionVersionsRequest
-newListDeviceDefinitionVersionsRequest _DeviceDefinitionId = ListDeviceDefinitionVersionsRequest { "DeviceDefinitionId": _DeviceDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeviceDefinitionVersionsRequest _DeviceDefinitionId = ListDeviceDefinitionVersionsRequest { "DeviceDefinitionId": _DeviceDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListDeviceDefinitionVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDeviceDefinitionVersionsRequest' :: String -> ( { "DeviceDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"DeviceDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListDeviceDefinitionVersionsRequest
-newListDeviceDefinitionVersionsRequest' _DeviceDefinitionId customize = (ListDeviceDefinitionVersionsRequest <<< customize) { "DeviceDefinitionId": _DeviceDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeviceDefinitionVersionsRequest' :: String -> ( { "DeviceDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"DeviceDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListDeviceDefinitionVersionsRequest
+newListDeviceDefinitionVersionsRequest' _DeviceDefinitionId customize = (ListDeviceDefinitionVersionsRequest <<< customize) { "DeviceDefinitionId": _DeviceDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListDeviceDefinitionVersionsResponse = ListDeviceDefinitionVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListDeviceDefinitionVersionsResponse :: Newtype ListDeviceDefinitionVersionsResponse _
 derive instance repGenericListDeviceDefinitionVersionsResponse :: Generic ListDeviceDefinitionVersionsResponse _
@@ -2730,18 +2729,18 @@ instance encodeListDeviceDefinitionVersionsResponse :: Encode ListDeviceDefiniti
 
 -- | Constructs ListDeviceDefinitionVersionsResponse from required parameters
 newListDeviceDefinitionVersionsResponse :: ListDeviceDefinitionVersionsResponse
-newListDeviceDefinitionVersionsResponse  = ListDeviceDefinitionVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListDeviceDefinitionVersionsResponse  = ListDeviceDefinitionVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListDeviceDefinitionVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDeviceDefinitionVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListDeviceDefinitionVersionsResponse
-newListDeviceDefinitionVersionsResponse'  customize = (ListDeviceDefinitionVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListDeviceDefinitionVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListDeviceDefinitionVersionsResponse
+newListDeviceDefinitionVersionsResponse'  customize = (ListDeviceDefinitionVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListDeviceDefinitionsRequest = ListDeviceDefinitionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListDeviceDefinitionsRequest :: Newtype ListDeviceDefinitionsRequest _
 derive instance repGenericListDeviceDefinitionsRequest :: Generic ListDeviceDefinitionsRequest _
@@ -2751,18 +2750,18 @@ instance encodeListDeviceDefinitionsRequest :: Encode ListDeviceDefinitionsReque
 
 -- | Constructs ListDeviceDefinitionsRequest from required parameters
 newListDeviceDefinitionsRequest :: ListDeviceDefinitionsRequest
-newListDeviceDefinitionsRequest  = ListDeviceDefinitionsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeviceDefinitionsRequest  = ListDeviceDefinitionsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListDeviceDefinitionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDeviceDefinitionsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListDeviceDefinitionsRequest
-newListDeviceDefinitionsRequest'  customize = (ListDeviceDefinitionsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeviceDefinitionsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListDeviceDefinitionsRequest
+newListDeviceDefinitionsRequest'  customize = (ListDeviceDefinitionsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListDeviceDefinitionsResponse = ListDeviceDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListDeviceDefinitionsResponse :: Newtype ListDeviceDefinitionsResponse _
 derive instance repGenericListDeviceDefinitionsResponse :: Generic ListDeviceDefinitionsResponse _
@@ -2772,19 +2771,19 @@ instance encodeListDeviceDefinitionsResponse :: Encode ListDeviceDefinitionsResp
 
 -- | Constructs ListDeviceDefinitionsResponse from required parameters
 newListDeviceDefinitionsResponse :: ListDeviceDefinitionsResponse
-newListDeviceDefinitionsResponse  = ListDeviceDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeviceDefinitionsResponse  = ListDeviceDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListDeviceDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListDeviceDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListDeviceDefinitionsResponse
-newListDeviceDefinitionsResponse'  customize = (ListDeviceDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListDeviceDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListDeviceDefinitionsResponse
+newListDeviceDefinitionsResponse'  customize = (ListDeviceDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListFunctionDefinitionVersionsRequest = ListFunctionDefinitionVersionsRequest 
   { "FunctionDefinitionId" :: (String)
-  , "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  , "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListFunctionDefinitionVersionsRequest :: Newtype ListFunctionDefinitionVersionsRequest _
 derive instance repGenericListFunctionDefinitionVersionsRequest :: Generic ListFunctionDefinitionVersionsRequest _
@@ -2794,18 +2793,18 @@ instance encodeListFunctionDefinitionVersionsRequest :: Encode ListFunctionDefin
 
 -- | Constructs ListFunctionDefinitionVersionsRequest from required parameters
 newListFunctionDefinitionVersionsRequest :: String -> ListFunctionDefinitionVersionsRequest
-newListFunctionDefinitionVersionsRequest _FunctionDefinitionId = ListFunctionDefinitionVersionsRequest { "FunctionDefinitionId": _FunctionDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListFunctionDefinitionVersionsRequest _FunctionDefinitionId = ListFunctionDefinitionVersionsRequest { "FunctionDefinitionId": _FunctionDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListFunctionDefinitionVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListFunctionDefinitionVersionsRequest' :: String -> ( { "FunctionDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"FunctionDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListFunctionDefinitionVersionsRequest
-newListFunctionDefinitionVersionsRequest' _FunctionDefinitionId customize = (ListFunctionDefinitionVersionsRequest <<< customize) { "FunctionDefinitionId": _FunctionDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListFunctionDefinitionVersionsRequest' :: String -> ( { "FunctionDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"FunctionDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListFunctionDefinitionVersionsRequest
+newListFunctionDefinitionVersionsRequest' _FunctionDefinitionId customize = (ListFunctionDefinitionVersionsRequest <<< customize) { "FunctionDefinitionId": _FunctionDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListFunctionDefinitionVersionsResponse = ListFunctionDefinitionVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListFunctionDefinitionVersionsResponse :: Newtype ListFunctionDefinitionVersionsResponse _
 derive instance repGenericListFunctionDefinitionVersionsResponse :: Generic ListFunctionDefinitionVersionsResponse _
@@ -2815,18 +2814,18 @@ instance encodeListFunctionDefinitionVersionsResponse :: Encode ListFunctionDefi
 
 -- | Constructs ListFunctionDefinitionVersionsResponse from required parameters
 newListFunctionDefinitionVersionsResponse :: ListFunctionDefinitionVersionsResponse
-newListFunctionDefinitionVersionsResponse  = ListFunctionDefinitionVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListFunctionDefinitionVersionsResponse  = ListFunctionDefinitionVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListFunctionDefinitionVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListFunctionDefinitionVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListFunctionDefinitionVersionsResponse
-newListFunctionDefinitionVersionsResponse'  customize = (ListFunctionDefinitionVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListFunctionDefinitionVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListFunctionDefinitionVersionsResponse
+newListFunctionDefinitionVersionsResponse'  customize = (ListFunctionDefinitionVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListFunctionDefinitionsRequest = ListFunctionDefinitionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListFunctionDefinitionsRequest :: Newtype ListFunctionDefinitionsRequest _
 derive instance repGenericListFunctionDefinitionsRequest :: Generic ListFunctionDefinitionsRequest _
@@ -2836,18 +2835,18 @@ instance encodeListFunctionDefinitionsRequest :: Encode ListFunctionDefinitionsR
 
 -- | Constructs ListFunctionDefinitionsRequest from required parameters
 newListFunctionDefinitionsRequest :: ListFunctionDefinitionsRequest
-newListFunctionDefinitionsRequest  = ListFunctionDefinitionsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListFunctionDefinitionsRequest  = ListFunctionDefinitionsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListFunctionDefinitionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListFunctionDefinitionsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListFunctionDefinitionsRequest
-newListFunctionDefinitionsRequest'  customize = (ListFunctionDefinitionsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListFunctionDefinitionsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListFunctionDefinitionsRequest
+newListFunctionDefinitionsRequest'  customize = (ListFunctionDefinitionsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListFunctionDefinitionsResponse = ListFunctionDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListFunctionDefinitionsResponse :: Newtype ListFunctionDefinitionsResponse _
 derive instance repGenericListFunctionDefinitionsResponse :: Generic ListFunctionDefinitionsResponse _
@@ -2857,12 +2856,12 @@ instance encodeListFunctionDefinitionsResponse :: Encode ListFunctionDefinitions
 
 -- | Constructs ListFunctionDefinitionsResponse from required parameters
 newListFunctionDefinitionsResponse :: ListFunctionDefinitionsResponse
-newListFunctionDefinitionsResponse  = ListFunctionDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListFunctionDefinitionsResponse  = ListFunctionDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListFunctionDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListFunctionDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListFunctionDefinitionsResponse
-newListFunctionDefinitionsResponse'  customize = (ListFunctionDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListFunctionDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListFunctionDefinitionsResponse
+newListFunctionDefinitionsResponse'  customize = (ListFunctionDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
@@ -2887,7 +2886,7 @@ newListGroupCertificateAuthoritiesRequest' _GroupId customize = (ListGroupCertif
 
 
 newtype ListGroupCertificateAuthoritiesResponse = ListGroupCertificateAuthoritiesResponse 
-  { "GroupCertificateAuthorities" :: NullOrUndefined (ListOfGroupCertificateAuthorityProperties)
+  { "GroupCertificateAuthorities" :: Maybe (ListOfGroupCertificateAuthorityProperties)
   }
 derive instance newtypeListGroupCertificateAuthoritiesResponse :: Newtype ListGroupCertificateAuthoritiesResponse _
 derive instance repGenericListGroupCertificateAuthoritiesResponse :: Generic ListGroupCertificateAuthoritiesResponse _
@@ -2897,19 +2896,19 @@ instance encodeListGroupCertificateAuthoritiesResponse :: Encode ListGroupCertif
 
 -- | Constructs ListGroupCertificateAuthoritiesResponse from required parameters
 newListGroupCertificateAuthoritiesResponse :: ListGroupCertificateAuthoritiesResponse
-newListGroupCertificateAuthoritiesResponse  = ListGroupCertificateAuthoritiesResponse { "GroupCertificateAuthorities": (NullOrUndefined Nothing) }
+newListGroupCertificateAuthoritiesResponse  = ListGroupCertificateAuthoritiesResponse { "GroupCertificateAuthorities": Nothing }
 
 -- | Constructs ListGroupCertificateAuthoritiesResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListGroupCertificateAuthoritiesResponse' :: ( { "GroupCertificateAuthorities" :: NullOrUndefined (ListOfGroupCertificateAuthorityProperties) } -> {"GroupCertificateAuthorities" :: NullOrUndefined (ListOfGroupCertificateAuthorityProperties) } ) -> ListGroupCertificateAuthoritiesResponse
-newListGroupCertificateAuthoritiesResponse'  customize = (ListGroupCertificateAuthoritiesResponse <<< customize) { "GroupCertificateAuthorities": (NullOrUndefined Nothing) }
+newListGroupCertificateAuthoritiesResponse' :: ( { "GroupCertificateAuthorities" :: Maybe (ListOfGroupCertificateAuthorityProperties) } -> {"GroupCertificateAuthorities" :: Maybe (ListOfGroupCertificateAuthorityProperties) } ) -> ListGroupCertificateAuthoritiesResponse
+newListGroupCertificateAuthoritiesResponse'  customize = (ListGroupCertificateAuthoritiesResponse <<< customize) { "GroupCertificateAuthorities": Nothing }
 
 
 
 newtype ListGroupVersionsRequest = ListGroupVersionsRequest 
   { "GroupId" :: (String)
-  , "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  , "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListGroupVersionsRequest :: Newtype ListGroupVersionsRequest _
 derive instance repGenericListGroupVersionsRequest :: Generic ListGroupVersionsRequest _
@@ -2919,18 +2918,18 @@ instance encodeListGroupVersionsRequest :: Encode ListGroupVersionsRequest where
 
 -- | Constructs ListGroupVersionsRequest from required parameters
 newListGroupVersionsRequest :: String -> ListGroupVersionsRequest
-newListGroupVersionsRequest _GroupId = ListGroupVersionsRequest { "GroupId": _GroupId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListGroupVersionsRequest _GroupId = ListGroupVersionsRequest { "GroupId": _GroupId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListGroupVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListGroupVersionsRequest' :: String -> ( { "GroupId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"GroupId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListGroupVersionsRequest
-newListGroupVersionsRequest' _GroupId customize = (ListGroupVersionsRequest <<< customize) { "GroupId": _GroupId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListGroupVersionsRequest' :: String -> ( { "GroupId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"GroupId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListGroupVersionsRequest
+newListGroupVersionsRequest' _GroupId customize = (ListGroupVersionsRequest <<< customize) { "GroupId": _GroupId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListGroupVersionsResponse = ListGroupVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListGroupVersionsResponse :: Newtype ListGroupVersionsResponse _
 derive instance repGenericListGroupVersionsResponse :: Generic ListGroupVersionsResponse _
@@ -2940,18 +2939,18 @@ instance encodeListGroupVersionsResponse :: Encode ListGroupVersionsResponse whe
 
 -- | Constructs ListGroupVersionsResponse from required parameters
 newListGroupVersionsResponse :: ListGroupVersionsResponse
-newListGroupVersionsResponse  = ListGroupVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListGroupVersionsResponse  = ListGroupVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListGroupVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListGroupVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListGroupVersionsResponse
-newListGroupVersionsResponse'  customize = (ListGroupVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListGroupVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListGroupVersionsResponse
+newListGroupVersionsResponse'  customize = (ListGroupVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListGroupsRequest = ListGroupsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListGroupsRequest :: Newtype ListGroupsRequest _
 derive instance repGenericListGroupsRequest :: Generic ListGroupsRequest _
@@ -2961,18 +2960,18 @@ instance encodeListGroupsRequest :: Encode ListGroupsRequest where encode = gene
 
 -- | Constructs ListGroupsRequest from required parameters
 newListGroupsRequest :: ListGroupsRequest
-newListGroupsRequest  = ListGroupsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListGroupsRequest  = ListGroupsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListGroupsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListGroupsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListGroupsRequest
-newListGroupsRequest'  customize = (ListGroupsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListGroupsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListGroupsRequest
+newListGroupsRequest'  customize = (ListGroupsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListGroupsResponse = ListGroupsResponse 
-  { "Groups" :: NullOrUndefined (ListOfGroupInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Groups" :: Maybe (ListOfGroupInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListGroupsResponse :: Newtype ListGroupsResponse _
 derive instance repGenericListGroupsResponse :: Generic ListGroupsResponse _
@@ -2982,19 +2981,19 @@ instance encodeListGroupsResponse :: Encode ListGroupsResponse where encode = ge
 
 -- | Constructs ListGroupsResponse from required parameters
 newListGroupsResponse :: ListGroupsResponse
-newListGroupsResponse  = ListGroupsResponse { "Groups": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListGroupsResponse  = ListGroupsResponse { "Groups": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListGroupsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListGroupsResponse' :: ( { "Groups" :: NullOrUndefined (ListOfGroupInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Groups" :: NullOrUndefined (ListOfGroupInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListGroupsResponse
-newListGroupsResponse'  customize = (ListGroupsResponse <<< customize) { "Groups": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListGroupsResponse' :: ( { "Groups" :: Maybe (ListOfGroupInformation) , "NextToken" :: Maybe (String) } -> {"Groups" :: Maybe (ListOfGroupInformation) , "NextToken" :: Maybe (String) } ) -> ListGroupsResponse
+newListGroupsResponse'  customize = (ListGroupsResponse <<< customize) { "Groups": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListLoggerDefinitionVersionsRequest = ListLoggerDefinitionVersionsRequest 
   { "LoggerDefinitionId" :: (String)
-  , "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  , "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListLoggerDefinitionVersionsRequest :: Newtype ListLoggerDefinitionVersionsRequest _
 derive instance repGenericListLoggerDefinitionVersionsRequest :: Generic ListLoggerDefinitionVersionsRequest _
@@ -3004,18 +3003,18 @@ instance encodeListLoggerDefinitionVersionsRequest :: Encode ListLoggerDefinitio
 
 -- | Constructs ListLoggerDefinitionVersionsRequest from required parameters
 newListLoggerDefinitionVersionsRequest :: String -> ListLoggerDefinitionVersionsRequest
-newListLoggerDefinitionVersionsRequest _LoggerDefinitionId = ListLoggerDefinitionVersionsRequest { "LoggerDefinitionId": _LoggerDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLoggerDefinitionVersionsRequest _LoggerDefinitionId = ListLoggerDefinitionVersionsRequest { "LoggerDefinitionId": _LoggerDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListLoggerDefinitionVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLoggerDefinitionVersionsRequest' :: String -> ( { "LoggerDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"LoggerDefinitionId" :: (String) , "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListLoggerDefinitionVersionsRequest
-newListLoggerDefinitionVersionsRequest' _LoggerDefinitionId customize = (ListLoggerDefinitionVersionsRequest <<< customize) { "LoggerDefinitionId": _LoggerDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLoggerDefinitionVersionsRequest' :: String -> ( { "LoggerDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"LoggerDefinitionId" :: (String) , "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListLoggerDefinitionVersionsRequest
+newListLoggerDefinitionVersionsRequest' _LoggerDefinitionId customize = (ListLoggerDefinitionVersionsRequest <<< customize) { "LoggerDefinitionId": _LoggerDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListLoggerDefinitionVersionsResponse = ListLoggerDefinitionVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListLoggerDefinitionVersionsResponse :: Newtype ListLoggerDefinitionVersionsResponse _
 derive instance repGenericListLoggerDefinitionVersionsResponse :: Generic ListLoggerDefinitionVersionsResponse _
@@ -3025,18 +3024,18 @@ instance encodeListLoggerDefinitionVersionsResponse :: Encode ListLoggerDefiniti
 
 -- | Constructs ListLoggerDefinitionVersionsResponse from required parameters
 newListLoggerDefinitionVersionsResponse :: ListLoggerDefinitionVersionsResponse
-newListLoggerDefinitionVersionsResponse  = ListLoggerDefinitionVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListLoggerDefinitionVersionsResponse  = ListLoggerDefinitionVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListLoggerDefinitionVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLoggerDefinitionVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListLoggerDefinitionVersionsResponse
-newListLoggerDefinitionVersionsResponse'  customize = (ListLoggerDefinitionVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListLoggerDefinitionVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListLoggerDefinitionVersionsResponse
+newListLoggerDefinitionVersionsResponse'  customize = (ListLoggerDefinitionVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListLoggerDefinitionsRequest = ListLoggerDefinitionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListLoggerDefinitionsRequest :: Newtype ListLoggerDefinitionsRequest _
 derive instance repGenericListLoggerDefinitionsRequest :: Generic ListLoggerDefinitionsRequest _
@@ -3046,18 +3045,18 @@ instance encodeListLoggerDefinitionsRequest :: Encode ListLoggerDefinitionsReque
 
 -- | Constructs ListLoggerDefinitionsRequest from required parameters
 newListLoggerDefinitionsRequest :: ListLoggerDefinitionsRequest
-newListLoggerDefinitionsRequest  = ListLoggerDefinitionsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLoggerDefinitionsRequest  = ListLoggerDefinitionsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListLoggerDefinitionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLoggerDefinitionsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListLoggerDefinitionsRequest
-newListLoggerDefinitionsRequest'  customize = (ListLoggerDefinitionsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLoggerDefinitionsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListLoggerDefinitionsRequest
+newListLoggerDefinitionsRequest'  customize = (ListLoggerDefinitionsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListLoggerDefinitionsResponse = ListLoggerDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListLoggerDefinitionsResponse :: Newtype ListLoggerDefinitionsResponse _
 derive instance repGenericListLoggerDefinitionsResponse :: Generic ListLoggerDefinitionsResponse _
@@ -3067,12 +3066,12 @@ instance encodeListLoggerDefinitionsResponse :: Encode ListLoggerDefinitionsResp
 
 -- | Constructs ListLoggerDefinitionsResponse from required parameters
 newListLoggerDefinitionsResponse :: ListLoggerDefinitionsResponse
-newListLoggerDefinitionsResponse  = ListLoggerDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLoggerDefinitionsResponse  = ListLoggerDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListLoggerDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLoggerDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListLoggerDefinitionsResponse
-newListLoggerDefinitionsResponse'  customize = (ListLoggerDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListLoggerDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListLoggerDefinitionsResponse
+newListLoggerDefinitionsResponse'  customize = (ListLoggerDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
@@ -3185,8 +3184,8 @@ instance encodeListOfVersionInformation :: Encode ListOfVersionInformation where
 
 
 newtype ListResourceDefinitionVersionsRequest = ListResourceDefinitionVersionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   , "ResourceDefinitionId" :: (String)
   }
 derive instance newtypeListResourceDefinitionVersionsRequest :: Newtype ListResourceDefinitionVersionsRequest _
@@ -3197,18 +3196,18 @@ instance encodeListResourceDefinitionVersionsRequest :: Encode ListResourceDefin
 
 -- | Constructs ListResourceDefinitionVersionsRequest from required parameters
 newListResourceDefinitionVersionsRequest :: String -> ListResourceDefinitionVersionsRequest
-newListResourceDefinitionVersionsRequest _ResourceDefinitionId = ListResourceDefinitionVersionsRequest { "ResourceDefinitionId": _ResourceDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListResourceDefinitionVersionsRequest _ResourceDefinitionId = ListResourceDefinitionVersionsRequest { "ResourceDefinitionId": _ResourceDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListResourceDefinitionVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListResourceDefinitionVersionsRequest' :: String -> ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) , "ResourceDefinitionId" :: (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) , "ResourceDefinitionId" :: (String) } ) -> ListResourceDefinitionVersionsRequest
-newListResourceDefinitionVersionsRequest' _ResourceDefinitionId customize = (ListResourceDefinitionVersionsRequest <<< customize) { "ResourceDefinitionId": _ResourceDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListResourceDefinitionVersionsRequest' :: String -> ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) , "ResourceDefinitionId" :: (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) , "ResourceDefinitionId" :: (String) } ) -> ListResourceDefinitionVersionsRequest
+newListResourceDefinitionVersionsRequest' _ResourceDefinitionId customize = (ListResourceDefinitionVersionsRequest <<< customize) { "ResourceDefinitionId": _ResourceDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListResourceDefinitionVersionsResponse = ListResourceDefinitionVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListResourceDefinitionVersionsResponse :: Newtype ListResourceDefinitionVersionsResponse _
 derive instance repGenericListResourceDefinitionVersionsResponse :: Generic ListResourceDefinitionVersionsResponse _
@@ -3218,18 +3217,18 @@ instance encodeListResourceDefinitionVersionsResponse :: Encode ListResourceDefi
 
 -- | Constructs ListResourceDefinitionVersionsResponse from required parameters
 newListResourceDefinitionVersionsResponse :: ListResourceDefinitionVersionsResponse
-newListResourceDefinitionVersionsResponse  = ListResourceDefinitionVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListResourceDefinitionVersionsResponse  = ListResourceDefinitionVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListResourceDefinitionVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListResourceDefinitionVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListResourceDefinitionVersionsResponse
-newListResourceDefinitionVersionsResponse'  customize = (ListResourceDefinitionVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListResourceDefinitionVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListResourceDefinitionVersionsResponse
+newListResourceDefinitionVersionsResponse'  customize = (ListResourceDefinitionVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListResourceDefinitionsRequest = ListResourceDefinitionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListResourceDefinitionsRequest :: Newtype ListResourceDefinitionsRequest _
 derive instance repGenericListResourceDefinitionsRequest :: Generic ListResourceDefinitionsRequest _
@@ -3239,18 +3238,18 @@ instance encodeListResourceDefinitionsRequest :: Encode ListResourceDefinitionsR
 
 -- | Constructs ListResourceDefinitionsRequest from required parameters
 newListResourceDefinitionsRequest :: ListResourceDefinitionsRequest
-newListResourceDefinitionsRequest  = ListResourceDefinitionsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListResourceDefinitionsRequest  = ListResourceDefinitionsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListResourceDefinitionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListResourceDefinitionsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListResourceDefinitionsRequest
-newListResourceDefinitionsRequest'  customize = (ListResourceDefinitionsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListResourceDefinitionsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListResourceDefinitionsRequest
+newListResourceDefinitionsRequest'  customize = (ListResourceDefinitionsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListResourceDefinitionsResponse = ListResourceDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListResourceDefinitionsResponse :: Newtype ListResourceDefinitionsResponse _
 derive instance repGenericListResourceDefinitionsResponse :: Generic ListResourceDefinitionsResponse _
@@ -3260,18 +3259,18 @@ instance encodeListResourceDefinitionsResponse :: Encode ListResourceDefinitions
 
 -- | Constructs ListResourceDefinitionsResponse from required parameters
 newListResourceDefinitionsResponse :: ListResourceDefinitionsResponse
-newListResourceDefinitionsResponse  = ListResourceDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListResourceDefinitionsResponse  = ListResourceDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListResourceDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListResourceDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListResourceDefinitionsResponse
-newListResourceDefinitionsResponse'  customize = (ListResourceDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListResourceDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListResourceDefinitionsResponse
+newListResourceDefinitionsResponse'  customize = (ListResourceDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListSubscriptionDefinitionVersionsRequest = ListSubscriptionDefinitionVersionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   , "SubscriptionDefinitionId" :: (String)
   }
 derive instance newtypeListSubscriptionDefinitionVersionsRequest :: Newtype ListSubscriptionDefinitionVersionsRequest _
@@ -3282,18 +3281,18 @@ instance encodeListSubscriptionDefinitionVersionsRequest :: Encode ListSubscript
 
 -- | Constructs ListSubscriptionDefinitionVersionsRequest from required parameters
 newListSubscriptionDefinitionVersionsRequest :: String -> ListSubscriptionDefinitionVersionsRequest
-newListSubscriptionDefinitionVersionsRequest _SubscriptionDefinitionId = ListSubscriptionDefinitionVersionsRequest { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionVersionsRequest _SubscriptionDefinitionId = ListSubscriptionDefinitionVersionsRequest { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListSubscriptionDefinitionVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListSubscriptionDefinitionVersionsRequest' :: String -> ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) , "SubscriptionDefinitionId" :: (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) , "SubscriptionDefinitionId" :: (String) } ) -> ListSubscriptionDefinitionVersionsRequest
-newListSubscriptionDefinitionVersionsRequest' _SubscriptionDefinitionId customize = (ListSubscriptionDefinitionVersionsRequest <<< customize) { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionVersionsRequest' :: String -> ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) , "SubscriptionDefinitionId" :: (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) , "SubscriptionDefinitionId" :: (String) } ) -> ListSubscriptionDefinitionVersionsRequest
+newListSubscriptionDefinitionVersionsRequest' _SubscriptionDefinitionId customize = (ListSubscriptionDefinitionVersionsRequest <<< customize) { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListSubscriptionDefinitionVersionsResponse = ListSubscriptionDefinitionVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListSubscriptionDefinitionVersionsResponse :: Newtype ListSubscriptionDefinitionVersionsResponse _
 derive instance repGenericListSubscriptionDefinitionVersionsResponse :: Generic ListSubscriptionDefinitionVersionsResponse _
@@ -3303,18 +3302,18 @@ instance encodeListSubscriptionDefinitionVersionsResponse :: Encode ListSubscrip
 
 -- | Constructs ListSubscriptionDefinitionVersionsResponse from required parameters
 newListSubscriptionDefinitionVersionsResponse :: ListSubscriptionDefinitionVersionsResponse
-newListSubscriptionDefinitionVersionsResponse  = ListSubscriptionDefinitionVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionVersionsResponse  = ListSubscriptionDefinitionVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListSubscriptionDefinitionVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListSubscriptionDefinitionVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListSubscriptionDefinitionVersionsResponse
-newListSubscriptionDefinitionVersionsResponse'  customize = (ListSubscriptionDefinitionVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListSubscriptionDefinitionVersionsResponse
+newListSubscriptionDefinitionVersionsResponse'  customize = (ListSubscriptionDefinitionVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 newtype ListSubscriptionDefinitionsRequest = ListSubscriptionDefinitionsRequest 
-  { "MaxResults" :: NullOrUndefined (String)
-  , "NextToken" :: NullOrUndefined (String)
+  { "MaxResults" :: Maybe (String)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListSubscriptionDefinitionsRequest :: Newtype ListSubscriptionDefinitionsRequest _
 derive instance repGenericListSubscriptionDefinitionsRequest :: Generic ListSubscriptionDefinitionsRequest _
@@ -3324,18 +3323,18 @@ instance encodeListSubscriptionDefinitionsRequest :: Encode ListSubscriptionDefi
 
 -- | Constructs ListSubscriptionDefinitionsRequest from required parameters
 newListSubscriptionDefinitionsRequest :: ListSubscriptionDefinitionsRequest
-newListSubscriptionDefinitionsRequest  = ListSubscriptionDefinitionsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionsRequest  = ListSubscriptionDefinitionsRequest { "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListSubscriptionDefinitionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListSubscriptionDefinitionsRequest' :: ( { "MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } -> {"MaxResults" :: NullOrUndefined (String) , "NextToken" :: NullOrUndefined (String) } ) -> ListSubscriptionDefinitionsRequest
-newListSubscriptionDefinitionsRequest'  customize = (ListSubscriptionDefinitionsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionsRequest' :: ( { "MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } -> {"MaxResults" :: Maybe (String) , "NextToken" :: Maybe (String) } ) -> ListSubscriptionDefinitionsRequest
+newListSubscriptionDefinitionsRequest'  customize = (ListSubscriptionDefinitionsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListSubscriptionDefinitionsResponse = ListSubscriptionDefinitionsResponse 
-  { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Definitions" :: Maybe (ListOfDefinitionInformation)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeListSubscriptionDefinitionsResponse :: Newtype ListSubscriptionDefinitionsResponse _
 derive instance repGenericListSubscriptionDefinitionsResponse :: Generic ListSubscriptionDefinitionsResponse _
@@ -3345,19 +3344,19 @@ instance encodeListSubscriptionDefinitionsResponse :: Encode ListSubscriptionDef
 
 -- | Constructs ListSubscriptionDefinitionsResponse from required parameters
 newListSubscriptionDefinitionsResponse :: ListSubscriptionDefinitionsResponse
-newListSubscriptionDefinitionsResponse  = ListSubscriptionDefinitionsResponse { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionsResponse  = ListSubscriptionDefinitionsResponse { "Definitions": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListSubscriptionDefinitionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListSubscriptionDefinitionsResponse' :: ( { "Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } -> {"Definitions" :: NullOrUndefined (ListOfDefinitionInformation) , "NextToken" :: NullOrUndefined (String) } ) -> ListSubscriptionDefinitionsResponse
-newListSubscriptionDefinitionsResponse'  customize = (ListSubscriptionDefinitionsResponse <<< customize) { "Definitions": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListSubscriptionDefinitionsResponse' :: ( { "Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } -> {"Definitions" :: Maybe (ListOfDefinitionInformation) , "NextToken" :: Maybe (String) } ) -> ListSubscriptionDefinitionsResponse
+newListSubscriptionDefinitionsResponse'  customize = (ListSubscriptionDefinitionsResponse <<< customize) { "Definitions": Nothing, "NextToken": Nothing }
 
 
 
 -- | List of versions response
 newtype ListVersionsResponse = ListVersionsResponse 
-  { "NextToken" :: NullOrUndefined (String)
-  , "Versions" :: NullOrUndefined (ListOfVersionInformation)
+  { "NextToken" :: Maybe (String)
+  , "Versions" :: Maybe (ListOfVersionInformation)
   }
 derive instance newtypeListVersionsResponse :: Newtype ListVersionsResponse _
 derive instance repGenericListVersionsResponse :: Generic ListVersionsResponse _
@@ -3367,19 +3366,19 @@ instance encodeListVersionsResponse :: Encode ListVersionsResponse where encode 
 
 -- | Constructs ListVersionsResponse from required parameters
 newListVersionsResponse :: ListVersionsResponse
-newListVersionsResponse  = ListVersionsResponse { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListVersionsResponse  = ListVersionsResponse { "NextToken": Nothing, "Versions": Nothing }
 
 -- | Constructs ListVersionsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListVersionsResponse' :: ( { "NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } -> {"NextToken" :: NullOrUndefined (String) , "Versions" :: NullOrUndefined (ListOfVersionInformation) } ) -> ListVersionsResponse
-newListVersionsResponse'  customize = (ListVersionsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Versions": (NullOrUndefined Nothing) }
+newListVersionsResponse' :: ( { "NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } -> {"NextToken" :: Maybe (String) , "Versions" :: Maybe (ListOfVersionInformation) } ) -> ListVersionsResponse
+newListVersionsResponse'  customize = (ListVersionsResponse <<< customize) { "NextToken": Nothing, "Versions": Nothing }
 
 
 
 -- | Attributes that define the Local Device Resource.
 newtype LocalDeviceResourceData = LocalDeviceResourceData 
-  { "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting)
-  , "SourcePath" :: NullOrUndefined (String)
+  { "GroupOwnerSetting" :: Maybe (GroupOwnerSetting)
+  , "SourcePath" :: Maybe (String)
   }
 derive instance newtypeLocalDeviceResourceData :: Newtype LocalDeviceResourceData _
 derive instance repGenericLocalDeviceResourceData :: Generic LocalDeviceResourceData _
@@ -3389,20 +3388,20 @@ instance encodeLocalDeviceResourceData :: Encode LocalDeviceResourceData where e
 
 -- | Constructs LocalDeviceResourceData from required parameters
 newLocalDeviceResourceData :: LocalDeviceResourceData
-newLocalDeviceResourceData  = LocalDeviceResourceData { "GroupOwnerSetting": (NullOrUndefined Nothing), "SourcePath": (NullOrUndefined Nothing) }
+newLocalDeviceResourceData  = LocalDeviceResourceData { "GroupOwnerSetting": Nothing, "SourcePath": Nothing }
 
 -- | Constructs LocalDeviceResourceData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLocalDeviceResourceData' :: ( { "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting) , "SourcePath" :: NullOrUndefined (String) } -> {"GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting) , "SourcePath" :: NullOrUndefined (String) } ) -> LocalDeviceResourceData
-newLocalDeviceResourceData'  customize = (LocalDeviceResourceData <<< customize) { "GroupOwnerSetting": (NullOrUndefined Nothing), "SourcePath": (NullOrUndefined Nothing) }
+newLocalDeviceResourceData' :: ( { "GroupOwnerSetting" :: Maybe (GroupOwnerSetting) , "SourcePath" :: Maybe (String) } -> {"GroupOwnerSetting" :: Maybe (GroupOwnerSetting) , "SourcePath" :: Maybe (String) } ) -> LocalDeviceResourceData
+newLocalDeviceResourceData'  customize = (LocalDeviceResourceData <<< customize) { "GroupOwnerSetting": Nothing, "SourcePath": Nothing }
 
 
 
 -- | Attributes that define the Local Volume Resource.
 newtype LocalVolumeResourceData = LocalVolumeResourceData 
-  { "DestinationPath" :: NullOrUndefined (String)
-  , "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting)
-  , "SourcePath" :: NullOrUndefined (String)
+  { "DestinationPath" :: Maybe (String)
+  , "GroupOwnerSetting" :: Maybe (GroupOwnerSetting)
+  , "SourcePath" :: Maybe (String)
   }
 derive instance newtypeLocalVolumeResourceData :: Newtype LocalVolumeResourceData _
 derive instance repGenericLocalVolumeResourceData :: Generic LocalVolumeResourceData _
@@ -3412,22 +3411,22 @@ instance encodeLocalVolumeResourceData :: Encode LocalVolumeResourceData where e
 
 -- | Constructs LocalVolumeResourceData from required parameters
 newLocalVolumeResourceData :: LocalVolumeResourceData
-newLocalVolumeResourceData  = LocalVolumeResourceData { "DestinationPath": (NullOrUndefined Nothing), "GroupOwnerSetting": (NullOrUndefined Nothing), "SourcePath": (NullOrUndefined Nothing) }
+newLocalVolumeResourceData  = LocalVolumeResourceData { "DestinationPath": Nothing, "GroupOwnerSetting": Nothing, "SourcePath": Nothing }
 
 -- | Constructs LocalVolumeResourceData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLocalVolumeResourceData' :: ( { "DestinationPath" :: NullOrUndefined (String) , "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting) , "SourcePath" :: NullOrUndefined (String) } -> {"DestinationPath" :: NullOrUndefined (String) , "GroupOwnerSetting" :: NullOrUndefined (GroupOwnerSetting) , "SourcePath" :: NullOrUndefined (String) } ) -> LocalVolumeResourceData
-newLocalVolumeResourceData'  customize = (LocalVolumeResourceData <<< customize) { "DestinationPath": (NullOrUndefined Nothing), "GroupOwnerSetting": (NullOrUndefined Nothing), "SourcePath": (NullOrUndefined Nothing) }
+newLocalVolumeResourceData' :: ( { "DestinationPath" :: Maybe (String) , "GroupOwnerSetting" :: Maybe (GroupOwnerSetting) , "SourcePath" :: Maybe (String) } -> {"DestinationPath" :: Maybe (String) , "GroupOwnerSetting" :: Maybe (GroupOwnerSetting) , "SourcePath" :: Maybe (String) } ) -> LocalVolumeResourceData
+newLocalVolumeResourceData'  customize = (LocalVolumeResourceData <<< customize) { "DestinationPath": Nothing, "GroupOwnerSetting": Nothing, "SourcePath": Nothing }
 
 
 
 -- | Information on the Logger
 newtype Logger = Logger 
-  { "Component" :: NullOrUndefined (LoggerComponent)
-  , "Id" :: NullOrUndefined (String)
-  , "Level" :: NullOrUndefined (LoggerLevel)
-  , "Space" :: NullOrUndefined (Int)
-  , "Type" :: NullOrUndefined (LoggerType)
+  { "Component" :: Maybe (LoggerComponent)
+  , "Id" :: Maybe (String)
+  , "Level" :: Maybe (LoggerLevel)
+  , "Space" :: Maybe (Int)
+  , "Type" :: Maybe (LoggerType)
   }
 derive instance newtypeLogger :: Newtype Logger _
 derive instance repGenericLogger :: Generic Logger _
@@ -3437,12 +3436,12 @@ instance encodeLogger :: Encode Logger where encode = genericEncode options
 
 -- | Constructs Logger from required parameters
 newLogger :: Logger
-newLogger  = Logger { "Component": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Level": (NullOrUndefined Nothing), "Space": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newLogger  = Logger { "Component": Nothing, "Id": Nothing, "Level": Nothing, "Space": Nothing, "Type": Nothing }
 
 -- | Constructs Logger's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLogger' :: ( { "Component" :: NullOrUndefined (LoggerComponent) , "Id" :: NullOrUndefined (String) , "Level" :: NullOrUndefined (LoggerLevel) , "Space" :: NullOrUndefined (Int) , "Type" :: NullOrUndefined (LoggerType) } -> {"Component" :: NullOrUndefined (LoggerComponent) , "Id" :: NullOrUndefined (String) , "Level" :: NullOrUndefined (LoggerLevel) , "Space" :: NullOrUndefined (Int) , "Type" :: NullOrUndefined (LoggerType) } ) -> Logger
-newLogger'  customize = (Logger <<< customize) { "Component": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Level": (NullOrUndefined Nothing), "Space": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newLogger' :: ( { "Component" :: Maybe (LoggerComponent) , "Id" :: Maybe (String) , "Level" :: Maybe (LoggerLevel) , "Space" :: Maybe (Int) , "Type" :: Maybe (LoggerType) } -> {"Component" :: Maybe (LoggerComponent) , "Id" :: Maybe (String) , "Level" :: Maybe (LoggerLevel) , "Space" :: Maybe (Int) , "Type" :: Maybe (LoggerType) } ) -> Logger
+newLogger'  customize = (Logger <<< customize) { "Component": Nothing, "Id": Nothing, "Level": Nothing, "Space": Nothing, "Type": Nothing }
 
 
 
@@ -3457,7 +3456,7 @@ instance encodeLoggerComponent :: Encode LoggerComponent where encode = genericE
 
 -- | Information on logger definition version
 newtype LoggerDefinitionVersion = LoggerDefinitionVersion 
-  { "Loggers" :: NullOrUndefined (ListOfLogger)
+  { "Loggers" :: Maybe (ListOfLogger)
   }
 derive instance newtypeLoggerDefinitionVersion :: Newtype LoggerDefinitionVersion _
 derive instance repGenericLoggerDefinitionVersion :: Generic LoggerDefinitionVersion _
@@ -3467,12 +3466,12 @@ instance encodeLoggerDefinitionVersion :: Encode LoggerDefinitionVersion where e
 
 -- | Constructs LoggerDefinitionVersion from required parameters
 newLoggerDefinitionVersion :: LoggerDefinitionVersion
-newLoggerDefinitionVersion  = LoggerDefinitionVersion { "Loggers": (NullOrUndefined Nothing) }
+newLoggerDefinitionVersion  = LoggerDefinitionVersion { "Loggers": Nothing }
 
 -- | Constructs LoggerDefinitionVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLoggerDefinitionVersion' :: ( { "Loggers" :: NullOrUndefined (ListOfLogger) } -> {"Loggers" :: NullOrUndefined (ListOfLogger) } ) -> LoggerDefinitionVersion
-newLoggerDefinitionVersion'  customize = (LoggerDefinitionVersion <<< customize) { "Loggers": (NullOrUndefined Nothing) }
+newLoggerDefinitionVersion' :: ( { "Loggers" :: Maybe (ListOfLogger) } -> {"Loggers" :: Maybe (ListOfLogger) } ) -> LoggerDefinitionVersion
+newLoggerDefinitionVersion'  customize = (LoggerDefinitionVersion <<< customize) { "Loggers": Nothing }
 
 
 
@@ -3515,8 +3514,8 @@ instance encodePermission :: Encode Permission where encode = genericEncode opti
 
 -- | Information needed to perform a reset of a group's deployments.
 newtype ResetDeploymentsRequest = ResetDeploymentsRequest 
-  { "AmznClientToken" :: NullOrUndefined (String)
-  , "Force" :: NullOrUndefined (Boolean)
+  { "AmznClientToken" :: Maybe (String)
+  , "Force" :: Maybe (Boolean)
   , "GroupId" :: (String)
   }
 derive instance newtypeResetDeploymentsRequest :: Newtype ResetDeploymentsRequest _
@@ -3527,18 +3526,18 @@ instance encodeResetDeploymentsRequest :: Encode ResetDeploymentsRequest where e
 
 -- | Constructs ResetDeploymentsRequest from required parameters
 newResetDeploymentsRequest :: String -> ResetDeploymentsRequest
-newResetDeploymentsRequest _GroupId = ResetDeploymentsRequest { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing), "Force": (NullOrUndefined Nothing) }
+newResetDeploymentsRequest _GroupId = ResetDeploymentsRequest { "GroupId": _GroupId, "AmznClientToken": Nothing, "Force": Nothing }
 
 -- | Constructs ResetDeploymentsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResetDeploymentsRequest' :: String -> ( { "AmznClientToken" :: NullOrUndefined (String) , "Force" :: NullOrUndefined (Boolean) , "GroupId" :: (String) } -> {"AmznClientToken" :: NullOrUndefined (String) , "Force" :: NullOrUndefined (Boolean) , "GroupId" :: (String) } ) -> ResetDeploymentsRequest
-newResetDeploymentsRequest' _GroupId customize = (ResetDeploymentsRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": (NullOrUndefined Nothing), "Force": (NullOrUndefined Nothing) }
+newResetDeploymentsRequest' :: String -> ( { "AmznClientToken" :: Maybe (String) , "Force" :: Maybe (Boolean) , "GroupId" :: (String) } -> {"AmznClientToken" :: Maybe (String) , "Force" :: Maybe (Boolean) , "GroupId" :: (String) } ) -> ResetDeploymentsRequest
+newResetDeploymentsRequest' _GroupId customize = (ResetDeploymentsRequest <<< customize) { "GroupId": _GroupId, "AmznClientToken": Nothing, "Force": Nothing }
 
 
 
 newtype ResetDeploymentsResponse = ResetDeploymentsResponse 
-  { "DeploymentArn" :: NullOrUndefined (String)
-  , "DeploymentId" :: NullOrUndefined (String)
+  { "DeploymentArn" :: Maybe (String)
+  , "DeploymentId" :: Maybe (String)
   }
 derive instance newtypeResetDeploymentsResponse :: Newtype ResetDeploymentsResponse _
 derive instance repGenericResetDeploymentsResponse :: Generic ResetDeploymentsResponse _
@@ -3548,20 +3547,20 @@ instance encodeResetDeploymentsResponse :: Encode ResetDeploymentsResponse where
 
 -- | Constructs ResetDeploymentsResponse from required parameters
 newResetDeploymentsResponse :: ResetDeploymentsResponse
-newResetDeploymentsResponse  = ResetDeploymentsResponse { "DeploymentArn": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing) }
+newResetDeploymentsResponse  = ResetDeploymentsResponse { "DeploymentArn": Nothing, "DeploymentId": Nothing }
 
 -- | Constructs ResetDeploymentsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResetDeploymentsResponse' :: ( { "DeploymentArn" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) } -> {"DeploymentArn" :: NullOrUndefined (String) , "DeploymentId" :: NullOrUndefined (String) } ) -> ResetDeploymentsResponse
-newResetDeploymentsResponse'  customize = (ResetDeploymentsResponse <<< customize) { "DeploymentArn": (NullOrUndefined Nothing), "DeploymentId": (NullOrUndefined Nothing) }
+newResetDeploymentsResponse' :: ( { "DeploymentArn" :: Maybe (String) , "DeploymentId" :: Maybe (String) } -> {"DeploymentArn" :: Maybe (String) , "DeploymentId" :: Maybe (String) } ) -> ResetDeploymentsResponse
+newResetDeploymentsResponse'  customize = (ResetDeploymentsResponse <<< customize) { "DeploymentArn": Nothing, "DeploymentId": Nothing }
 
 
 
 -- | Information on the resource.
 newtype Resource = Resource 
-  { "Id" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
-  , "ResourceDataContainer" :: NullOrUndefined (ResourceDataContainer)
+  { "Id" :: Maybe (String)
+  , "Name" :: Maybe (String)
+  , "ResourceDataContainer" :: Maybe (ResourceDataContainer)
   }
 derive instance newtypeResource :: Newtype Resource _
 derive instance repGenericResource :: Generic Resource _
@@ -3571,19 +3570,19 @@ instance encodeResource :: Encode Resource where encode = genericEncode options
 
 -- | Constructs Resource from required parameters
 newResource :: Resource
-newResource  = Resource { "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "ResourceDataContainer": (NullOrUndefined Nothing) }
+newResource  = Resource { "Id": Nothing, "Name": Nothing, "ResourceDataContainer": Nothing }
 
 -- | Constructs Resource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResource' :: ( { "Id" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) , "ResourceDataContainer" :: NullOrUndefined (ResourceDataContainer) } -> {"Id" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) , "ResourceDataContainer" :: NullOrUndefined (ResourceDataContainer) } ) -> Resource
-newResource'  customize = (Resource <<< customize) { "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "ResourceDataContainer": (NullOrUndefined Nothing) }
+newResource' :: ( { "Id" :: Maybe (String) , "Name" :: Maybe (String) , "ResourceDataContainer" :: Maybe (ResourceDataContainer) } -> {"Id" :: Maybe (String) , "Name" :: Maybe (String) , "ResourceDataContainer" :: Maybe (ResourceDataContainer) } ) -> Resource
+newResource'  customize = (Resource <<< customize) { "Id": Nothing, "Name": Nothing, "ResourceDataContainer": Nothing }
 
 
 
 -- | Policy for the function to access a resource.
 newtype ResourceAccessPolicy = ResourceAccessPolicy 
-  { "Permission" :: NullOrUndefined (Permission)
-  , "ResourceId" :: NullOrUndefined (String)
+  { "Permission" :: Maybe (Permission)
+  , "ResourceId" :: Maybe (String)
   }
 derive instance newtypeResourceAccessPolicy :: Newtype ResourceAccessPolicy _
 derive instance repGenericResourceAccessPolicy :: Generic ResourceAccessPolicy _
@@ -3593,19 +3592,19 @@ instance encodeResourceAccessPolicy :: Encode ResourceAccessPolicy where encode 
 
 -- | Constructs ResourceAccessPolicy from required parameters
 newResourceAccessPolicy :: ResourceAccessPolicy
-newResourceAccessPolicy  = ResourceAccessPolicy { "Permission": (NullOrUndefined Nothing), "ResourceId": (NullOrUndefined Nothing) }
+newResourceAccessPolicy  = ResourceAccessPolicy { "Permission": Nothing, "ResourceId": Nothing }
 
 -- | Constructs ResourceAccessPolicy's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceAccessPolicy' :: ( { "Permission" :: NullOrUndefined (Permission) , "ResourceId" :: NullOrUndefined (String) } -> {"Permission" :: NullOrUndefined (Permission) , "ResourceId" :: NullOrUndefined (String) } ) -> ResourceAccessPolicy
-newResourceAccessPolicy'  customize = (ResourceAccessPolicy <<< customize) { "Permission": (NullOrUndefined Nothing), "ResourceId": (NullOrUndefined Nothing) }
+newResourceAccessPolicy' :: ( { "Permission" :: Maybe (Permission) , "ResourceId" :: Maybe (String) } -> {"Permission" :: Maybe (Permission) , "ResourceId" :: Maybe (String) } ) -> ResourceAccessPolicy
+newResourceAccessPolicy'  customize = (ResourceAccessPolicy <<< customize) { "Permission": Nothing, "ResourceId": Nothing }
 
 
 
 -- | A container of data for all resource types.
 newtype ResourceDataContainer = ResourceDataContainer 
-  { "LocalDeviceResourceData" :: NullOrUndefined (LocalDeviceResourceData)
-  , "LocalVolumeResourceData" :: NullOrUndefined (LocalVolumeResourceData)
+  { "LocalDeviceResourceData" :: Maybe (LocalDeviceResourceData)
+  , "LocalVolumeResourceData" :: Maybe (LocalVolumeResourceData)
   }
 derive instance newtypeResourceDataContainer :: Newtype ResourceDataContainer _
 derive instance repGenericResourceDataContainer :: Generic ResourceDataContainer _
@@ -3615,18 +3614,18 @@ instance encodeResourceDataContainer :: Encode ResourceDataContainer where encod
 
 -- | Constructs ResourceDataContainer from required parameters
 newResourceDataContainer :: ResourceDataContainer
-newResourceDataContainer  = ResourceDataContainer { "LocalDeviceResourceData": (NullOrUndefined Nothing), "LocalVolumeResourceData": (NullOrUndefined Nothing) }
+newResourceDataContainer  = ResourceDataContainer { "LocalDeviceResourceData": Nothing, "LocalVolumeResourceData": Nothing }
 
 -- | Constructs ResourceDataContainer's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceDataContainer' :: ( { "LocalDeviceResourceData" :: NullOrUndefined (LocalDeviceResourceData) , "LocalVolumeResourceData" :: NullOrUndefined (LocalVolumeResourceData) } -> {"LocalDeviceResourceData" :: NullOrUndefined (LocalDeviceResourceData) , "LocalVolumeResourceData" :: NullOrUndefined (LocalVolumeResourceData) } ) -> ResourceDataContainer
-newResourceDataContainer'  customize = (ResourceDataContainer <<< customize) { "LocalDeviceResourceData": (NullOrUndefined Nothing), "LocalVolumeResourceData": (NullOrUndefined Nothing) }
+newResourceDataContainer' :: ( { "LocalDeviceResourceData" :: Maybe (LocalDeviceResourceData) , "LocalVolumeResourceData" :: Maybe (LocalVolumeResourceData) } -> {"LocalDeviceResourceData" :: Maybe (LocalDeviceResourceData) , "LocalVolumeResourceData" :: Maybe (LocalVolumeResourceData) } ) -> ResourceDataContainer
+newResourceDataContainer'  customize = (ResourceDataContainer <<< customize) { "LocalDeviceResourceData": Nothing, "LocalVolumeResourceData": Nothing }
 
 
 
 -- | Information on resource definition version
 newtype ResourceDefinitionVersion = ResourceDefinitionVersion 
-  { "Resources" :: NullOrUndefined (ListOfResource)
+  { "Resources" :: Maybe (ListOfResource)
   }
 derive instance newtypeResourceDefinitionVersion :: Newtype ResourceDefinitionVersion _
 derive instance repGenericResourceDefinitionVersion :: Generic ResourceDefinitionVersion _
@@ -3636,12 +3635,12 @@ instance encodeResourceDefinitionVersion :: Encode ResourceDefinitionVersion whe
 
 -- | Constructs ResourceDefinitionVersion from required parameters
 newResourceDefinitionVersion :: ResourceDefinitionVersion
-newResourceDefinitionVersion  = ResourceDefinitionVersion { "Resources": (NullOrUndefined Nothing) }
+newResourceDefinitionVersion  = ResourceDefinitionVersion { "Resources": Nothing }
 
 -- | Constructs ResourceDefinitionVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceDefinitionVersion' :: ( { "Resources" :: NullOrUndefined (ListOfResource) } -> {"Resources" :: NullOrUndefined (ListOfResource) } ) -> ResourceDefinitionVersion
-newResourceDefinitionVersion'  customize = (ResourceDefinitionVersion <<< customize) { "Resources": (NullOrUndefined Nothing) }
+newResourceDefinitionVersion' :: ( { "Resources" :: Maybe (ListOfResource) } -> {"Resources" :: Maybe (ListOfResource) } ) -> ResourceDefinitionVersion
+newResourceDefinitionVersion'  customize = (ResourceDefinitionVersion <<< customize) { "Resources": Nothing }
 
 
 
@@ -3667,10 +3666,10 @@ instance encodeSoftwareToUpdate :: Encode SoftwareToUpdate where encode = generi
 
 -- | Information on subscription
 newtype Subscription = Subscription 
-  { "Id" :: NullOrUndefined (String)
-  , "Source" :: NullOrUndefined (String)
-  , "Subject" :: NullOrUndefined (String)
-  , "Target" :: NullOrUndefined (String)
+  { "Id" :: Maybe (String)
+  , "Source" :: Maybe (String)
+  , "Subject" :: Maybe (String)
+  , "Target" :: Maybe (String)
   }
 derive instance newtypeSubscription :: Newtype Subscription _
 derive instance repGenericSubscription :: Generic Subscription _
@@ -3680,18 +3679,18 @@ instance encodeSubscription :: Encode Subscription where encode = genericEncode 
 
 -- | Constructs Subscription from required parameters
 newSubscription :: Subscription
-newSubscription  = Subscription { "Id": (NullOrUndefined Nothing), "Source": (NullOrUndefined Nothing), "Subject": (NullOrUndefined Nothing), "Target": (NullOrUndefined Nothing) }
+newSubscription  = Subscription { "Id": Nothing, "Source": Nothing, "Subject": Nothing, "Target": Nothing }
 
 -- | Constructs Subscription's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSubscription' :: ( { "Id" :: NullOrUndefined (String) , "Source" :: NullOrUndefined (String) , "Subject" :: NullOrUndefined (String) , "Target" :: NullOrUndefined (String) } -> {"Id" :: NullOrUndefined (String) , "Source" :: NullOrUndefined (String) , "Subject" :: NullOrUndefined (String) , "Target" :: NullOrUndefined (String) } ) -> Subscription
-newSubscription'  customize = (Subscription <<< customize) { "Id": (NullOrUndefined Nothing), "Source": (NullOrUndefined Nothing), "Subject": (NullOrUndefined Nothing), "Target": (NullOrUndefined Nothing) }
+newSubscription' :: ( { "Id" :: Maybe (String) , "Source" :: Maybe (String) , "Subject" :: Maybe (String) , "Target" :: Maybe (String) } -> {"Id" :: Maybe (String) , "Source" :: Maybe (String) , "Subject" :: Maybe (String) , "Target" :: Maybe (String) } ) -> Subscription
+newSubscription'  customize = (Subscription <<< customize) { "Id": Nothing, "Source": Nothing, "Subject": Nothing, "Target": Nothing }
 
 
 
 -- | Information on subscription definition version
 newtype SubscriptionDefinitionVersion = SubscriptionDefinitionVersion 
-  { "Subscriptions" :: NullOrUndefined (ListOfSubscription)
+  { "Subscriptions" :: Maybe (ListOfSubscription)
   }
 derive instance newtypeSubscriptionDefinitionVersion :: Newtype SubscriptionDefinitionVersion _
 derive instance repGenericSubscriptionDefinitionVersion :: Generic SubscriptionDefinitionVersion _
@@ -3701,12 +3700,12 @@ instance encodeSubscriptionDefinitionVersion :: Encode SubscriptionDefinitionVer
 
 -- | Constructs SubscriptionDefinitionVersion from required parameters
 newSubscriptionDefinitionVersion :: SubscriptionDefinitionVersion
-newSubscriptionDefinitionVersion  = SubscriptionDefinitionVersion { "Subscriptions": (NullOrUndefined Nothing) }
+newSubscriptionDefinitionVersion  = SubscriptionDefinitionVersion { "Subscriptions": Nothing }
 
 -- | Constructs SubscriptionDefinitionVersion's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSubscriptionDefinitionVersion' :: ( { "Subscriptions" :: NullOrUndefined (ListOfSubscription) } -> {"Subscriptions" :: NullOrUndefined (ListOfSubscription) } ) -> SubscriptionDefinitionVersion
-newSubscriptionDefinitionVersion'  customize = (SubscriptionDefinitionVersion <<< customize) { "Subscriptions": (NullOrUndefined Nothing) }
+newSubscriptionDefinitionVersion' :: ( { "Subscriptions" :: Maybe (ListOfSubscription) } -> {"Subscriptions" :: Maybe (ListOfSubscription) } ) -> SubscriptionDefinitionVersion
+newSubscriptionDefinitionVersion'  customize = (SubscriptionDefinitionVersion <<< customize) { "Subscriptions": Nothing }
 
 
 
@@ -3722,7 +3721,7 @@ instance encodeUpdateAgentLogLevel :: Encode UpdateAgentLogLevel where encode = 
 
 -- | connectivity info request
 newtype UpdateConnectivityInfoRequest = UpdateConnectivityInfoRequest 
-  { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo)
+  { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo)
   , "ThingName" :: (String)
   }
 derive instance newtypeUpdateConnectivityInfoRequest :: Newtype UpdateConnectivityInfoRequest _
@@ -3733,18 +3732,18 @@ instance encodeUpdateConnectivityInfoRequest :: Encode UpdateConnectivityInfoReq
 
 -- | Constructs UpdateConnectivityInfoRequest from required parameters
 newUpdateConnectivityInfoRequest :: String -> UpdateConnectivityInfoRequest
-newUpdateConnectivityInfoRequest _ThingName = UpdateConnectivityInfoRequest { "ThingName": _ThingName, "ConnectivityInfo": (NullOrUndefined Nothing) }
+newUpdateConnectivityInfoRequest _ThingName = UpdateConnectivityInfoRequest { "ThingName": _ThingName, "ConnectivityInfo": Nothing }
 
 -- | Constructs UpdateConnectivityInfoRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateConnectivityInfoRequest' :: String -> ( { "ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo) , "ThingName" :: (String) } -> {"ConnectivityInfo" :: NullOrUndefined (ListOfConnectivityInfo) , "ThingName" :: (String) } ) -> UpdateConnectivityInfoRequest
-newUpdateConnectivityInfoRequest' _ThingName customize = (UpdateConnectivityInfoRequest <<< customize) { "ThingName": _ThingName, "ConnectivityInfo": (NullOrUndefined Nothing) }
+newUpdateConnectivityInfoRequest' :: String -> ( { "ConnectivityInfo" :: Maybe (ListOfConnectivityInfo) , "ThingName" :: (String) } -> {"ConnectivityInfo" :: Maybe (ListOfConnectivityInfo) , "ThingName" :: (String) } ) -> UpdateConnectivityInfoRequest
+newUpdateConnectivityInfoRequest' _ThingName customize = (UpdateConnectivityInfoRequest <<< customize) { "ThingName": _ThingName, "ConnectivityInfo": Nothing }
 
 
 
 newtype UpdateConnectivityInfoResponse = UpdateConnectivityInfoResponse 
-  { "Message" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeUpdateConnectivityInfoResponse :: Newtype UpdateConnectivityInfoResponse _
 derive instance repGenericUpdateConnectivityInfoResponse :: Generic UpdateConnectivityInfoResponse _
@@ -3754,18 +3753,18 @@ instance encodeUpdateConnectivityInfoResponse :: Encode UpdateConnectivityInfoRe
 
 -- | Constructs UpdateConnectivityInfoResponse from required parameters
 newUpdateConnectivityInfoResponse :: UpdateConnectivityInfoResponse
-newUpdateConnectivityInfoResponse  = UpdateConnectivityInfoResponse { "Message": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newUpdateConnectivityInfoResponse  = UpdateConnectivityInfoResponse { "Message": Nothing, "Version": Nothing }
 
 -- | Constructs UpdateConnectivityInfoResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateConnectivityInfoResponse' :: ( { "Message" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> UpdateConnectivityInfoResponse
-newUpdateConnectivityInfoResponse'  customize = (UpdateConnectivityInfoResponse <<< customize) { "Message": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newUpdateConnectivityInfoResponse' :: ( { "Message" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Message" :: Maybe (String) , "Version" :: Maybe (String) } ) -> UpdateConnectivityInfoResponse
+newUpdateConnectivityInfoResponse'  customize = (UpdateConnectivityInfoResponse <<< customize) { "Message": Nothing, "Version": Nothing }
 
 
 
 newtype UpdateCoreDefinitionRequest = UpdateCoreDefinitionRequest 
   { "CoreDefinitionId" :: (String)
-  , "Name" :: NullOrUndefined (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeUpdateCoreDefinitionRequest :: Newtype UpdateCoreDefinitionRequest _
 derive instance repGenericUpdateCoreDefinitionRequest :: Generic UpdateCoreDefinitionRequest _
@@ -3775,12 +3774,12 @@ instance encodeUpdateCoreDefinitionRequest :: Encode UpdateCoreDefinitionRequest
 
 -- | Constructs UpdateCoreDefinitionRequest from required parameters
 newUpdateCoreDefinitionRequest :: String -> UpdateCoreDefinitionRequest
-newUpdateCoreDefinitionRequest _CoreDefinitionId = UpdateCoreDefinitionRequest { "CoreDefinitionId": _CoreDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateCoreDefinitionRequest _CoreDefinitionId = UpdateCoreDefinitionRequest { "CoreDefinitionId": _CoreDefinitionId, "Name": Nothing }
 
 -- | Constructs UpdateCoreDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateCoreDefinitionRequest' :: String -> ( { "CoreDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } -> {"CoreDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } ) -> UpdateCoreDefinitionRequest
-newUpdateCoreDefinitionRequest' _CoreDefinitionId customize = (UpdateCoreDefinitionRequest <<< customize) { "CoreDefinitionId": _CoreDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateCoreDefinitionRequest' :: String -> ( { "CoreDefinitionId" :: (String) , "Name" :: Maybe (String) } -> {"CoreDefinitionId" :: (String) , "Name" :: Maybe (String) } ) -> UpdateCoreDefinitionRequest
+newUpdateCoreDefinitionRequest' _CoreDefinitionId customize = (UpdateCoreDefinitionRequest <<< customize) { "CoreDefinitionId": _CoreDefinitionId, "Name": Nothing }
 
 
 
@@ -3795,7 +3794,7 @@ instance encodeUpdateCoreDefinitionResponse :: Encode UpdateCoreDefinitionRespon
 
 newtype UpdateDeviceDefinitionRequest = UpdateDeviceDefinitionRequest 
   { "DeviceDefinitionId" :: (String)
-  , "Name" :: NullOrUndefined (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeUpdateDeviceDefinitionRequest :: Newtype UpdateDeviceDefinitionRequest _
 derive instance repGenericUpdateDeviceDefinitionRequest :: Generic UpdateDeviceDefinitionRequest _
@@ -3805,12 +3804,12 @@ instance encodeUpdateDeviceDefinitionRequest :: Encode UpdateDeviceDefinitionReq
 
 -- | Constructs UpdateDeviceDefinitionRequest from required parameters
 newUpdateDeviceDefinitionRequest :: String -> UpdateDeviceDefinitionRequest
-newUpdateDeviceDefinitionRequest _DeviceDefinitionId = UpdateDeviceDefinitionRequest { "DeviceDefinitionId": _DeviceDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateDeviceDefinitionRequest _DeviceDefinitionId = UpdateDeviceDefinitionRequest { "DeviceDefinitionId": _DeviceDefinitionId, "Name": Nothing }
 
 -- | Constructs UpdateDeviceDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateDeviceDefinitionRequest' :: String -> ( { "DeviceDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } -> {"DeviceDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } ) -> UpdateDeviceDefinitionRequest
-newUpdateDeviceDefinitionRequest' _DeviceDefinitionId customize = (UpdateDeviceDefinitionRequest <<< customize) { "DeviceDefinitionId": _DeviceDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateDeviceDefinitionRequest' :: String -> ( { "DeviceDefinitionId" :: (String) , "Name" :: Maybe (String) } -> {"DeviceDefinitionId" :: (String) , "Name" :: Maybe (String) } ) -> UpdateDeviceDefinitionRequest
+newUpdateDeviceDefinitionRequest' _DeviceDefinitionId customize = (UpdateDeviceDefinitionRequest <<< customize) { "DeviceDefinitionId": _DeviceDefinitionId, "Name": Nothing }
 
 
 
@@ -3825,7 +3824,7 @@ instance encodeUpdateDeviceDefinitionResponse :: Encode UpdateDeviceDefinitionRe
 
 newtype UpdateFunctionDefinitionRequest = UpdateFunctionDefinitionRequest 
   { "FunctionDefinitionId" :: (String)
-  , "Name" :: NullOrUndefined (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeUpdateFunctionDefinitionRequest :: Newtype UpdateFunctionDefinitionRequest _
 derive instance repGenericUpdateFunctionDefinitionRequest :: Generic UpdateFunctionDefinitionRequest _
@@ -3835,12 +3834,12 @@ instance encodeUpdateFunctionDefinitionRequest :: Encode UpdateFunctionDefinitio
 
 -- | Constructs UpdateFunctionDefinitionRequest from required parameters
 newUpdateFunctionDefinitionRequest :: String -> UpdateFunctionDefinitionRequest
-newUpdateFunctionDefinitionRequest _FunctionDefinitionId = UpdateFunctionDefinitionRequest { "FunctionDefinitionId": _FunctionDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateFunctionDefinitionRequest _FunctionDefinitionId = UpdateFunctionDefinitionRequest { "FunctionDefinitionId": _FunctionDefinitionId, "Name": Nothing }
 
 -- | Constructs UpdateFunctionDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateFunctionDefinitionRequest' :: String -> ( { "FunctionDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } -> {"FunctionDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } ) -> UpdateFunctionDefinitionRequest
-newUpdateFunctionDefinitionRequest' _FunctionDefinitionId customize = (UpdateFunctionDefinitionRequest <<< customize) { "FunctionDefinitionId": _FunctionDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateFunctionDefinitionRequest' :: String -> ( { "FunctionDefinitionId" :: (String) , "Name" :: Maybe (String) } -> {"FunctionDefinitionId" :: (String) , "Name" :: Maybe (String) } ) -> UpdateFunctionDefinitionRequest
+newUpdateFunctionDefinitionRequest' _FunctionDefinitionId customize = (UpdateFunctionDefinitionRequest <<< customize) { "FunctionDefinitionId": _FunctionDefinitionId, "Name": Nothing }
 
 
 
@@ -3854,7 +3853,7 @@ instance encodeUpdateFunctionDefinitionResponse :: Encode UpdateFunctionDefiniti
 
 
 newtype UpdateGroupCertificateConfigurationRequest = UpdateGroupCertificateConfigurationRequest 
-  { "CertificateExpiryInMilliseconds" :: NullOrUndefined (String)
+  { "CertificateExpiryInMilliseconds" :: Maybe (String)
   , "GroupId" :: (String)
   }
 derive instance newtypeUpdateGroupCertificateConfigurationRequest :: Newtype UpdateGroupCertificateConfigurationRequest _
@@ -3865,19 +3864,19 @@ instance encodeUpdateGroupCertificateConfigurationRequest :: Encode UpdateGroupC
 
 -- | Constructs UpdateGroupCertificateConfigurationRequest from required parameters
 newUpdateGroupCertificateConfigurationRequest :: String -> UpdateGroupCertificateConfigurationRequest
-newUpdateGroupCertificateConfigurationRequest _GroupId = UpdateGroupCertificateConfigurationRequest { "GroupId": _GroupId, "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing) }
+newUpdateGroupCertificateConfigurationRequest _GroupId = UpdateGroupCertificateConfigurationRequest { "GroupId": _GroupId, "CertificateExpiryInMilliseconds": Nothing }
 
 -- | Constructs UpdateGroupCertificateConfigurationRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateGroupCertificateConfigurationRequest' :: String -> ( { "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: (String) } -> {"CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: (String) } ) -> UpdateGroupCertificateConfigurationRequest
-newUpdateGroupCertificateConfigurationRequest' _GroupId customize = (UpdateGroupCertificateConfigurationRequest <<< customize) { "GroupId": _GroupId, "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing) }
+newUpdateGroupCertificateConfigurationRequest' :: String -> ( { "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: (String) } -> {"CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: (String) } ) -> UpdateGroupCertificateConfigurationRequest
+newUpdateGroupCertificateConfigurationRequest' _GroupId customize = (UpdateGroupCertificateConfigurationRequest <<< customize) { "GroupId": _GroupId, "CertificateExpiryInMilliseconds": Nothing }
 
 
 
 newtype UpdateGroupCertificateConfigurationResponse = UpdateGroupCertificateConfigurationResponse 
-  { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String)
-  , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String)
-  , "GroupId" :: NullOrUndefined (String)
+  { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String)
+  , "CertificateExpiryInMilliseconds" :: Maybe (String)
+  , "GroupId" :: Maybe (String)
   }
 derive instance newtypeUpdateGroupCertificateConfigurationResponse :: Newtype UpdateGroupCertificateConfigurationResponse _
 derive instance repGenericUpdateGroupCertificateConfigurationResponse :: Generic UpdateGroupCertificateConfigurationResponse _
@@ -3887,18 +3886,18 @@ instance encodeUpdateGroupCertificateConfigurationResponse :: Encode UpdateGroup
 
 -- | Constructs UpdateGroupCertificateConfigurationResponse from required parameters
 newUpdateGroupCertificateConfigurationResponse :: UpdateGroupCertificateConfigurationResponse
-newUpdateGroupCertificateConfigurationResponse  = UpdateGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds": (NullOrUndefined Nothing), "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing), "GroupId": (NullOrUndefined Nothing) }
+newUpdateGroupCertificateConfigurationResponse  = UpdateGroupCertificateConfigurationResponse { "CertificateAuthorityExpiryInMilliseconds": Nothing, "CertificateExpiryInMilliseconds": Nothing, "GroupId": Nothing }
 
 -- | Constructs UpdateGroupCertificateConfigurationResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateGroupCertificateConfigurationResponse' :: ( { "CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String) , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: NullOrUndefined (String) } -> {"CertificateAuthorityExpiryInMilliseconds" :: NullOrUndefined (String) , "CertificateExpiryInMilliseconds" :: NullOrUndefined (String) , "GroupId" :: NullOrUndefined (String) } ) -> UpdateGroupCertificateConfigurationResponse
-newUpdateGroupCertificateConfigurationResponse'  customize = (UpdateGroupCertificateConfigurationResponse <<< customize) { "CertificateAuthorityExpiryInMilliseconds": (NullOrUndefined Nothing), "CertificateExpiryInMilliseconds": (NullOrUndefined Nothing), "GroupId": (NullOrUndefined Nothing) }
+newUpdateGroupCertificateConfigurationResponse' :: ( { "CertificateAuthorityExpiryInMilliseconds" :: Maybe (String) , "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: Maybe (String) } -> {"CertificateAuthorityExpiryInMilliseconds" :: Maybe (String) , "CertificateExpiryInMilliseconds" :: Maybe (String) , "GroupId" :: Maybe (String) } ) -> UpdateGroupCertificateConfigurationResponse
+newUpdateGroupCertificateConfigurationResponse'  customize = (UpdateGroupCertificateConfigurationResponse <<< customize) { "CertificateAuthorityExpiryInMilliseconds": Nothing, "CertificateExpiryInMilliseconds": Nothing, "GroupId": Nothing }
 
 
 
 newtype UpdateGroupRequest = UpdateGroupRequest 
   { "GroupId" :: (String)
-  , "Name" :: NullOrUndefined (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeUpdateGroupRequest :: Newtype UpdateGroupRequest _
 derive instance repGenericUpdateGroupRequest :: Generic UpdateGroupRequest _
@@ -3908,12 +3907,12 @@ instance encodeUpdateGroupRequest :: Encode UpdateGroupRequest where encode = ge
 
 -- | Constructs UpdateGroupRequest from required parameters
 newUpdateGroupRequest :: String -> UpdateGroupRequest
-newUpdateGroupRequest _GroupId = UpdateGroupRequest { "GroupId": _GroupId, "Name": (NullOrUndefined Nothing) }
+newUpdateGroupRequest _GroupId = UpdateGroupRequest { "GroupId": _GroupId, "Name": Nothing }
 
 -- | Constructs UpdateGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateGroupRequest' :: String -> ( { "GroupId" :: (String) , "Name" :: NullOrUndefined (String) } -> {"GroupId" :: (String) , "Name" :: NullOrUndefined (String) } ) -> UpdateGroupRequest
-newUpdateGroupRequest' _GroupId customize = (UpdateGroupRequest <<< customize) { "GroupId": _GroupId, "Name": (NullOrUndefined Nothing) }
+newUpdateGroupRequest' :: String -> ( { "GroupId" :: (String) , "Name" :: Maybe (String) } -> {"GroupId" :: (String) , "Name" :: Maybe (String) } ) -> UpdateGroupRequest
+newUpdateGroupRequest' _GroupId customize = (UpdateGroupRequest <<< customize) { "GroupId": _GroupId, "Name": Nothing }
 
 
 
@@ -3928,7 +3927,7 @@ instance encodeUpdateGroupResponse :: Encode UpdateGroupResponse where encode = 
 
 newtype UpdateLoggerDefinitionRequest = UpdateLoggerDefinitionRequest 
   { "LoggerDefinitionId" :: (String)
-  , "Name" :: NullOrUndefined (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeUpdateLoggerDefinitionRequest :: Newtype UpdateLoggerDefinitionRequest _
 derive instance repGenericUpdateLoggerDefinitionRequest :: Generic UpdateLoggerDefinitionRequest _
@@ -3938,12 +3937,12 @@ instance encodeUpdateLoggerDefinitionRequest :: Encode UpdateLoggerDefinitionReq
 
 -- | Constructs UpdateLoggerDefinitionRequest from required parameters
 newUpdateLoggerDefinitionRequest :: String -> UpdateLoggerDefinitionRequest
-newUpdateLoggerDefinitionRequest _LoggerDefinitionId = UpdateLoggerDefinitionRequest { "LoggerDefinitionId": _LoggerDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateLoggerDefinitionRequest _LoggerDefinitionId = UpdateLoggerDefinitionRequest { "LoggerDefinitionId": _LoggerDefinitionId, "Name": Nothing }
 
 -- | Constructs UpdateLoggerDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateLoggerDefinitionRequest' :: String -> ( { "LoggerDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } -> {"LoggerDefinitionId" :: (String) , "Name" :: NullOrUndefined (String) } ) -> UpdateLoggerDefinitionRequest
-newUpdateLoggerDefinitionRequest' _LoggerDefinitionId customize = (UpdateLoggerDefinitionRequest <<< customize) { "LoggerDefinitionId": _LoggerDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateLoggerDefinitionRequest' :: String -> ( { "LoggerDefinitionId" :: (String) , "Name" :: Maybe (String) } -> {"LoggerDefinitionId" :: (String) , "Name" :: Maybe (String) } ) -> UpdateLoggerDefinitionRequest
+newUpdateLoggerDefinitionRequest' _LoggerDefinitionId customize = (UpdateLoggerDefinitionRequest <<< customize) { "LoggerDefinitionId": _LoggerDefinitionId, "Name": Nothing }
 
 
 
@@ -3957,7 +3956,7 @@ instance encodeUpdateLoggerDefinitionResponse :: Encode UpdateLoggerDefinitionRe
 
 
 newtype UpdateResourceDefinitionRequest = UpdateResourceDefinitionRequest 
-  { "Name" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
   , "ResourceDefinitionId" :: (String)
   }
 derive instance newtypeUpdateResourceDefinitionRequest :: Newtype UpdateResourceDefinitionRequest _
@@ -3968,12 +3967,12 @@ instance encodeUpdateResourceDefinitionRequest :: Encode UpdateResourceDefinitio
 
 -- | Constructs UpdateResourceDefinitionRequest from required parameters
 newUpdateResourceDefinitionRequest :: String -> UpdateResourceDefinitionRequest
-newUpdateResourceDefinitionRequest _ResourceDefinitionId = UpdateResourceDefinitionRequest { "ResourceDefinitionId": _ResourceDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateResourceDefinitionRequest _ResourceDefinitionId = UpdateResourceDefinitionRequest { "ResourceDefinitionId": _ResourceDefinitionId, "Name": Nothing }
 
 -- | Constructs UpdateResourceDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateResourceDefinitionRequest' :: String -> ( { "Name" :: NullOrUndefined (String) , "ResourceDefinitionId" :: (String) } -> {"Name" :: NullOrUndefined (String) , "ResourceDefinitionId" :: (String) } ) -> UpdateResourceDefinitionRequest
-newUpdateResourceDefinitionRequest' _ResourceDefinitionId customize = (UpdateResourceDefinitionRequest <<< customize) { "ResourceDefinitionId": _ResourceDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateResourceDefinitionRequest' :: String -> ( { "Name" :: Maybe (String) , "ResourceDefinitionId" :: (String) } -> {"Name" :: Maybe (String) , "ResourceDefinitionId" :: (String) } ) -> UpdateResourceDefinitionRequest
+newUpdateResourceDefinitionRequest' _ResourceDefinitionId customize = (UpdateResourceDefinitionRequest <<< customize) { "ResourceDefinitionId": _ResourceDefinitionId, "Name": Nothing }
 
 
 
@@ -3987,7 +3986,7 @@ instance encodeUpdateResourceDefinitionResponse :: Encode UpdateResourceDefiniti
 
 
 newtype UpdateSubscriptionDefinitionRequest = UpdateSubscriptionDefinitionRequest 
-  { "Name" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
   , "SubscriptionDefinitionId" :: (String)
   }
 derive instance newtypeUpdateSubscriptionDefinitionRequest :: Newtype UpdateSubscriptionDefinitionRequest _
@@ -3998,12 +3997,12 @@ instance encodeUpdateSubscriptionDefinitionRequest :: Encode UpdateSubscriptionD
 
 -- | Constructs UpdateSubscriptionDefinitionRequest from required parameters
 newUpdateSubscriptionDefinitionRequest :: String -> UpdateSubscriptionDefinitionRequest
-newUpdateSubscriptionDefinitionRequest _SubscriptionDefinitionId = UpdateSubscriptionDefinitionRequest { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateSubscriptionDefinitionRequest _SubscriptionDefinitionId = UpdateSubscriptionDefinitionRequest { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "Name": Nothing }
 
 -- | Constructs UpdateSubscriptionDefinitionRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateSubscriptionDefinitionRequest' :: String -> ( { "Name" :: NullOrUndefined (String) , "SubscriptionDefinitionId" :: (String) } -> {"Name" :: NullOrUndefined (String) , "SubscriptionDefinitionId" :: (String) } ) -> UpdateSubscriptionDefinitionRequest
-newUpdateSubscriptionDefinitionRequest' _SubscriptionDefinitionId customize = (UpdateSubscriptionDefinitionRequest <<< customize) { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "Name": (NullOrUndefined Nothing) }
+newUpdateSubscriptionDefinitionRequest' :: String -> ( { "Name" :: Maybe (String) , "SubscriptionDefinitionId" :: (String) } -> {"Name" :: Maybe (String) , "SubscriptionDefinitionId" :: (String) } ) -> UpdateSubscriptionDefinitionRequest
+newUpdateSubscriptionDefinitionRequest' _SubscriptionDefinitionId customize = (UpdateSubscriptionDefinitionRequest <<< customize) { "SubscriptionDefinitionId": _SubscriptionDefinitionId, "Name": Nothing }
 
 
 
@@ -4048,10 +4047,10 @@ instance encodeUpdateTargetsOperatingSystem :: Encode UpdateTargetsOperatingSyst
 
 -- | Information on the version
 newtype VersionInformation = VersionInformation 
-  { "Arn" :: NullOrUndefined (String)
-  , "CreationTimestamp" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (String)
+  { "Arn" :: Maybe (String)
+  , "CreationTimestamp" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Version" :: Maybe (String)
   }
 derive instance newtypeVersionInformation :: Newtype VersionInformation _
 derive instance repGenericVersionInformation :: Generic VersionInformation _
@@ -4061,10 +4060,10 @@ instance encodeVersionInformation :: Encode VersionInformation where encode = ge
 
 -- | Constructs VersionInformation from required parameters
 newVersionInformation :: VersionInformation
-newVersionInformation  = VersionInformation { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newVersionInformation  = VersionInformation { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
 -- | Constructs VersionInformation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newVersionInformation' :: ( { "Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } -> {"Arn" :: NullOrUndefined (String) , "CreationTimestamp" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (String) } ) -> VersionInformation
-newVersionInformation'  customize = (VersionInformation <<< customize) { "Arn": (NullOrUndefined Nothing), "CreationTimestamp": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newVersionInformation' :: ( { "Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } -> {"Arn" :: Maybe (String) , "CreationTimestamp" :: Maybe (String) , "Id" :: Maybe (String) , "Version" :: Maybe (String) } ) -> VersionInformation
+newVersionInformation'  customize = (VersionInformation <<< customize) { "Arn": Nothing, "CreationTimestamp": Nothing, "Id": Nothing, "Version": Nothing }
 
